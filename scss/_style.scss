@@ -1,0 +1,150 @@
+header {
+  padding: 33px 0;
+  background-color: $header-background;
+  .container {
+    @extend %container;
+    @include flex(row, space-between, center, wrap);
+    .logo {
+      @include flex(row, space-between, center, wrap);
+      gap: 10px;
+      h3 {
+        font-family: $header-font;
+        font-size: 27px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .fa-book-open {
+        font-size: 40px;
+      }
+    }
+    .navwrapper {
+      display: flex;
+      justify-content: space-between;
+      max-width: 860px;
+      width: 100%;
+      @media (max-width: 1150px) {
+        max-width: 1088px;
+        margin-top: 30px;
+      }
+      @media (max-width:750px) {
+        display: none;
+      }
+      nav {
+        ul {
+          @include flex(row, space-between, center, wrap);
+          gap: 50px;
+          a {
+            font-family: $header-font;
+            color: #472d1c;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      }
+      .iconsdiv {
+        @include flex(row, space-between, center, wrap);
+        gap: 55px;
+        i {
+          font-size: 27px;
+        }
+      }
+    }
+    .fa-bars {
+      display: none;
+      font-size: 27px;
+      @media (max-width: 750px) {
+        display: block;
+      }
+    }
+  }
+}
+.s-1 {
+  background-color: $background-color;
+  padding-top: 40px;
+  .container {
+    @extend %container;
+    .quote {
+      background-image: url("../images/s-1image.png");
+      background-color: #472d1c;
+      height: 356px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      padding: 0 70px;
+      @include flex(column, center, start, wrap);
+      gap: 20px;
+      @media (max-width:450px) {
+        padding: 0 40px;
+      }
+      h2 {
+        color: #d1beaf;
+        font-family: $main-font;
+        font-size: 46px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.92px;
+        text-transform: capitalize;
+        max-width: 570px;
+        width: 100%;
+        @media (max-width:450px) {
+          font-size: 35px;
+        }
+      }
+      .shopnow {
+        padding: 10px 0;
+        width: 156px;
+        border-radius: 8px;
+        background-color: #d1beaf;
+        @include flex(row, center, center, nowrap);
+        @media (max-width: 350px) {
+          max-width: 350px;
+          width: 100%;
+        }
+        h6 {
+          color: #302923;
+          text-align: center;
+          font-family: $main-font;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          letter-spacing: 0.32px;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}
+.s-2 {
+  background-color: $background-color;
+  padding-top: 60px ;
+  .container {
+    @extend %container;
+    @include flex (column, center, center, wrap);
+    gap: 20px;
+    .genres {
+      color: $titles-color;
+      font-family: "Bell MT";
+      font-size: 58px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .cardswrapper {
+      @include flex (row, center, center, wrap);
+      gap: 50px;
+      @media (max-width:1310px) {
+        max-width: 900px;
+      }
+      .card {
+        @extend %card;
+        
+      } 
+    }
+  }
+}

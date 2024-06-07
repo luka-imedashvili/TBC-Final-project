@@ -136,4 +136,324 @@ a {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.s-2 .container, .s-1 .container, header .container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 1300px) {
+  .s-2 .container, .s-1 .container, header .container {
+    width: 95%;
+  }
+}
+
+.s-2 .container .cardswrapper .card {
+  width: 208px;
+  height: 180px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border-radius: 10px;
+  background-color: #6c5c47;
+  padding-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.s-2 .container .cardswrapper .card h5 {
+  color: #eeddcf;
+  font-family: "Bell MT Regular";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 10px;
+}
+.s-2 .container .cardswrapper .card .historical {
+  font-size: 25px;
+}
+
+header {
+  padding: 33px 0;
+  background-color: #D1BEAF;
+}
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+header .container .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+header .container .logo h3 {
+  font-family: "Copperplate Gothic Light";
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+header .container .logo .fa-book-open {
+  font-size: 40px;
+}
+header .container .navwrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 860px;
+  width: 100%;
+}
+@media (max-width: 1150px) {
+  header .container .navwrapper {
+    max-width: 1088px;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 750px) {
+  header .container .navwrapper {
+    display: none;
+  }
+}
+header .container .navwrapper nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 50px;
+}
+header .container .navwrapper nav ul a {
+  font-family: "Copperplate Gothic Light";
+  color: #472d1c;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+header .container .navwrapper .iconsdiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 55px;
+}
+header .container .navwrapper .iconsdiv i {
+  font-size: 27px;
+}
+header .container .fa-bars {
+  display: none;
+  font-size: 27px;
+}
+@media (max-width: 750px) {
+  header .container .fa-bars {
+    display: block;
+  }
+}
+
+.s-1 {
+  background-color: #FCF3EB;
+  padding-top: 40px;
+}
+.s-1 .container .quote {
+  background-image: url("../images/s-1image.png");
+  background-color: #472d1c;
+  height: 356px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 0 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+}
+@media (max-width: 450px) {
+  .s-1 .container .quote {
+    padding: 0 40px;
+  }
+}
+.s-1 .container .quote h2 {
+  color: #d1beaf;
+  font-family: "Bell MT Regular";
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.92px;
+  text-transform: capitalize;
+  max-width: 570px;
+  width: 100%;
+}
+@media (max-width: 450px) {
+  .s-1 .container .quote h2 {
+    font-size: 35px;
+  }
+}
+.s-1 .container .quote .shopnow {
+  padding: 10px 0;
+  width: 156px;
+  border-radius: 8px;
+  background-color: #d1beaf;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+@media (max-width: 350px) {
+  .s-1 .container .quote .shopnow {
+    max-width: 350px;
+    width: 100%;
+  }
+}
+.s-1 .container .quote .shopnow h6 {
+  color: #302923;
+  text-align: center;
+  font-family: "Bell MT Regular";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.32px;
+  text-transform: capitalize;
+}
+
+.s-2 {
+  background-color: #FCF3EB;
+  padding-top: 60px;
+}
+.s-2 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+}
+.s-2 .container .genres {
+  color: #472D1C;
+  font-family: "Bell MT";
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.s-2 .container .cardswrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 50px;
+}
+@media (max-width: 1310px) {
+  .s-2 .container .cardswrapper {
+    max-width: 900px;
+  }
 }/*# sourceMappingURL=global.css.map */
