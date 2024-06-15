@@ -173,6 +173,24 @@ a {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+@media (max-width: 1310px) {
+  .s-2 .container .cardswrapper .card {
+    width: 185px;
+    height: 170px;
+  }
+}
+@media (max-width: 1200px) {
+  .s-2 .container .cardswrapper .card {
+    width: 150px;
+    height: 145px;
+  }
+}
+@media (max-width: 1000px) {
+  .s-2 .container .cardswrapper .card {
+    width: 130px;
+    height: 135px;
+  }
+}
 .s-2 .container .cardswrapper .card h5 {
   color: #eeddcf;
   font-family: "Bell MT Regular";
@@ -182,8 +200,28 @@ a {
   line-height: normal;
   margin-top: 10px;
 }
+@media (max-width: 1200px) {
+  .s-2 .container .cardswrapper .card h5 {
+    font-size: 23px;
+  }
+}
 .s-2 .container .cardswrapper .card .historical {
   font-size: 25px;
+}
+@media (max-width: 1200px) {
+  .s-2 .container .cardswrapper .card .historical {
+    font-size: 22px;
+  }
+}
+.s-2 .container .cardswrapper .card img {
+  width: 60px;
+  height: 60px;
+}
+@media (max-width: 1200px) {
+  .s-2 .container .cardswrapper .card img {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 header {
@@ -434,6 +472,11 @@ header .container .fa-bars {
   font-weight: 700;
   line-height: normal;
 }
+@media (max-width: 500px) {
+  .s-2 .container .genres {
+    font-size: 48px;
+  }
+}
 .s-2 .container .cardswrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -452,8 +495,13 @@ header .container .fa-bars {
       flex-wrap: wrap;
   gap: 50px;
 }
-@media (max-width: 1310px) {
+@media (max-width: 1000px) {
   .s-2 .container .cardswrapper {
-    max-width: 900px;
+    gap: 30px;
+  }
+}
+@media (max-width: 813px) {
+  .s-2 .container .cardswrapper {
+    max-width: 600px;
   }
 }/*# sourceMappingURL=global.css.map */
