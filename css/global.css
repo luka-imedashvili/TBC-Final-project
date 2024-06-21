@@ -138,13 +138,13 @@ a {
           box-sizing: border-box;
 }
 
-.s-2 .container, .s-1 .container, header .container {
+.s-3 .container, .s-2 .container, .s-1 .container, header .container {
   max-width: 1240px;
   width: 100%;
   margin: 0 auto;
 }
 @media (max-width: 1300px) {
-  .s-2 .container, .s-1 .container, header .container {
+  .s-3 .container, .s-2 .container, .s-1 .container, header .container {
     width: 95%;
   }
 }
@@ -225,128 +225,133 @@ a {
 }
 
 header {
-  padding: 33px 0;
-  background-color: #D1BEAF;
+  padding: 25px 0;
+  background-color: rgba(209, 190, 175, 0.9333333333);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 header .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 header .container .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   gap: 10px;
 }
+@media (max-width: 500px) {
+  header .container .logo {
+    gap: 5px;
+  }
+}
+header .container .logo .fa-book {
+  color: #2C1508;
+  font-size: 33px;
+}
+@media (max-width: 750px) {
+  header .container .logo .fa-book {
+    font-size: 29px;
+  }
+}
+@media (max-width: 500px) {
+  header .container .logo .fa-book {
+    font-size: 19px;
+  }
+}
 header .container .logo h3 {
+  color: #2C1508;
   font-family: "Copperplate Gothic Light";
   font-size: 27px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
-header .container .logo .fa-book-open {
-  font-size: 40px;
-}
-header .container .navwrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  max-width: 860px;
-  width: 100%;
-}
-@media (max-width: 1150px) {
-  header .container .navwrapper {
-    max-width: 1088px;
-    margin-top: 30px;
-  }
-}
 @media (max-width: 750px) {
-  header .container .navwrapper {
-    display: none;
+  header .container .logo h3 {
+    font-size: 24px;
   }
 }
-header .container .navwrapper nav ul {
+@media (max-width: 500px) {
+  header .container .logo h3 {
+    font-size: 14px;
+  }
+}
+header .container nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+}
+@media (max-width: 1000px) {
+  header .container nav {
+    display: none;
+  }
+}
+header .container nav .ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 50px;
 }
-header .container .navwrapper nav ul a {
-  font-family: "Copperplate Gothic Light";
+header .container nav .ul a {
   color: #472d1c;
+  font-family: "Copperplate Gothic Light";
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
-header .container .navwrapper .iconsdiv {
+header .container .iconsdiv {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   gap: 55px;
 }
-header .container .navwrapper .iconsdiv i {
+@media (max-width: 1110px) {
+  header .container .iconsdiv {
+    gap: 30px;
+  }
+}
+@media (max-width: 1000px) {
+  header .container .iconsdiv {
+    gap: 12px;
+  }
+}
+@media (max-width: 500px) {
+  header .container .iconsdiv {
+    gap: 5px;
+  }
+}
+header .container .iconsdiv i {
+  color: #2C1508;
   font-size: 27px;
 }
-header .container .fa-bars {
+@media (max-width: 500px) {
+  header .container .iconsdiv i {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1000px) {
+  header .container .iconsdiv .icon23 {
+    display: none;
+  }
+}
+header .container .iconsdiv .fa-bars {
   display: none;
-  font-size: 27px;
 }
-@media (max-width: 750px) {
-  header .container .fa-bars {
+@media (max-width: 1000px) {
+  header .container .iconsdiv .fa-bars {
     display: block;
   }
 }
@@ -356,7 +361,7 @@ header .container .fa-bars {
   padding-top: 40px;
 }
 .s-1 .container .quote {
-  background-image: url("../images/s-1image.png");
+  background-image: url("../images/banner.jpg");
   background-color: #472d1c;
   height: 356px;
   background-repeat: no-repeat;
@@ -371,9 +376,9 @@ header .container .fa-bars {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
@@ -474,7 +479,7 @@ header .container .fa-bars {
 }
 @media (max-width: 500px) {
   .s-2 .container .genres {
-    font-size: 48px;
+    font-size: 45px;
   }
 }
 .s-2 .container .cardswrapper {
@@ -503,5 +508,279 @@ header .container .fa-bars {
 @media (max-width: 813px) {
   .s-2 .container .cardswrapper {
     max-width: 600px;
+  }
+}
+.s-3 {
+  background-color: #FCF3EB;
+  padding-top: 60px;
+}
+.s-3 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.s-3 .container .s-3title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.s-3 .container .s-3title h3 {
+  font-family: "Bell MT Regular";
+  color: #472D1C;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+@media (max-width: 1150px) {
+  .s-3 .container .s-3title h3 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 710px) {
+  .s-3 .container .s-3title h3 {
+    font-size: 45px;
+  }
+}
+@media (max-width: 410px) {
+  .s-3 .container .s-3title h3 {
+    width: 240px;
+  }
+}
+.s-3 .container .s-3title h6 {
+  color: #796751;
+  font-family: "Bell MT Regular";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  padding-top: 15px;
+}
+@media (max-width: 1110px) {
+  .s-3 .container .s-3title h6 {
+    font-size: 20px;
+  }
+}
+.s-3 .container .bestsellerswrapper {
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 100px;
+  row-gap: 20px;
+}
+@media (max-width: 1350px) {
+  .s-3 .container .bestsellerswrapper {
+    gap: 50px;
+    row-gap: 20px;
+  }
+}
+@media (max-width: 1150px) {
+  .s-3 .container .bestsellerswrapper {
+    gap: 25px;
+  }
+}
+@media (max-width: 710px) {
+  .s-3 .container .bestsellerswrapper {
+    gap: 10px;
+  }
+}
+.s-3 .container .bestsellerswrapper .bestscard {
+  width: 235px;
+  border-radius: 15px;
+  border: 1px solid #cbb294;
+  padding: 10px 10px;
+}
+@media (max-width: 1150px) {
+  .s-3 .container .bestsellerswrapper .bestscard {
+    width: 200px;
+  }
+}
+@media (max-width: 450px) {
+  .s-3 .container .bestsellerswrapper .bestscard {
+    width: 160px;
+  }
+}
+@media (max-width: 360px) {
+  .s-3 .container .bestsellerswrapper .bestscard {
+    width: 145px;
+  }
+}
+.s-3 .container .bestsellerswrapper .bestscard .bestsimgwrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px;
+  padding-bottom: 10px;
+}
+@media (max-width: 710px) {
+  .s-3 .container .bestsellerswrapper .bestscard .bestsimgwrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.s-3 .container .bestsellerswrapper .bestscard .bestsimgwrapper img {
+  width: 116px;
+  height: 174px;
+}
+@media (max-width: 1150px) {
+  .s-3 .container .bestsellerswrapper .bestscard .bestsimgwrapper img {
+    width: 95px;
+    height: 144px;
+  }
+}
+.s-3 .container .bestsellerswrapper .bestscard .bestsimgwrapper .bestsbox {
+  width: 30px;
+  height: 30px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border-radius: 5px;
+  border: 1px solid #cbb294;
+  margin-right: 5px;
+}
+@media (max-width: 1150px) {
+  .s-3 .container .bestsellerswrapper .bestscard .bestsimgwrapper .bestsbox {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media (max-width: 710px) {
+  .s-3 .container .bestsellerswrapper .bestscard .bestsimgwrapper .bestsbox {
+    display: none;
+  }
+}
+.s-3 .container .bestsellerswrapper .bestscard .bookname {
+  color: #302923;
+  font-family: "Bell MT Regular";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media (max-width: 1150px) {
+  .s-3 .container .bestsellerswrapper .bestscard .bookname {
+    font-size: 19px;
+  }
+}
+@media (max-width: 450px) {
+  .s-3 .container .bestsellerswrapper .bestscard .aad {
+    font-size: 15px;
+  }
+}
+.s-3 .container .bestsellerswrapper .bestscard .rating {
+  color: #483d35;
+  font-family: "Bell MT Regular";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 2px;
+}
+@media (max-width: 1150px) {
+  .s-3 .container .bestsellerswrapper .bestscard .rating {
+    font-size: 15px;
+  }
+}
+.s-3 .container .bestsellerswrapper .bestscard .fa-star {
+  font-size: 13px;
+}
+.s-3 .container .bestsellerswrapper .bestscard .price {
+  color: #3c2a16;
+  font-family: "Bell MT Regular";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 5px;
+}
+@media (max-width: 1150px) {
+  .s-3 .container .bestsellerswrapper .bestscard .price {
+    font-size: 19px;
+    margin-top: 3px;
+  }
+}
+.s-3 .container .bestsellerswrapper .bestscard .lotr {
+  font-size: 18px;
+}
+@media (max-width: 1150px) {
+  .s-3 .container .bestsellerswrapper .bestscard .lotr {
+    font-size: 16px;
+  }
+}
+@media (max-width: 925px) {
+  .s-3 .container .bestsellerswrapper .bestscard8, .s-3 .container .bestsellerswrapper .bestscard4 {
+    display: none;
+  }
+}
+@media (max-width: 653px) {
+  .s-3 .container .bestsellerswrapper .bestscard5, .s-3 .container .bestsellerswrapper .bestscard6 {
+    display: none;
+  }
+}
+.s-3 .container .seemore {
+  color: #796751;
+  font-family: "Bell MT Regular";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 10px;
+}
+@media (max-width: 750px) {
+  .s-3 .container .seemore {
+    font-size: 20px;
   }
 }/*# sourceMappingURL=global.css.map */
