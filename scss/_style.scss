@@ -1,367 +1,348 @@
-header {
-  padding: 25px 0;
-  background-color: $header-background;
-  position: sticky;
-  top: 0;
-  .container {
-    @extend %container;
-    display: flex;
-    justify-content: space-between;
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      @media (max-width: 500px) {
-        gap: 5px;
-      }
-      .fa-book {
-        color: $main-color;
-        font-size: 33px;
-        @media (max-width: 750px) {
-          font-size: 29px;
-        }
-        @media (max-width: 500px) {
-          font-size: 19px;
-        }
-      }
-      h3 {
-        color: $main-color;
-        font-family: $header-font;
-        font-size: 27px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        @media (max-width: 750px) {
-          font-size: 24px;
-        }
-        @media (max-width: 500px) {
-          font-size: 14px;
-        }
-      }
-    }
-    nav {
-      display: flex;
-      align-items: center;
-      @media (max-width: 1000px) {
-        display: none;
-      }
-      .ul {
-        display: flex;
-        gap: 50px;
-        a {
-          color: #472d1c;
-          font-family: $header-font;
-          font-size: 18px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
-        }
-      }
-    }
-    .iconsdiv {
-      display: flex;
-      gap: 55px;
-      @media (max-width: 1110px) {
-        gap: 30px;
-      }
-      @media (max-width: 1000px) {
-        gap: 12px;
-      }
-      @media (max-width: 500px) {
-        gap: 5px;
-      }
-      i {
-        color: $main-color;
-        font-size: 27px;
-        @media (max-width: 500px) {
-          font-size: 16px;
-        }
-      }
-      @media (max-width: 1000px) {
-        .icon23 {
-          display: none;
-        }
-      }
-      .fa-bars {
-        display: none;
-        @media (max-width: 1000px) {
-          display: block;
-        }
-      }
-    }
+html {
+  scroll-behavior: smooth;
+  ::selection {
+    background-color: #63595182;
   }
-}
-.s-1 {
-  background-color: $background-color;
-  padding-top: 40px;
-  .container {
-    @extend %container;
-    .quote {
-      background-image: url("../images/banner.jpg");
-      background-color: #472d1c;
-      height: 356px;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      border-radius: 10px;
-      padding: 0 70px;
-      @include flex(column, space-evenly, start, wrap);
-      gap: 20px;
-      @media (max-width: 450px) {
-        padding: 0 40px;
-      }
-      h2 {
-        color: #d1beaf;
-        font-family: $main-font;
-        font-size: 46px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        letter-spacing: 0.92px;
-        text-transform: capitalize;
-        max-width: 570px;
-        width: 100%;
+  header {
+    @extend %header;
+  }
+  .s-1 {
+    background-color: $background-color;
+    padding-top: 40px;
+    .container {
+      @extend %container;
+      .quote {
+        background-image: url("../images/banner.jpg");
+        background-color: #472d1c;
+        height: 356px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 0 70px;
+        @include flex(column, space-evenly, start, wrap);
+        gap: 20px;
         @media (max-width: 450px) {
-          font-size: 35px;
+          padding: 0 40px;
         }
-      }
-      .shopnow {
-        padding: 10px 0;
-        width: 156px;
-        border-radius: 8px;
-        background-color: #d1beaf;
-        @include flex(row, center, center, nowrap);
-        @media (max-width: 350px) {
-          max-width: 350px;
-          width: 100%;
-        }
-        h6 {
-          color: #302923;
-          text-align: center;
+        h2 {
+          color: #d1beaf;
           font-family: $main-font;
-          font-size: 16px;
+          font-size: 46px;
           font-style: normal;
           font-weight: 700;
           line-height: normal;
-          letter-spacing: 0.32px;
+          letter-spacing: 0.92px;
           text-transform: capitalize;
+          max-width: 570px;
+          width: 100%;
+          @media (max-width: 450px) {
+            font-size: 35px;
+          }
+        }
+        .shopnow {
+          padding: 10px 0;
+          width: 156px;
+          border-radius: 8px;
+          background-color: #d1beaf;
+          cursor: pointer;
+          &:hover {
+            background-color: $hover3;
+          }
+          @include flex(row, center, center, nowrap);
+          @media (max-width: 350px) {
+            max-width: 350px;
+            width: 100%;
+          }
+          h6 {
+            color: #302923;
+            text-align: center;
+            font-family: $main-font;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 0.32px;
+            text-transform: capitalize;
+          }
         }
       }
     }
   }
-}
-.s-2 {
-  background-color: $background-color;
-  padding-top: 60px;
-  .container {
-    @extend %container;
-    @include flex(column, center, center, wrap);
-    gap: 20px;
-    .genres {
-      color: $titles-color;
-      font-family: "Bell MT";
-      font-size: 58px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      @media (max-width: 500px) {
-        font-size: 45px;
-      }
-    }
-    .cardswrapper {
-      @include flex(row, center, center, wrap);
-      gap: 50px;
-      @media (max-width: 1000px) {
-        gap: 30px;
-      }
-      @media (max-width: 813px) {
-        max-width: 600px;
-      }
-      .card {
-        @extend %card;
-      }
-    }
-  }
-}
-.s-3 {
-  background-color: $background-color;
-  padding-top: 60px;
-  .container {
-    @extend %container;
-    @include flex(column, center, center, wrap);
-    .s-3title {
+  .s-2 {
+    background-color: $background-color;
+    padding-top: 60px;
+    .container {
+      @extend %container;
       @include flex(column, center, center, wrap);
-      h3 {
-        font-family: $main-font;
+      gap: 20px;
+      .genres {
         color: $titles-color;
-        font-size: 64px;
+        font-family: "Bell MT";
+        font-size: 58px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
-        text-align: center;
+        @media (max-width: 500px) {
+          font-size: 45px;
+        }
+      }
+      .cardswrapper {
+        @include flex(row, center, center, wrap);
+        gap: 50px;
+        @media (max-width: 1000px) {
+          gap: 30px;
+        }
+        @media (max-width: 813px) {
+          max-width: 600px;
+        }
+        .card {
+          @extend %card;
+        }
+      }
+    }
+  }
+  .s-3 {
+    background-color: $background-color;
+    padding-top: 60px;
+    .container {
+      @extend %container;
+      @include flex(column, center, center, wrap);
+      .s-3title {
+        @include flex(column, center, center, wrap);
+        h3 {
+          font-family: $main-font;
+          color: $titles-color;
+          font-size: 64px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          text-align: center;
+          @media (max-width: 1150px) {
+            font-size: 50px;
+          }
+          @media (max-width: 710px) {
+            font-size: 45px;
+          }
+          @media (max-width: 410px) {
+            width: 240px;
+          }
+        }
+        h6 {
+          color: #796751;
+          font-family: $main-font;
+          font-size: 25px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          max-width: 700px;
+          width: 100%;
+          text-align: center;
+          padding-top: 15px;
+          @media (max-width: 1110px) {
+            font-size: 20px;
+          }
+        }
+      }
+      .bestsellerswrapper {
+        padding-top: 40px;
+        @include flex(row, center, center, wrap);
+        gap: 100px;
+        row-gap: 20px;
+        @media (max-width: 1350px) {
+          gap: 50px;
+          row-gap: 20px;
+        }
         @media (max-width: 1150px) {
-          font-size: 50px;
+          gap: 25px;
         }
         @media (max-width: 710px) {
-          font-size: 45px;
-         }
-         @media (max-width: 410px) {
-          width: 240px;
-         }
+          gap: 10px;
+        }
+
+        .bestscard {
+          width: 235px;
+          border-radius: 15px;
+          border: 1px solid $border-color;
+          padding: 10px 10px;
+          @media (max-width: 1150px) {
+            width: 200px;
+          }
+          @media (max-width: 450px) {
+            width: 160px;
+          }
+          @media (max-width: 360px) {
+            width: 145px;
+          }
+
+          .bestsimgwrapper {
+            @include flex(row, end, start, wrap);
+            gap: 15px;
+            padding-bottom: 10px;
+            @media (max-width: 710px) {
+              justify-content: center;
+            }
+            img {
+              width: 116px;
+              height: 174px;
+              @media (max-width: 1150px) {
+                width: 95px;
+                height: 144px;
+              }
+            }
+            .bestsbox {
+              width: 30px;
+              height: 30px;
+              flex-shrink: 0;
+              border-radius: 5px;
+              border: 1px solid $border-color;
+              margin-right: 5px;
+              @media (max-width: 1150px) {
+                width: 25px;
+                height: 25px;
+              }
+              @media (max-width: 710px) {
+                display: none;
+              }
+            }
+          }
+          .bookname {
+            color: #302923;
+            font-family: $main-font;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            @media (max-width: 1150px) {
+              font-size: 19px;
+            }
+          }
+          .aad {
+            @media (max-width: 450px) {
+              font-size: 15px;
+            }
+          }
+          .rating {
+            color: #483d35;
+            font-family: $main-font;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 2px;
+            @media (max-width: 1150px) {
+              font-size: 15px;
+            }
+          }
+          .fa-star {
+            font-size: 13px;
+          }
+          .price {
+            color: #3c2a16;
+            font-family: $main-font;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-top: 5px;
+            @media (max-width: 1150px) {
+              font-size: 19px;
+              margin-top: 3px;
+            }
+          }
+          .lotr {
+            font-size: 18px;
+            @media (max-width: 1150px) {
+              font-size: 16px;
+            }
+          }
+        }
+        .bestscard8,
+        .bestscard4 {
+          @media (max-width: 925px) {
+            display: none;
+          }
+        }
+        .bestscard5,
+        .bestscard6 {
+          @media (max-width: 653px) {
+            display: none;
+          }
+        }
       }
-      h6 {
+      .seemore {
         color: #796751;
         font-family: $main-font;
         font-size: 25px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        max-width: 700px;
-        width: 100%;
-        text-align: center;
-        padding-top: 15px;
-        @media (max-width: 1110px) {
+        margin-top: 15px;
+        &:hover {
+          color: $hover;
+        }
+        @media (max-width: 750px) {
           font-size: 20px;
-         }
-        
-      }
-    }
-    .bestsellerswrapper {
-      padding-top: 40px;
-      @include flex(row, center, center, wrap);
-      gap: 100px;
-      row-gap: 20px;
-      @media (max-width: 1350px) {
-        gap: 50px;
-        row-gap: 20px;
-      }
-      @media (max-width: 1150px) {
-        gap: 25px;
-      }
-      @media (max-width: 710px) {
-        gap: 10px;
-      }
-      
-      .bestscard {
-        width: 235px;
-        border-radius: 15px;
-        border: 1px solid $border-color;
-        padding: 10px 10px;
-        @media (max-width: 1150px) {
-          width: 200px;
         }
-        @media (max-width: 450px) {
-          width: 160px;
-        }
-        @media (max-width: 360px) {
-          width: 145px;
-        }
-
-        .bestsimgwrapper {
-          @include flex(row, end, start, wrap);
-          gap: 15px;
-          padding-bottom: 10px;
-          @media (max-width: 710px) {
-            justify-content: center;
-          }
-          img {
-            width: 116px;
-            height: 174px;
-            @media (max-width: 1150px) {
-              width: 95px;
-              height: 144px;
-            }
-            
-          }
-          .bestsbox {
-            width: 30px;
-            height: 30px;
-            flex-shrink: 0;
-            border-radius: 5px;
-            border: 1px solid $border-color;
-            margin-right: 5px;
-            @media (max-width: 1150px) {
-              width: 25px;
-              height: 25px;
-            }
-            @media (max-width: 710px) {
-             display: none;
-            }
-          }
-        }
-        .bookname {
-          color: #302923;
-          font-family: $main-font;
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
-          @media (max-width: 1150px) {
-            font-size: 19px;
-          }
-        }
-        .aad {
-          @media (max-width: 450px) {
-            font-size: 15px;
-          }  
-        } 
-        .rating {
-          color: #483d35;
-          font-family: $main-font;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
-          margin-top: 2px;
-          @media (max-width: 1150px) {
-            font-size: 15px;
-          }
-        }
-        .fa-star {
-          font-size: 13px;
-        }
-        .price {
-          color: #3c2a16;
-          font-family: $main-font;
-          font-size: 24px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: normal;
-          margin-top: 5px;
-          @media (max-width: 1150px) {
-            font-size: 19px;
-            margin-top: 3px;
-          }
-        }
-        .lotr {
-          font-size: 18px;
-          @media (max-width: 1150px) {
-            font-size: 16px;
-          }
-        }
-      }
-      .bestscard8, .bestscard4 {
-        @media (max-width: 925px) {
-          display: none;
-        }
-      }
-      .bestscard5, .bestscard6 {
-        @media (max-width: 653px) {
-          display: none;
-        }
-      }
-    }
-    .seemore {
-      color: #796751;
-      font-family: $main-font;
-      font-size: 25px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      margin-top: 10px;
-      @media (max-width: 750px) {
-        font-size: 20px;
       }
     }
   }
+  .s-4 {
+    background-color: $background-color;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media (max-width: 600px) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    .container {
+      @extend %container;
+      @include flex(column, center, start, wrap);
+      @media (max-width: 1310px) {
+        align-items: center;
+      }
+      h3 {
+        color: $titles-color;
+        text-align: center;
+        font-family: $main-color;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.96px;
+        margin-bottom: 30px;
+      }
+      .offerswrapper {
+        @include flex(row, center, start, nowrap);
+        gap: 40px;
+        width: 100%;
+        @media (max-width: 510px) {
+          gap: 15px;
+        }
+        .offer1 {
+          @extend %offercard;
+          @include flex(row, end, center, wrap);
+          background-image: url("../images/offer1.png");
+          padding-right: 100px;
+          @media (max-width: 833px) {
+            justify-content: center;
+            padding: 0px;
+          }
+        }
+        .offer2 {
+          @extend %offercard;
+          @include flex(row, end, center, wrap);
+          background-image: url("../images/offer2.png");
+          padding-right: 40px;
+          @media (max-width: 833px) {
+            justify-content: center;
+            padding: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+footer {
+  @extend %footer;
 }
