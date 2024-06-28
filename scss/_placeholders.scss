@@ -3,6 +3,7 @@
   background-color: $header-background;
   position: sticky;
   top: 0;
+  z-index: 5;
   .container {
     @extend %container;
     display: flex;
@@ -105,7 +106,7 @@
 }
 %footer {
   background-color: $background-color;
-  border-top: 2px solid $footer-border;
+  border-top: 1px solid $footer-border;
   padding-top: 40px;
   padding-bottom: 22px;
   .container {
@@ -179,7 +180,7 @@
   width: 100%;
   margin: 0 auto;
   @media (max-width: 1300px) {
-    width: 95%;
+    width: 90%;
   }
 }
 %usercontainer {
@@ -335,7 +336,7 @@
   font-size: 18px;
 }
 %footerh6 {
-  color: $footer-text;
+  color: $secondary;
   text-align: center;
   font-family: $main-font;
   font-size: 14px;
@@ -344,6 +345,7 @@
   line-height: normal;
   letter-spacing: 0.28px;
 }
+// user page start
 %usertext {
   color: var(--Text, #3a3d5b);
   font-family: Arial;
@@ -416,4 +418,81 @@
   @extend %usertitles;
   font-size: 20px;
   cursor: pointer;
+}
+// books pages start
+%bookname {
+  color: $titles-color;
+  font-family: $main-font;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.8px;
+}
+%bookauthor {
+  color: $secondary;
+  font-family: $main-font;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.48px;
+}
+%bookprice {
+  color: #2c1508;
+  font-family: $main-font;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.72px;
+}
+%booksum {
+  color: #000;
+  font-family: $main-font;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.4px;
+}
+%bookstars {
+  color: $secondary;
+  font-size: 17px;
+}
+%bookreviews {
+  color: #472d1c;
+  font-family: $main-font;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.34px;
+}
+%dettitle {
+  color: $titles-color;
+  font-family: $main-font;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  margin-bottom: 30px;
+  @media (max-width: 800px) {
+    margin-bottom: 10px;
+  }
+  @media (max-width: 400px) {
+    font-size: 30px;
+  }
+}
+%deth6 {
+  font-family: $main-font;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.44px;
+  @media (max-width: 400px) {
+    font-size: 18px;
+  }
 }

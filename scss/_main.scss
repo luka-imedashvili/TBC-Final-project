@@ -164,7 +164,11 @@ html {
             width: 235px;
             border-radius: 15px;
             border: 1px solid $border-color;
-            padding: 10px 10px;
+            padding: 10px 20px;
+            &:hover {
+              background-color: $header-background;
+              border: 1px solid #A59181;
+            }
             @media (max-width: 1150px) {
               width: 200px;
             }
@@ -196,7 +200,6 @@ html {
                 flex-shrink: 0;
                 border-radius: 5px;
                 border: 1px solid $border-color;
-                margin-right: 5px;
                 @media (max-width: 1150px) {
                   width: 25px;
                   height: 25px;
