@@ -63,6 +63,9 @@
           height: 500px;
         }
       }
+      .jane {
+        height: 660px;
+      }
     }
 
     .description {
@@ -108,13 +111,23 @@
             padding: 10px 20px;
             border: none;
             cursor: pointer;
+            display: none;
+            @media (max-width: 770px) {
+              display: flex;
+            }
             &:hover {
               background-color: #a59181;
             }
           }
           #more {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
             @media (max-width: 770px) {
               display: none;
+            }
+            @media (max-width: 550px) {
+              gap: 15px;
             }
           }
         }
@@ -360,6 +373,27 @@
           font-weight: 400;
           line-height: normal;
           letter-spacing: 0.32px;
+          #myBtn {
+            display: flex;
+            max-width: fit-content;
+            border-radius: 8px;
+            background-color: $primary;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            &:hover {
+              background-color: #a59181;
+            }
+          }
+          #more {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            display: none;
+            @media (max-width: 550px) {
+              gap: 15px;
+            }
+          }
         }
         .seemore {
           display: flex;
@@ -385,7 +419,6 @@
   }
   .container {
     @extend %container;
-
     .alsolike {
       display: flex;
       flex-direction: column;
@@ -401,15 +434,15 @@
       .alsolike2 {
         display: flex;
         justify-content: center;
-        max-width: 1440px;
-        width: 100%;
+        max-width: 1240px;
+        width: 95%;
         gap: 30px;
         @media (max-width: 920px) {
           gap: 15px;
         }
         @media (max-width: 800px) {
-          max-width: 500px;
-          width: 100%;
+          max-width: 600px;
+          width: 95%;
           flex-wrap: wrap;
         }
         .bestscard {
@@ -431,7 +464,8 @@
             width: 160px;
           }
           @media (max-width: 360px) {
-            width: 145px;
+            width: 130px;
+            padding: 10px 10px;
           }
 
           .bestsimgwrapper {
@@ -505,11 +539,6 @@
           @media (max-width: 1060px) {
             display: none;
           }
-        }
-        .bestscard6 {
-          // @media (max-width: 800px) {
-          //   display: none;
-          // }
         }
       }
     }
