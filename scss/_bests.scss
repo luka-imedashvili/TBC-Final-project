@@ -152,7 +152,7 @@
             .stars {
               display: flex;
               gap: 8px;
-              .fa-star {
+              .fa-star, .fa-star-half-stroke {
                 @extend %bookstars;
               }
             }
@@ -373,20 +373,23 @@
           font-weight: 400;
           line-height: normal;
           letter-spacing: 0.32px;
-          #myBtn {
+          #myBtn2 {
             display: flex;
             max-width: fit-content;
             border-radius: 8px;
             background-color: $primary;
             padding: 10px 20px;
             border: none;
+            color: #302923;
+            font-family: $main-font;
+            font-size: 17px;
             cursor: pointer;
+            margin-top: 10px;
             &:hover {
               background-color: #a59181;
             }
           }
-          #more {
-            display: flex;
+          #more2 {
             flex-direction: column;
             gap: 30px;
             display: none;
@@ -530,6 +533,7 @@
           }
           .lotr {
             font-size: 18px;
+            color: #302923;
             @media (max-width: 1150px) {
               font-size: 16px;
             }

@@ -738,7 +738,7 @@ footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericon
   letter-spacing: 0.4px;
 }
 
-.hush-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star {
+.hush-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star, .hush-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star-half-stroke {
   color: #796751;
   font-size: 17px;
 }
@@ -1528,7 +1528,7 @@ footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericon
   letter-spacing: 0.4px;
 }
 
-.hush-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star {
+.hush-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star, .hush-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star-half-stroke {
   color: #796751;
   font-size: 17px;
 }
@@ -3139,7 +3139,7 @@ html .s-4 .container .offerswrapper .offer2 {
   line-height: normal;
   letter-spacing: 0.32px;
 }
-.hush-s-2 .container .author .aboutauthor p #myBtn {
+.hush-s-2 .container .author .aboutauthor p #myBtn2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3150,15 +3150,16 @@ html .s-4 .container .offerswrapper .offer2 {
   background-color: #D1BEAF;
   padding: 10px 20px;
   border: none;
+  color: #302923;
+  font-family: "Bell MT Regular";
+  font-size: 17px;
   cursor: pointer;
+  margin-top: 10px;
 }
-.hush-s-2 .container .author .aboutauthor p #myBtn:hover {
+.hush-s-2 .container .author .aboutauthor p #myBtn2:hover {
   background-color: #a59181;
 }
-.hush-s-2 .container .author .aboutauthor p #more {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.hush-s-2 .container .author .aboutauthor p #more2 {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -3167,7 +3168,7 @@ html .s-4 .container .offerswrapper .offer2 {
   display: none;
 }
 @media (max-width: 550px) {
-  .hush-s-2 .container .author .aboutauthor p #more {
+  .hush-s-2 .container .author .aboutauthor p #more2 {
     gap: 15px;
   }
 }
@@ -3366,6 +3367,7 @@ html .s-4 .container .offerswrapper .offer2 {
 }
 .hush-s-3 .container .alsolike .alsolike2 .bestscard .lotr {
   font-size: 18px;
+  color: #302923;
 }
 @media (max-width: 1150px) {
   .hush-s-3 .container .alsolike .alsolike2 .bestscard .lotr {
