@@ -1,0 +1,204 @@
+.books-s-1 {
+  background-color: $background-color;
+  padding-top: 30px;
+  .container {
+    @extend %container;
+    display: flex;
+    gap: 120px;
+    .filter {
+      display: flex;
+      flex-direction: column;
+      max-width: fit-content;
+      .category1 {
+        @extend %category;
+        h3 {
+          margin-top: 0px;
+          padding-bottom: 5px;
+        }
+      }
+      .category {
+        display: flex;
+        flex-direction: column;
+        @extend %category;
+      }
+      .price,
+      .distance {
+        input[type="text"] {
+          border-radius: 5px;
+          border: 1px solid $secondary;
+          background-color: #d7bfad;
+          padding: 12px 6px;
+          &:focus {
+            outline: none;
+            border: 2px solid #837366;
+            font-family: $main-font;
+            font-size: 21x;
+          }
+          &::placeholder {
+            color: #472d1c;
+            font-family: $main-font;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+        input[type="submit"] {
+          border-radius: 6px;
+          border: 1px solid #796751;
+          background: #544a41;
+          padding: 10px 0;
+          color: #d7bfad;
+          font-family: $main-font;
+          font-size: 21px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+      }
+    }
+    .books {
+      display: flex;
+      gap: 55px;
+      .column1,
+      .column2,
+      .column3 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .bookcard {
+          width: 235px;
+          border-radius: 15px;
+          border: 1px solid $border-color;
+          padding: 20px 20px;
+          &:hover {
+            background-color: $header-background;
+            border: 1px solid #a59181;
+          }
+          @media (max-width: 1150px) {
+            width: 200px;
+          }
+          @media (max-width: 450px) {
+            width: 160px;
+          }
+          @media (max-width: 360px) {
+            width: 145px;
+          }
+
+          .bestsimgwrapper {
+            @include flex(row, center, start, wrap);
+            gap: 15px;
+            padding-bottom: 10px;
+            @media (max-width: 710px) {
+              justify-content: center;
+            }
+            img {
+              width: 116px;
+              height: 174px;
+              @media (max-width: 1150px) {
+                width: 95px;
+                height: 144px;
+              }
+            }
+          }
+          .bookname {
+            color: #302923;
+            font-family: $main-font;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            @media (max-width: 1150px) {
+              font-size: 19px;
+            }
+          }
+          .rating {
+            color: #483d35;
+            font-family: $main-font;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 2px;
+            @media (max-width: 1150px) {
+              font-size: 15px;
+            }
+          }
+          .price {
+            color: #3c2a16;
+            font-family: $main-font;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-top: 5px;
+            @media (max-width: 1150px) {
+              font-size: 19px;
+              margin-top: 3px;
+            }
+          }
+        }
+      }
+      .column1 {
+        select {
+          max-width: 166px;
+          flex-shrink: 0;
+          border-radius: 10px;
+          border: 1px solid #472d1c;
+          background-color: $background-color;
+          padding: 12px 16px;
+          color: #796751;
+          text-align: center;
+          font-family: $main-font;
+          font-size: 23px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: 0.46px;
+          text-transform: capitalize;
+          outline: none;
+          cursor: pointer;
+        }
+      }
+      .column2 {
+        .filter {
+          display: flex;
+          flex-direction: row;
+          justify-content: end;
+          gap: 15px;
+          max-width: 235px;
+          .grid,
+          .list {
+            max-width: 55px;
+            padding: 12px 14px;
+            border: 1px solid #472d1c;
+            border-radius: 10px;
+            cursor: pointer;
+          }
+        }
+      }
+      .column3 {
+        select {
+          max-width: 235px;
+          flex-shrink: 0;
+          border-radius: 10px;
+          border: 1px solid #472d1c;
+          background-color: $background-color;
+          padding: 12px 16px;
+          color: #796751;
+          text-align: center;
+          font-family: $main-font;
+          font-size: 17px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: 0.46px;
+          text-transform: capitalize;
+          outline: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

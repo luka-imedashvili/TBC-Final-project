@@ -66,8 +66,10 @@
       .jane {
         height: 660px;
       }
+      .aad {
+        height: 610px;
+      }
     }
-
     .description {
       display: flex;
       flex-direction: column;
@@ -152,7 +154,8 @@
             .stars {
               display: flex;
               gap: 8px;
-              .fa-star, .fa-star-half-stroke {
+              .fa-star,
+              .fa-star-half-stroke {
                 @extend %bookstars;
               }
             }

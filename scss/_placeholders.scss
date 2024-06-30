@@ -141,6 +141,7 @@
       }
       .footericons {
         display: flex;
+        align-items: center;
         gap: 25px;
         @media (max-width: 410px) {
           margin-bottom: 30px;
@@ -494,5 +495,64 @@
   letter-spacing: 0.44px;
   @media (max-width: 400px) {
     font-size: 18px;
+  }
+}
+%category {
+  h3 {
+    color: $titles-color;
+    text-align: center;
+    font-family: $main-font;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
+    border-bottom: 1px solid $secondary;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    padding-bottom: 5px ;
+
+  }
+  .inputwrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .diswrapper,
+    .pricewrapper {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 12px;
+    }
+  }
+  .labelwrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    input[type="checkbox"] {
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+      border: 1px solid #471c1c;
+      accent-color: #d7bfad;
+    }
+    input[type="radio"] {
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+      border: 1px solid #471c1c;
+      accent-color: #d7bfad;
+    }
+  }
+  label {
+    color: #472d1c;
+    text-align: center;
+    font-family: "Bell MT";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.36px;
+    text-transform: capitalize;
   }
 }

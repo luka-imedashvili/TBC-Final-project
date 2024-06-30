@@ -343,6 +343,9 @@ footer .container .footerdiv1 .footericons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 25px;
 }
 @media (max-width: 410px) {
@@ -371,13 +374,13 @@ footer .container .footerdiv2 .footericons2 a {
   display: flex;
   gap: 10px;
 }
-.hush-s-3 .container, .hush-s-2 .container, .hush-s-1 .container, .user-s-1 .container, html .s-4 .container, html .s-3 .container, html .s-2 .container, html .s-1 .container, html header .container, footer .container {
+.books-s-1 .container, .hush-s-3 .container, .hush-s-2 .container, .hush-s-1 .container, .user-s-1 .container, html .s-4 .container, html .s-3 .container, html .s-2 .container, html .s-1 .container, html header .container, footer .container {
   max-width: 1240px;
   width: 100%;
   margin: 0 auto;
 }
 @media (max-width: 1300px) {
-  .hush-s-3 .container, .hush-s-2 .container, .hush-s-1 .container, .user-s-1 .container, html .s-4 .container, html .s-3 .container, html .s-2 .container, html .s-1 .container, html header .container, footer .container {
+  .books-s-1 .container, .hush-s-3 .container, .hush-s-2 .container, .hush-s-1 .container, .user-s-1 .container, html .s-4 .container, html .s-3 .container, html .s-2 .container, html .s-1 .container, html header .container, footer .container {
     width: 95%;
   }
 }
@@ -738,7 +741,8 @@ footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericon
   letter-spacing: 0.4px;
 }
 
-.hush-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star, .hush-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star-half-stroke {
+.hush-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star,
+.hush-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star-half-stroke {
   color: #796751;
   font-size: 17px;
 }
@@ -786,6 +790,75 @@ footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericon
   .hush-s-2 .container .productdet .detailswrapper .det2 h6, .hush-s-2 .container .productdet .detailswrapper .det1 h6 {
     font-size: 18px;
   }
+}
+
+.books-s-1 .container .filter .category h3, .books-s-1 .container .filter .category1 h3 {
+  color: #472d1c;
+  text-align: center;
+  font-family: "Bell MT Regular";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.72px;
+  text-transform: capitalize;
+  border-bottom: 1px solid #796751;
+  margin-bottom: 15px;
+  margin-top: 30px;
+  padding-bottom: 5px;
+}
+.books-s-1 .container .filter .category .inputwrapper, .books-s-1 .container .filter .category1 .inputwrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.books-s-1 .container .filter .category .inputwrapper .diswrapper, .books-s-1 .container .filter .category1 .inputwrapper .diswrapper,
+.books-s-1 .container .filter .category .inputwrapper .pricewrapper,
+.books-s-1 .container .filter .category1 .inputwrapper .pricewrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+.books-s-1 .container .filter .category .labelwrapper, .books-s-1 .container .filter .category1 .labelwrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.books-s-1 .container .filter .category .labelwrapper input[type=checkbox], .books-s-1 .container .filter .category1 .labelwrapper input[type=checkbox] {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  border: 1px solid #471c1c;
+  accent-color: #d7bfad;
+}
+.books-s-1 .container .filter .category .labelwrapper input[type=radio], .books-s-1 .container .filter .category1 .labelwrapper input[type=radio] {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  border: 1px solid #471c1c;
+  accent-color: #d7bfad;
+}
+.books-s-1 .container .filter .category label, .books-s-1 .container .filter .category1 label {
+  color: #472d1c;
+  text-align: center;
+  font-family: "Bell MT";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.36px;
+  text-transform: capitalize;
 }
 
 html,
@@ -1133,6 +1206,9 @@ footer .container .footerdiv1 .footericons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 25px;
 }
 @media (max-width: 410px) {
@@ -1161,13 +1237,13 @@ footer .container .footerdiv2 .footericons2 a {
   display: flex;
   gap: 10px;
 }
-.hush-s-3 .container, .hush-s-2 .container, .hush-s-1 .container, .user-s-1 .container, html .s-4 .container, html .s-3 .container, html .s-2 .container, html .s-1 .container, html header .container, footer .container {
+.books-s-1 .container, .hush-s-3 .container, .hush-s-2 .container, .hush-s-1 .container, .user-s-1 .container, html .s-4 .container, html .s-3 .container, html .s-2 .container, html .s-1 .container, html header .container, footer .container {
   max-width: 1240px;
   width: 100%;
   margin: 0 auto;
 }
 @media (max-width: 1300px) {
-  .hush-s-3 .container, .hush-s-2 .container, .hush-s-1 .container, .user-s-1 .container, html .s-4 .container, html .s-3 .container, html .s-2 .container, html .s-1 .container, html header .container, footer .container {
+  .books-s-1 .container, .hush-s-3 .container, .hush-s-2 .container, .hush-s-1 .container, .user-s-1 .container, html .s-4 .container, html .s-3 .container, html .s-2 .container, html .s-1 .container, html header .container, footer .container {
     width: 95%;
   }
 }
@@ -1528,7 +1604,8 @@ footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericon
   letter-spacing: 0.4px;
 }
 
-.hush-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star, .hush-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star-half-stroke {
+.hush-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star,
+.hush-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star-half-stroke {
   color: #796751;
   font-size: 17px;
 }
@@ -1576,6 +1653,75 @@ footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericon
   .hush-s-2 .container .productdet .detailswrapper .det2 h6, .hush-s-2 .container .productdet .detailswrapper .det1 h6 {
     font-size: 18px;
   }
+}
+
+.books-s-1 .container .filter .category h3, .books-s-1 .container .filter .category1 h3 {
+  color: #472d1c;
+  text-align: center;
+  font-family: "Bell MT Regular";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.72px;
+  text-transform: capitalize;
+  border-bottom: 1px solid #796751;
+  margin-bottom: 15px;
+  margin-top: 30px;
+  padding-bottom: 5px;
+}
+.books-s-1 .container .filter .category .inputwrapper, .books-s-1 .container .filter .category1 .inputwrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.books-s-1 .container .filter .category .inputwrapper .diswrapper, .books-s-1 .container .filter .category1 .inputwrapper .diswrapper,
+.books-s-1 .container .filter .category .inputwrapper .pricewrapper,
+.books-s-1 .container .filter .category1 .inputwrapper .pricewrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+.books-s-1 .container .filter .category .labelwrapper, .books-s-1 .container .filter .category1 .labelwrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.books-s-1 .container .filter .category .labelwrapper input[type=checkbox], .books-s-1 .container .filter .category1 .labelwrapper input[type=checkbox] {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  border: 1px solid #471c1c;
+  accent-color: #d7bfad;
+}
+.books-s-1 .container .filter .category .labelwrapper input[type=radio], .books-s-1 .container .filter .category1 .labelwrapper input[type=radio] {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  border: 1px solid #471c1c;
+  accent-color: #d7bfad;
+}
+.books-s-1 .container .filter .category label, .books-s-1 .container .filter .category1 label {
+  color: #472d1c;
+  text-align: center;
+  font-family: "Bell MT";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.36px;
+  text-transform: capitalize;
 }
 
 html {
@@ -1991,6 +2137,7 @@ html .s-3 .container .bestsellerswrapper .bestscard .price {
 }
 html .s-3 .container .bestsellerswrapper .bestscard .lotr {
   font-size: 18px;
+  color: #302923;
 }
 @media (max-width: 1150px) {
   html .s-3 .container .bestsellerswrapper .bestscard .lotr {
@@ -2720,6 +2867,9 @@ html .s-4 .container .offerswrapper .offer2 {
 .hush-s-1 .container .imgdiv .jane {
   height: 660px;
 }
+.hush-s-1 .container .imgdiv .aad {
+  height: 610px;
+}
 .hush-s-1 .container .description {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3378,4 +3528,321 @@ html .s-4 .container .offerswrapper .offer2 {
   .hush-s-3 .container .alsolike .alsolike2 .bestscard7 {
     display: none;
   }
+}
+
+.books-s-1 {
+  background-color: #fcf3eb;
+  padding-top: 30px;
+}
+.books-s-1 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 120px;
+}
+.books-s-1 .container .filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.books-s-1 .container .filter .category1 h3 {
+  margin-top: 0px;
+  padding-bottom: 5px;
+}
+.books-s-1 .container .filter .category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.books-s-1 .container .filter .price input[type=text],
+.books-s-1 .container .filter .distance input[type=text] {
+  border-radius: 5px;
+  border: 1px solid #796751;
+  background-color: #d7bfad;
+  padding: 12px 6px;
+}
+.books-s-1 .container .filter .price input[type=text]:focus,
+.books-s-1 .container .filter .distance input[type=text]:focus {
+  outline: none;
+  border: 2px solid #837366;
+  font-family: "Bell MT Regular";
+  font-size: 21x;
+}
+.books-s-1 .container .filter .price input[type=text]::-webkit-input-placeholder, .books-s-1 .container .filter .distance input[type=text]::-webkit-input-placeholder {
+  color: #472d1c;
+  font-family: "Bell MT Regular";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.books-s-1 .container .filter .price input[type=text]::-moz-placeholder, .books-s-1 .container .filter .distance input[type=text]::-moz-placeholder {
+  color: #472d1c;
+  font-family: "Bell MT Regular";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.books-s-1 .container .filter .price input[type=text]:-ms-input-placeholder, .books-s-1 .container .filter .distance input[type=text]:-ms-input-placeholder {
+  color: #472d1c;
+  font-family: "Bell MT Regular";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.books-s-1 .container .filter .price input[type=text]::-ms-input-placeholder, .books-s-1 .container .filter .distance input[type=text]::-ms-input-placeholder {
+  color: #472d1c;
+  font-family: "Bell MT Regular";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.books-s-1 .container .filter .price input[type=text]::placeholder,
+.books-s-1 .container .filter .distance input[type=text]::placeholder {
+  color: #472d1c;
+  font-family: "Bell MT Regular";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.books-s-1 .container .filter .price input[type=submit],
+.books-s-1 .container .filter .distance input[type=submit] {
+  border-radius: 6px;
+  border: 1px solid #796751;
+  background: #544a41;
+  padding: 10px 0;
+  color: #d7bfad;
+  font-family: "Bell MT Regular";
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.books-s-1 .container .books {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 55px;
+}
+.books-s-1 .container .books .column1,
+.books-s-1 .container .books .column2,
+.books-s-1 .container .books .column3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.books-s-1 .container .books .column1 .bookcard,
+.books-s-1 .container .books .column2 .bookcard,
+.books-s-1 .container .books .column3 .bookcard {
+  width: 235px;
+  border-radius: 15px;
+  border: 1px solid #cbb294;
+  padding: 20px 20px;
+}
+.books-s-1 .container .books .column1 .bookcard:hover,
+.books-s-1 .container .books .column2 .bookcard:hover,
+.books-s-1 .container .books .column3 .bookcard:hover {
+  background-color: rgba(209, 190, 175, 0.9333333333);
+  border: 1px solid #a59181;
+}
+@media (max-width: 1150px) {
+  .books-s-1 .container .books .column1 .bookcard,
+  .books-s-1 .container .books .column2 .bookcard,
+  .books-s-1 .container .books .column3 .bookcard {
+    width: 200px;
+  }
+}
+@media (max-width: 450px) {
+  .books-s-1 .container .books .column1 .bookcard,
+  .books-s-1 .container .books .column2 .bookcard,
+  .books-s-1 .container .books .column3 .bookcard {
+    width: 160px;
+  }
+}
+@media (max-width: 360px) {
+  .books-s-1 .container .books .column1 .bookcard,
+  .books-s-1 .container .books .column2 .bookcard,
+  .books-s-1 .container .books .column3 .bookcard {
+    width: 145px;
+  }
+}
+.books-s-1 .container .books .column1 .bookcard .bestsimgwrapper,
+.books-s-1 .container .books .column2 .bookcard .bestsimgwrapper,
+.books-s-1 .container .books .column3 .bookcard .bestsimgwrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px;
+  padding-bottom: 10px;
+}
+@media (max-width: 710px) {
+  .books-s-1 .container .books .column1 .bookcard .bestsimgwrapper,
+  .books-s-1 .container .books .column2 .bookcard .bestsimgwrapper,
+  .books-s-1 .container .books .column3 .bookcard .bestsimgwrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.books-s-1 .container .books .column1 .bookcard .bestsimgwrapper img,
+.books-s-1 .container .books .column2 .bookcard .bestsimgwrapper img,
+.books-s-1 .container .books .column3 .bookcard .bestsimgwrapper img {
+  width: 116px;
+  height: 174px;
+}
+@media (max-width: 1150px) {
+  .books-s-1 .container .books .column1 .bookcard .bestsimgwrapper img,
+  .books-s-1 .container .books .column2 .bookcard .bestsimgwrapper img,
+  .books-s-1 .container .books .column3 .bookcard .bestsimgwrapper img {
+    width: 95px;
+    height: 144px;
+  }
+}
+.books-s-1 .container .books .column1 .bookcard .bookname,
+.books-s-1 .container .books .column2 .bookcard .bookname,
+.books-s-1 .container .books .column3 .bookcard .bookname {
+  color: #302923;
+  font-family: "Bell MT Regular";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media (max-width: 1150px) {
+  .books-s-1 .container .books .column1 .bookcard .bookname,
+  .books-s-1 .container .books .column2 .bookcard .bookname,
+  .books-s-1 .container .books .column3 .bookcard .bookname {
+    font-size: 19px;
+  }
+}
+.books-s-1 .container .books .column1 .bookcard .rating,
+.books-s-1 .container .books .column2 .bookcard .rating,
+.books-s-1 .container .books .column3 .bookcard .rating {
+  color: #483d35;
+  font-family: "Bell MT Regular";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 2px;
+}
+@media (max-width: 1150px) {
+  .books-s-1 .container .books .column1 .bookcard .rating,
+  .books-s-1 .container .books .column2 .bookcard .rating,
+  .books-s-1 .container .books .column3 .bookcard .rating {
+    font-size: 15px;
+  }
+}
+.books-s-1 .container .books .column1 .bookcard .price,
+.books-s-1 .container .books .column2 .bookcard .price,
+.books-s-1 .container .books .column3 .bookcard .price {
+  color: #3c2a16;
+  font-family: "Bell MT Regular";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 5px;
+}
+@media (max-width: 1150px) {
+  .books-s-1 .container .books .column1 .bookcard .price,
+  .books-s-1 .container .books .column2 .bookcard .price,
+  .books-s-1 .container .books .column3 .bookcard .price {
+    font-size: 19px;
+    margin-top: 3px;
+  }
+}
+.books-s-1 .container .books .column1 select {
+  max-width: 166px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #472d1c;
+  background-color: #fcf3eb;
+  padding: 12px 16px;
+  color: #796751;
+  text-align: center;
+  font-family: "Bell MT Regular";
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.46px;
+  text-transform: capitalize;
+  outline: none;
+  cursor: pointer;
+}
+.books-s-1 .container .books .column2 .filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  gap: 15px;
+  max-width: 235px;
+}
+.books-s-1 .container .books .column2 .filter .grid,
+.books-s-1 .container .books .column2 .filter .list {
+  max-width: 55px;
+  padding: 12px 14px;
+  border: 1px solid #472d1c;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.books-s-1 .container .books .column3 select {
+  max-width: 235px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #472d1c;
+  background-color: #fcf3eb;
+  padding: 12px 16px;
+  color: #796751;
+  text-align: center;
+  font-family: "Bell MT Regular";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.46px;
+  text-transform: capitalize;
+  outline: none;
+  cursor: pointer;
 }/*# sourceMappingURL=global.css.map */
