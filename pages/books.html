@@ -21,24 +21,36 @@
   <body>
     <header>
       <div class="container">
-        <a href="../index.html" class="logo">
-          <i class="fa-solid fa-book"></i>
-          <h3>THE BOOKSHELF</h3>
-        </a>
-        <nav>
-          <ul class="ul" id="ul">
+        <div class="pcnav">
+          <a href="../index.html" class="logo">
+            <i class="fa-solid fa-book"></i>
+            <h3>THE BOOKSHELF</h3>
+          </a>
+          <nav>
+            <ul class="ul">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="#">Books</a></li>
+              <li><a href="../index.html#about">About Us</a></li>
+              <li><a href="#footer">Contact Us</a></li>
+            </ul>
+          </nav>
+          <div class="iconsdiv">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#"><i class="fa-solid fa-cart-shopping icon23"></i></a>
+            <a href="user.html"><i class="fa-solid fa-user icon23"></i></a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa-solid fa-bars"></i>
+            </a>
+          </div>
+        </div>
+        <nav id="ul">
+          <ul class="ul">
             <li><a href="../index.html">Home</a></li>
             <li><a href="#">Books</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a href="../index.html#about">About Us</a></li>
             <li><a href="#footer">Contact Us</a></li>
           </ul>
         </nav>
-        <div class="iconsdiv">
-          <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-          <a href="#"><i class="fa-solid fa-cart-shopping icon23"></i></a>
-          <a href="pages/user.html"><i class="fa-solid fa-user icon23"></i></a>
-          <a href="pages/user.html"><i class="fa-solid fa-bars"></i></a>
-        </div>
       </div>
     </header>
     <section class="books-s-1">
@@ -51,6 +63,7 @@
                 <div class="diswrapper">
                   <input
                     type="text"
+                    
                     id="min"
                     name="mindis"
                     placeholder="Min: (Meters)"
@@ -210,223 +223,315 @@
           </form>
         </div>
         <div class="books">
-          <div class="column1">
-            <select name="show" id="show">
-              <option value="20">Show: 20</option>
-              <option value="15">Show: 15</option>
-              <option value="10">Show: 10</option>
-            </select>
-            <!-- card1 -->
-            <div class="bookcard1 bookcard">
-              <div class="bestsimgwrapper">
-                <img src="../images/stars.jpeg" alt="Hush,hush novel" />
+          <div class="bookdiv">
+            <div class="column1">
+              <div class="filtersdiv">
+                <select name="show" id="show">
+                  <option value="20">Show: 20</option>
+                  <option value="15">Show: 15</option>
+                  <option value="10">Show: 10</option>
+                </select>
+                <div class="grid">
+                  <img src="../images/mingcute_grid-line.png" alt="grid" />
+                </div>
               </div>
-              <h6 class="bookname">The Fault In Our Stars</h6>
-              <h6 class="rating">
-                Rating on Goodreads: 3,9
-                <i class="fa-solid fa-star" style="color: #ff4d00"></i>
-              </h6>
-              <h6 class="price">9.99$</h6>
-            </div>
-            <!-- card2 -->
-            <div class="bookcard2 bookcard">
-              <div class="bestsimgwrapper">
-                <img src="../images/agatha1.jpeg" alt="Jane Eyre" />
+              <!-- card1 -->
+              <div class="bookcard1 bookcard">
+                <div class="bestsimgwrapper">
+                  <img src="../images/stars.jpeg" alt="Hush,hush novel" />
+                </div>
+                <h6 class="bookname">The Fault In Our Stars</h6>
+                <h6 class="rating">
+                  Rating: 3,9
+                  <i class="fa-solid fa-star" style="color: #ff4d00"></i>
+                </h6>
+                <h6 class="price">9.99$</h6>
               </div>
-              <h6 class="bookname">Murder On The Orient</h6>
-              <h6 class="rating">
-                Rating on Goodreads: 4.1
-                <i class="fa-solid fa-star" style="color: #ff4d00"></i>
-              </h6>
-              <h6 class="price">8.99$</h6>
-            </div>
-            <!-- card3 -->
-            <div class="bookcard3 bookcard">
-              <div class="bestsimgwrapper">
-                <img
-                  src="../images/alaska.jpg"
-                  alt="Harry Potter and the Philosophers Stone"
-                />
+              <!-- card2 -->
+              <div class="bookcard7 bookcard">
+                <div class="bestsimgwrapper">
+                  <img src="../images/hunger.webp" alt="hunger Games" />
+                </div>
+                <h6 class="bookname">The Hunger Games</h6>
+                <h6 class="rating">
+                  Rating: 3,8
+                  <i class="fa-solid fa-star" style="color: #ff4d00"></i>
+                </h6>
+                <h6 class="price">9.99$</h6>
               </div>
-              <h6 class="bookname">Looking For Alaska</h6>
-              <h6 class="rating">
-                Rating on Goodreads: 4,5
-                <i class="fa-solid fa-star" style="color: #ff4d00"></i>
-              </h6>
-              <h6 class="price">10.99$</h6>
-            </div>
-            <!-- card4 -->
-            <div class="bookcard4 bookcard">
-              <div class="bestsimgwrapper">
-                <img src="../images/1984.jpg" alt="Hush,hush novel" />
+              <!-- card3 -->
+              <div class="bookcard11 bookcard">
+                <div class="bestsimgwrapper">
+                  <img src="../images/nemesis.jpg" alt="Nemesis novel" />
+                </div>
+                <h6 class="bookname">Nemesis</h6>
+                <h6 class="rating">
+                  Rating: 4,0
+                  <i class="fa-solid fa-star" style="color: #ff4d00"></i>
+                </h6>
+                <h6 class="price">16.99$</h6>
               </div>
-              <h6 class="lotr">1984</h6>
-              <h6 class="rating">
-                Rating on Goodreads: 4,4
-                <i class="fa-solid fa-star" style="color: #ff4d00"></i>
-              </h6>
-              <h6 class="price">19.99$</h6>
-            </div>
-            <!-- card5 -->
-            <div class="bookcard5 bookcard">
-              <div class="bestsimgwrapper">
-                <img src="../images/alchemist.jpeg" alt="Hush,hush novel" />
+              <!-- card4 -->
+              <div class="bookcard4 bookcard">
+                <div class="bestsimgwrapper">
+                  <img src="../images/1984.jpg" alt="Hush,hush novel" />
+                </div>
+                <h6 class="lotr">1984</h6>
+                <h6 class="rating">
+                  Rating: 4,4
+                  <i class="fa-solid fa-star" style="color: #ff4d00"></i>
+                </h6>
+                <h6 class="price">19.99$</h6>
               </div>
-              <h6 class="bookname aad">The Alchemist</h6>
-              <h6 class="rating">
-                Rating on Goodreads: 4,5
-                <i class="fa-solid fa-star" style="color: #ff4d00"></i>
-              </h6>
-              <h6 class="price">8.99$</h6>
+              <!-- card5 -->
+              <div class="bookcard5 bookcard">
+                <div class="bestsimgwrapper">
+                  <img src="../images/alchemist.jpeg" alt="Hush,hush novel" />
+                </div>
+                <h6 class="bookname aad">The Alchemist</h6>
+                <h6 class="rating">
+                  Rating: 4,5
+                  <i class="fa-solid fa-star" style="color: #ff4d00"></i>
+                </h6>
+                <h6 class="price">8.99$</h6>
+              </div>
             </div>
-          </div>
+            <div class="column2">
+              <div class="filter">
+                <div class="grid">
+                  <img src="../images/mingcute_grid-line.png" alt="grid" />
+                </div>
+                <div class="list">
+                  <img src="../images/solar_list-broken.png" alt="list" />
+                </div>
+              </div>
+              <!-- card6 -->
+              <div class="bookcard2 bookcard">
+                <div class="bestsimgwrapper">
+                  <img src="../images/agatha1.jpeg" alt="Jane Eyre" />
+                </div>
+                <h6 class="bookname">Murder On The Orient</h6>
+                <h6 class="rating">
+                  Rating: 4.1
+                  <i class="fa-solid fa-star" style="color: #ff4d00"></i>
+                </h6>
+                <h6 class="price">8.99$</h6>
+              </div>
+              <!-- card7 -->
+              <div class="bookcard6 bookcard">
+                <div class="bestsimgwrapper">
+                  <img src="../images/hobbit.jpg" alt="Hobbit novel" />
+                </div>
+                <h6 class="bookname">The Hobbit</h6>
+                <h6 class="rating">
+                  Rating: 4,1
+                  <i class="fa-solid fa-star" style="color: #ff4d00"></i>
+                </h6>
+                <h6 class="price">13.99$</h6>
+              </div>
 
-          <div class="column2">
-            <div class="filter">
-              <div class="grid">
-                <img src="../images/mingcute_grid-line.png" alt="grid">
+              <!-- card8 -->
+              <div class="bookcard8 bookcard">
+                <div class="bestsimgwrapper">
+                  <img
+                    src="../images/agatha2.jpg"
+                    alt="Harry Potter and the Philosophers Stone"
+                  />
+                </div>
+                <h6 class="bookname">Death On The Nile</h6>
+                <h6 class="rating">
+                  Rating: 4,3
+                  <i class="fa-solid fa-star" style="color: #ff4d00"></i>
+                </h6>
+                <h6 class="price">13.99$</h6>
               </div>
-              <div class="list">
-                <img src="../images/solar_list-broken.png" alt="list">
+              <!-- card9 -->
+              <div class="bookcard9 bookcard">
+                <div class="bestsimgwrapper">
+                  <img
+                    src="../images/frank.jpeg"
+                    alt="The diary of a young girl novel"
+                  />
+                </div>
+                <h6>The Diary Of A Young Girl</h6>
+                <h6 class="rating">
+                  Rating: 4,4
+                  <i class="fa-solid fa-star" style="color: #ff4d00"></i>
+                </h6>
+                <h6 class="price">15.99$</h6>
+              </div>
+              <!-- card10 -->
+              <div class="bookcard10 bookcard">
+                <div class="bestsimgwrapper">
+                  <img src="../images/holly.jpeg" alt="Holly" />
+                </div>
+                <h6 class="bookname aad">Holly</h6>
+                <h6 class="rating">
+                  Rating: 4,5
+                  <i class="fa-solid fa-star" style="color: #ff4d00"></i>
+                </h6>
+                <h6 class="price">11.99$</h6>
               </div>
             </div>
-            <!-- card6 -->
-            <div class="bookcard6 bookcard">
-              <div class="bestsimgwrapper">
-                <img src="../images/hobbit.jpg" alt="Hobbit novel" />
+            <!-- !column3! -->
+            <div class="column3">
+              <div class="filtersdiv">
+                <select name="sortby" id="sprtby">
+                  <option value="matches">
+                    <span class="span">Sort By:</span> Top Matches
+                  </option>
+                  <option value="distance">
+                    <span class="span">Sort By:</span> Distance
+                  </option>
+                  <option value="price">
+                    <span class="span">Sort By:</span> Price
+                  </option>
+                </select>
+                <div class="list">
+                  <img src="../images/solar_list-broken.png" alt="list" />
+                </div>
               </div>
-              <h6 class="bookname">The Hobbit</h6>
-              <h6 class="rating">
-                Rating on Goodreads: 4,1
-                <i class="fa-solid fa-star" style="color: #ff4d00"></i>
-              </h6>
-              <h6 class="price">13.99$</h6>
-            </div>
-            <!-- card7 -->
-            <div class="bookcard7 bookcard">
-              <div class="bestsimgwrapper">
-                <img src="../images/hunger.webp" alt="hunger Games" />
+
+              <!-- card11 -->
+
+              <div class="bookcard3 bookcard">
+                <div class="bestsimgwrapper">
+                  <img
+                    src="../images/alaska.jpg"
+                    alt="Harry Potter and the Philosophers Stone"
+                  />
+                </div>
+                <h6 class="bookname">Looking For Alaska</h6>
+                <h6 class="rating">
+                  Rating: 4,5
+                  <i class="fa-solid fa-star" style="color: #ff4d00"></i>
+                </h6>
+                <h6 class="price">10.99$</h6>
               </div>
-              <h6 class="bookname">The Hunger Games</h6>
-              <h6 class="rating">
-                Rating on Goodreads: 3,8
-                <i class="fa-solid fa-star" style="color: #ff4d00"></i>
-              </h6>
-              <h6 class="price">9.99$</h6>
-            </div>
-            <!-- card8 -->
-            <div class="bookcard8 bookcard">
-              <div class="bestsimgwrapper">
-                <img
-                  src="../images/agatha2.jpg"
-                  alt="Harry Potter and the Philosophers Stone"
-                />
+              <!-- card12 -->
+              <div class="bookcard12 bookcard">
+                <div class="bestsimgwrapper">
+                  <img src="../images/thief.jpeg" alt="The Book Thief" />
+                </div>
+                <h6 class="bookname">The Book Thief</h6>
+                <h6 class="rating">
+                  Rating: 4.4
+                  <i class="fa-solid fa-star" style="color: #ff4d00"></i>
+                </h6>
+                <h6 class="price">11.99$</h6>
               </div>
-              <h6 class="bookname">Death On The Nile</h6>
-              <h6 class="rating">
-                Rating on Goodreads: 4,3
-                <i class="fa-solid fa-star" style="color: #ff4d00"></i>
-              </h6>
-              <h6 class="price">10.99$</h6>
-            </div>
-            <!-- card9 -->
-            <div class="bookcard9 bookcard">
-              <div class="bestsimgwrapper">
-                <img src="../images/frank.jpeg" alt="Hush,hush novel" />
+              <!-- card13 -->
+              <div class="bookcard13 bookcard">
+                <div class="bestsimgwrapper">
+                  <img src="../images/paper.jpeg" alt="Paper Towns" />
+                </div>
+                <h6 class="bookname">Paper Towns</h6>
+                <h6 class="rating">
+                  Rating: 3.7
+                  <i class="fa-solid fa-star" style="color: #ff4d00"></i>
+                </h6>
+                <h6 class="price">9.99$</h6>
               </div>
-              <h6 class="lotr">The Diary Of A Young Girl</h6>
-              <h6 class="rating">
-                Rating on Goodreads: 4,4
-                <i class="fa-solid fa-star" style="color: #ff4d00"></i>
-              </h6>
-              <h6 class="price">15.99$</h6>
-            </div>
-            <!-- card10 -->
-            <div class="bookcard10 bookcard">
-              <div class="bestsimgwrapper">
-                <img src="../images/holly.jpeg" alt="Hush,hush novel" />
+              <!-- card14 -->
+              <div class="bookcard14 bookcard">
+                <div class="bestsimgwrapper">
+                  <img
+                    src="../images/mockingbird.jpg"
+                    alt="To Kill a mockingbird"
+                  />
+                </div>
+                <h6>To Kill A Mockingbird</h6>
+                <h6 class="rating">
+                  Rating: 4,4
+                  <i class="fa-solid fa-star" style="color: #ff4d00"></i>
+                </h6>
+                <h6 class="price">15.99$</h6>
               </div>
-              <h6 class="bookname aad">Holly</h6>
-              <h6 class="rating">
-                Rating on Goodreads: 4,5
-                <i class="fa-solid fa-star" style="color: #ff4d00"></i>
-              </h6>
-              <h6 class="price">11.99$</h6>
+              <!-- card15 -->
+              <div class="bookcard15 bookcard">
+                <div class="bestsimgwrapper">
+                  <img
+                    src="../images/tower.png"
+                    alt="The dark Tower - Stephen King"
+                  />
+                </div>
+                <h6 class="bookname">The Dark Tower</h6>
+                <h6 class="rating">
+                  Rating: 3.9
+                  <i class="fa-solid fa-star" style="color: #ff4d00"></i>
+                </h6>
+                <h6 class="price">17.99$</h6>
+              </div>
             </div>
           </div>
-          <!-- !column3! -->
-          <div class="column3">
-            <select name="sortby" id="sprtby">
-              <option value="matches">Sort By: Top Matches</option>
-              <option value="distance">Sort By: Distance</option>
-              <option value="price">Sort By: Price</option>
-            </select>
-            <!-- card11 -->
-            <div class="bookcard11 bookcard">
-              <div class="bestsimgwrapper">
-                <img src="../images/hobbit.jpg" alt="Hobbit novel" />
-              </div>
-              <h6 class="bookname">The Hobbit</h6>
-              <h6 class="rating">
-                Rating on Goodreads: 4,1
-                <i class="fa-solid fa-star" style="color: #ff4d00"></i>
-              </h6>
-              <h6 class="price">13.99$</h6>
-            </div>
-            <!-- card12 -->
-            <div class="bookcard12 bookcard">
-              <div class="bestsimgwrapper">
-                <img src="../images/hunger.webp" alt="hunger Games" />
-              </div>
-              <h6 class="bookname">The Hunger Games</h6>
-              <h6 class="rating">
-                Rating on Goodreads: 3,8
-                <i class="fa-solid fa-star" style="color: #ff4d00"></i>
-              </h6>
-              <h6 class="price">9.99$</h6>
-            </div>
-            <!-- card13 -->
-            <div class="bookcard13 bookcard">
-              <div class="bestsimgwrapper">
-                <img
-                  src="../images/agatha2.jpg"
-                  alt="Harry Potter and the Philosophers Stone"
-                />
-              </div>
-              <h6 class="bookname">Death On The Nile</h6>
-              <h6 class="rating">
-                Rating on Goodreads: 4,3
-                <i class="fa-solid fa-star" style="color: #ff4d00"></i>
-              </h6>
-              <h6 class="price">10.99$</h6>
-            </div>
-            <!-- card14 -->
-            <div class="bookcard14 bookcard">
-              <div class="bestsimgwrapper">
-                <img src="../images/frank.jpeg" alt="Hush,hush novel" />
-              </div>
-              <h6 class="lotr">The Diary Of A Young Girl</h6>
-              <h6 class="rating">
-                Rating on Goodreads: 4,4
-                <i class="fa-solid fa-star" style="color: #ff4d00"></i>
-              </h6>
-              <h6 class="price">15.99$</h6>
-            </div>
-            <!-- card15 -->
-            <div class="bookcard15 bookcard">
-              <div class="bestsimgwrapper">
-                <img src="../images/holly.jpeg" alt="Hush,hush novel" />
-              </div>
-              <h6 class="bookname aad">Holly</h6>
-              <h6 class="rating">
-                Rating on Goodreads: 4,5
-                <i class="fa-solid fa-star" style="color: #ff4d00"></i>
-              </h6>
-              <h6 class="price">11.99$</h6>
-            </div>
+          <div class="pagechanger">
+            <i class="fa-solid fa-chevron-left"></i>
+            <h6>1</h6>
+            <h6>2</h6>
+            <h6>3</h6>
+            <h6>4</h6>
+            <h6>...</h6>
+            <h6>9</h6>
+            <i class="fa-solid fa-chevron-right"></i>
           </div>
         </div>
       </div>
     </section>
+    <footer id="footer">
+      <div class="container">
+        <div class="footerdiv1">
+          <h3>Contact Us</h3>
+          <ul>
+            <li>
+              <i class="fa-solid fa-phone"> </i>
+              <a href="tel:+995555443322">+995 555 44 33 22</a>
+            </li>
+            <li>
+              <i class="fa-regular fa-envelope"></i>
+              <a href="mailto:Thebookshelf@gmail.com">Thebookshelf@gmail.com</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <a
+                href="https://www.google.com/maps/place/Marjanishvili/@41.7099505,44.7958734,18z/data=!4m17!1m10!3m9!1s0x40440d27df42c23d:0x5824d566c7797875!2sMarjanishvili+Central!5m2!4m1!1i2!8m2!3d41.7104791!4d44.7963562!16s%2Fg%2F11dfgrfyvg!3m5!1s0x40440d27c088e619:0x85df45e4dde9bf15!8m2!3d41.7098214!4d44.7975361!16s%2Fm%2F0gtwgb0?entry=ttu"
+              >
+                Kote Marjanishvili St, Tbilisi</a
+              >
+            </li>
+          </ul>
+          <div class="footericons">
+            <a href="https://www.tbceducation.ge/">
+              <img src="../images/tbc-logo.png" alt="TBC logo" width="50px" />
+            </a>
+            <a href="https://www.facebook.com/"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="https://www.instagram.com/"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://x.com/?lang=en&mx=2"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footerdiv2">
+          <h3>Navigation</h3>
+          <div class="footericons2">
+            <a href="../index.html">
+              <i class="fa-solid fa-house"></i>
+              <h6>Home</h6>
+            </a>
+            <a href="books.html">
+              <i class="fa-solid fa-book"></i>
+              <h6>Shop Books</h6>
+            </a>
+            <a href="../index.html#about">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <h6>About Us</h6>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

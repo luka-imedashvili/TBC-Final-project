@@ -146,15 +146,32 @@ html header {
   top: 0;
   z-index: 5;
 }
+@media (max-width: 500px) {
+  html header {
+    padding: 15px 0;
+  }
+}
 html header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+html header .container .pcnav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-html header .container .logo {
+html header .container .pcnav .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -164,28 +181,28 @@ html header .container .logo {
   gap: 10px;
 }
 @media (max-width: 500px) {
-  html header .container .logo {
+  html header .container .pcnav .logo {
     gap: 5px;
   }
 }
-html header .container .logo .fa-book {
+html header .container .pcnav .logo .fa-book {
   color: #2c1508;
   font-size: 33px;
 }
-html header .container .logo .fa-book:hover {
+html header .container .pcnav .logo .fa-book:hover {
   color: #836e60;
 }
 @media (max-width: 750px) {
-  html header .container .logo .fa-book {
+  html header .container .pcnav .logo .fa-book {
     font-size: 29px;
   }
 }
 @media (max-width: 500px) {
-  html header .container .logo .fa-book {
-    font-size: 19px;
+  html header .container .pcnav .logo .fa-book {
+    font-size: 20px;
   }
 }
-html header .container .logo h3 {
+html header .container .pcnav .logo h3 {
   color: #2c1508;
   font-family: "Copperplate Gothic Light";
   font-size: 27px;
@@ -193,20 +210,20 @@ html header .container .logo h3 {
   font-weight: 400;
   line-height: normal;
 }
-html header .container .logo h3:hover {
+html header .container .pcnav .logo h3:hover {
   color: #836e60;
 }
 @media (max-width: 750px) {
-  html header .container .logo h3 {
+  html header .container .pcnav .logo h3 {
     font-size: 24px;
   }
 }
 @media (max-width: 500px) {
-  html header .container .logo h3 {
-    font-size: 14px;
+  html header .container .pcnav .logo h3 {
+    font-size: 15px;
   }
 }
-html header .container nav {
+html header .container .pcnav nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,17 +232,21 @@ html header .container nav {
           align-items: center;
 }
 @media (max-width: 1000px) {
-  html header .container nav {
+  html header .container .pcnav nav {
     display: none;
   }
 }
-html header .container nav .ul {
+html header .container .pcnav nav .ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   gap: 50px;
 }
-html header .container nav .ul a {
+html header .container .pcnav nav .ul a {
   color: #472d1c;
   font-family: "Copperplate Gothic Light";
   font-size: 18px;
@@ -233,63 +254,169 @@ html header .container nav .ul a {
   font-weight: 400;
   line-height: normal;
 }
-html header .container nav .ul a:hover {
+html header .container .pcnav nav .ul a:hover {
   color: #695a50;
 }
-html header .container .iconsdiv {
+html header .container .pcnav .iconsdiv {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 55px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 200px;
+  width: 100%;
 }
 @media (max-width: 1110px) {
-  html header .container .iconsdiv {
+  html header .container .pcnav .iconsdiv {
     gap: 30px;
   }
 }
 @media (max-width: 1000px) {
-  html header .container .iconsdiv {
+  html header .container .pcnav .iconsdiv {
     gap: 12px;
   }
 }
 @media (max-width: 500px) {
-  html header .container .iconsdiv {
+  html header .container .pcnav .iconsdiv {
     gap: 5px;
   }
 }
-html header .container .iconsdiv i {
+html header .container .pcnav .iconsdiv i {
   color: #2c1508;
   font-size: 27px;
 }
-html header .container .iconsdiv i:hover {
+html header .container .pcnav .iconsdiv i:hover {
   color: #836e60;
 }
 @media (max-width: 500px) {
-  html header .container .iconsdiv i {
-    font-size: 16px;
+  html header .container .pcnav .iconsdiv i {
+    font-size: 17px;
   }
 }
 @media (max-width: 1000px) {
-  html header .container .iconsdiv .icon23 {
+  html header .container .pcnav .iconsdiv .icon23 {
     display: none;
   }
 }
-html header .container .iconsdiv .fa-bars {
+html header .container .pcnav .iconsdiv .fa-bars {
   display: none;
 }
 @media (max-width: 1000px) {
-  html header .container .iconsdiv .fa-bars {
+  html header .container .pcnav .iconsdiv .fa-bars {
     display: block;
   }
 }
+html header .container #ul {
+  display: none;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding-top: 20px;
+}
+@media (max-width: 500px) {
+  html header .container #ul {
+    padding-top: 10px;
+  }
+}
+html header .container #ul .ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+@media (max-width: 500px) {
+  html header .container #ul .ul {
+    gap: 8px;
+  }
+}
+html header .container #ul .ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+html header .container #ul .ul li a {
+  text-align: end;
+  color: #472d1c;
+  font-family: "Copperplate Gothic Light";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media (max-width: 750px) {
+  html header .container #ul .ul li a {
+    font-size: 18px;
+  }
+}
+@media (max-width: 500px) {
+  html header .container #ul .ul li a {
+    font-size: 12px;
+  }
+}
+html header .container #ul .ul li a:hover {
+  color: #695a50;
+}
 
-footer {
+.books-s-1, .bests-s-1, html .s-1 {
+  background-color: #fcf3eb;
+  padding-top: 40px;
+}
+@media (max-width: 770px) {
+  .books-s-1, .bests-s-1, html .s-1 {
+    padding-top: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .books-s-1, .bests-s-1, html .s-1 {
+    padding-top: 10px;
+  }
+}
+
+.bests-s-2, html .s-4, html .s-3, html .s-2 {
+  background-color: #fcf3eb;
+  padding-top: 60px;
+}
+@media (max-width: 770px) {
+  .bests-s-2, html .s-4, html .s-3, html .s-2 {
+    padding-top: 30px;
+  }
+}
+
+.bests-s-3, html .s-5 {
+  background-color: #fcf3eb;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media (max-width: 770px) {
+  .bests-s-3, html .s-5 {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+}
+@media (max-width: 425px) {
+  .bests-s-3, html .s-5 {
+    padding-bottom: 10px;
+  }
+}
+
+html footer {
   background-color: #fcf3eb;
   border-top: 1px solid #65503c;
   padding-top: 40px;
   padding-bottom: 22px;
 }
-footer .container {
+html footer .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -307,14 +434,14 @@ footer .container {
       flex-wrap: wrap;
 }
 @media (max-width: 410px) {
-  footer .container {
+  html footer .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
 }
-footer .container .footerdiv1 ul {
+html footer .container .footerdiv1 ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -326,11 +453,11 @@ footer .container .footerdiv1 ul {
   padding-bottom: 40px;
 }
 @media (max-width: 500px) {
-  footer .container .footerdiv1 ul {
+  html footer .container .footerdiv1 ul {
     padding-bottom: 20px;
   }
 }
-footer .container .footerdiv1 ul li {
+html footer .container .footerdiv1 ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -339,7 +466,7 @@ footer .container .footerdiv1 ul li {
           align-items: center;
   gap: 10px;
 }
-footer .container .footerdiv1 .footericons {
+html footer .container .footerdiv1 .footericons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -349,16 +476,16 @@ footer .container .footerdiv1 .footericons {
   gap: 25px;
 }
 @media (max-width: 410px) {
-  footer .container .footerdiv1 .footericons {
+  html footer .container .footerdiv1 .footericons {
     margin-bottom: 30px;
     gap: 15px;
   }
 }
-footer .container .footerdiv1 .footericons i {
+html footer .container .footerdiv1 .footericons i {
   color: #472d1c;
   font-size: 24px;
 }
-footer .container .footerdiv2 .footericons2 {
+html footer .container .footerdiv2 .footericons2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -368,19 +495,19 @@ footer .container .footerdiv2 .footericons2 {
           flex-direction: column;
   gap: 10px;
 }
-footer .container .footerdiv2 .footericons2 a {
+html footer .container .footerdiv2 .footericons2 a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
 }
-.books-s-1 .container, .hush-s-3 .container, .hush-s-2 .container, .hush-s-1 .container, .user-s-1 .container, html .s-4 .container, html .s-3 .container, html .s-2 .container, html .s-1 .container, html header .container, footer .container {
+.books-s-1 .container, .bests-s-3 .container, .bests-s-2 .container, .bests-s-1 .container, .user-s-1 .container, html .s-5 .container, html .s-4 .container, html .s-3 .container, html .s-2 .container, html .s-1 .container, html header .container, html footer .container {
   max-width: 1240px;
   width: 100%;
   margin: 0 auto;
 }
 @media (max-width: 1300px) {
-  .books-s-1 .container, .hush-s-3 .container, .hush-s-2 .container, .hush-s-1 .container, .user-s-1 .container, html .s-4 .container, html .s-3 .container, html .s-2 .container, html .s-1 .container, html header .container, footer .container {
+  .books-s-1 .container, .bests-s-3 .container, .bests-s-2 .container, .bests-s-1 .container, .user-s-1 .container, html .s-5 .container, html .s-4 .container, html .s-3 .container, html .s-2 .container, html .s-1 .container, html header .container, html footer .container {
     width: 95%;
   }
 }
@@ -573,7 +700,7 @@ html .s-4 .container .offerswrapper .offer2 .offertext .purchase h6, html .s-4 .
   }
 }
 
-footer .container .footerdiv1 h3, footer .container .footerdiv2 h3 {
+html footer .container .footerdiv1 h3, html footer .container .footerdiv2 h3 {
   color: #472d1c;
   font-family: "Bell MT Regular";
   font-size: 40px;
@@ -584,17 +711,17 @@ footer .container .footerdiv1 h3, footer .container .footerdiv2 h3 {
   margin-bottom: 20px;
 }
 @media (max-width: 650px) {
-  footer .container .footerdiv1 h3, footer .container .footerdiv2 h3 {
+  html footer .container .footerdiv1 h3, html footer .container .footerdiv2 h3 {
     font-size: 32px;
   }
 }
 
-footer .container .footerdiv1 ul li i, footer .container .footerdiv2 .footericons2 a i {
+html footer .container .footerdiv1 ul li i, html footer .container .footerdiv2 .footericons2 a i {
   color: #472d1c;
   font-size: 18px;
 }
 
-footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericons2 a h6 {
+html footer .container .footerdiv1 ul li a, html footer .container .footerdiv2 .footericons2 a h6 {
   color: #796751;
   text-align: center;
   font-family: "Bell MT Regular";
@@ -701,7 +828,7 @@ footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericon
   cursor: pointer;
 }
 
-.hush-s-1 .container .description .part1 .booktitle h2, .hush-s-1 .container .imgdiv .booktitle h2 {
+.bests-s-1 .container .description .part1 .booktitle h2, .bests-s-1 .container .imgdiv .booktitle h2 {
   color: #472d1c;
   font-family: "Bell MT Regular";
   font-size: 40px;
@@ -710,8 +837,24 @@ footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericon
   line-height: normal;
   letter-spacing: 0.8px;
 }
+@media (max-width: 770px) {
+  .bests-s-1 .container .description .part1 .booktitle h2, .bests-s-1 .container .imgdiv .booktitle h2 {
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .bests-s-1 .container .description .part1 .booktitle h2, .bests-s-1 .container .imgdiv .booktitle h2 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 425px) {
+  .bests-s-1 .container .description .part1 .booktitle h2, .bests-s-1 .container .imgdiv .booktitle h2 {
+    font-size: 25px;
+    text-align: start;
+  }
+}
 
-.hush-s-1 .container .description .part1 .booktitle h4, .hush-s-1 .container .imgdiv .booktitle h4 {
+.bests-s-1 .container .description .part1 .booktitle h4, .bests-s-1 .container .imgdiv .booktitle h4 {
   color: #796751;
   font-family: "Bell MT Regular";
   font-size: 24px;
@@ -720,8 +863,24 @@ footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericon
   line-height: normal;
   letter-spacing: 0.48px;
 }
+@media (max-width: 770px) {
+  .bests-s-1 .container .description .part1 .booktitle h4, .bests-s-1 .container .imgdiv .booktitle h4 {
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .bests-s-1 .container .description .part1 .booktitle h4, .bests-s-1 .container .imgdiv .booktitle h4 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .bests-s-1 .container .description .part1 .booktitle h4, .bests-s-1 .container .imgdiv .booktitle h4 {
+    font-size: 17px;
+    text-align: start;
+  }
+}
 
-.hush-s-1 .container .description .part1 .booktitle h5, .hush-s-1 .container .imgdiv .booktitle h5 {
+.bests-s-1 .container .description .part1 .booktitle h5, .bests-s-1 .container .imgdiv .booktitle h5 {
   color: #2c1508;
   font-family: "Bell MT Regular";
   font-size: 36px;
@@ -730,8 +889,24 @@ footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericon
   line-height: normal;
   letter-spacing: 0.72px;
 }
+@media (max-width: 770px) {
+  .bests-s-1 .container .description .part1 .booktitle h5, .bests-s-1 .container .imgdiv .booktitle h5 {
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .bests-s-1 .container .description .part1 .booktitle h5, .bests-s-1 .container .imgdiv .booktitle h5 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 425px) {
+  .bests-s-1 .container .description .part1 .booktitle h5, .bests-s-1 .container .imgdiv .booktitle h5 {
+    font-size: 25px;
+    text-align: start;
+  }
+}
 
-.hush-s-1 .container .description .part1 .booksummary p {
+.bests-s-1 .container .description .part1 .booksummary p {
   color: #000;
   font-family: "Bell MT Regular";
   font-size: 20px;
@@ -741,13 +916,13 @@ footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericon
   letter-spacing: 0.4px;
 }
 
-.hush-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star,
-.hush-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star-half-stroke {
+.bests-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star,
+.bests-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star-half-stroke {
   color: #796751;
   font-size: 17px;
 }
 
-.hush-s-1 .container .description .part2 .ratingquantity .review p {
+.bests-s-1 .container .description .part2 .ratingquantity .review p {
   color: #472d1c;
   font-family: "Bell MT Regular";
   font-size: 17px;
@@ -757,7 +932,7 @@ footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericon
   letter-spacing: 0.34px;
 }
 
-.hush-s-3 .container .alsolike h3, .hush-s-2 .container .author h2, .hush-s-2 .container .productdet h2 {
+.bests-s-3 .container .alsolike h3, .bests-s-2 .container .author h2, .bests-s-2 .container .productdet h2 {
   color: #472d1c;
   font-family: "Bell MT Regular";
   font-size: 40px;
@@ -768,17 +943,17 @@ footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericon
   margin-bottom: 30px;
 }
 @media (max-width: 800px) {
-  .hush-s-3 .container .alsolike h3, .hush-s-2 .container .author h2, .hush-s-2 .container .productdet h2 {
+  .bests-s-3 .container .alsolike h3, .bests-s-2 .container .author h2, .bests-s-2 .container .productdet h2 {
     margin-bottom: 10px;
   }
 }
 @media (max-width: 400px) {
-  .hush-s-3 .container .alsolike h3, .hush-s-2 .container .author h2, .hush-s-2 .container .productdet h2 {
+  .bests-s-3 .container .alsolike h3, .bests-s-2 .container .author h2, .bests-s-2 .container .productdet h2 {
     font-size: 30px;
   }
 }
 
-.hush-s-2 .container .productdet .detailswrapper .det2 h6, .hush-s-2 .container .productdet .detailswrapper .det1 h6 {
+.bests-s-2 .container .productdet .detailswrapper .det2 h6, .bests-s-2 .container .productdet .detailswrapper .det1 h6 {
   font-family: "Bell MT Regular";
   font-size: 22px;
   font-style: normal;
@@ -787,7 +962,7 @@ footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericon
   letter-spacing: 0.44px;
 }
 @media (max-width: 400px) {
-  .hush-s-2 .container .productdet .detailswrapper .det2 h6, .hush-s-2 .container .productdet .detailswrapper .det1 h6 {
+  .bests-s-2 .container .productdet .detailswrapper .det2 h6, .bests-s-2 .container .productdet .detailswrapper .det1 h6 {
     font-size: 18px;
   }
 }
@@ -859,6 +1034,89 @@ footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericon
   line-height: normal;
   letter-spacing: 0.36px;
   text-transform: capitalize;
+}
+
+.books-s-1 .container .books .bookdiv .column2 .filter .grid,
+.books-s-1 .container .books .bookdiv .column2 .filter .list, .books-s-1 .container .books .bookdiv .column1 .filtersdiv .grid,
+.books-s-1 .container .books .bookdiv .column1 .filtersdiv .list,
+.books-s-1 .container .books .bookdiv .column2 .filtersdiv .grid,
+.books-s-1 .container .books .bookdiv .column2 .filtersdiv .list,
+.books-s-1 .container .books .bookdiv .column3 .filtersdiv .grid,
+.books-s-1 .container .books .bookdiv .column3 .filtersdiv .list {
+  width: 55px;
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #472d1c;
+  border-radius: 10px;
+  cursor: pointer;
+}
+@media (max-width: 1260px) {
+  .books-s-1 .container .books .bookdiv .column2 .filter .grid,
+  .books-s-1 .container .books .bookdiv .column2 .filter .list, .books-s-1 .container .books .bookdiv .column1 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column1 .filtersdiv .list,
+  .books-s-1 .container .books .bookdiv .column2 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column2 .filtersdiv .list,
+  .books-s-1 .container .books .bookdiv .column3 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column3 .filtersdiv .list {
+    height: 51px;
+    width: 51px;
+  }
+}
+@media (max-width: 1090px) {
+  .books-s-1 .container .books .bookdiv .column2 .filter .grid,
+  .books-s-1 .container .books .bookdiv .column2 .filter .list, .books-s-1 .container .books .bookdiv .column1 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column1 .filtersdiv .list,
+  .books-s-1 .container .books .bookdiv .column2 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column2 .filtersdiv .list,
+  .books-s-1 .container .books .bookdiv .column3 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column3 .filtersdiv .list {
+    width: 55px;
+    height: 55px;
+  }
+}
+@media (max-width: 820px) {
+  .books-s-1 .container .books .bookdiv .column2 .filter .grid,
+  .books-s-1 .container .books .bookdiv .column2 .filter .list, .books-s-1 .container .books .bookdiv .column1 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column1 .filtersdiv .list,
+  .books-s-1 .container .books .bookdiv .column2 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column2 .filtersdiv .list,
+  .books-s-1 .container .books .bookdiv .column3 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column3 .filtersdiv .list {
+    height: 51px;
+    width: 51px;
+  }
+}
+@media (max-width: 700px) {
+  .books-s-1 .container .books .bookdiv .column2 .filter .grid,
+  .books-s-1 .container .books .bookdiv .column2 .filter .list, .books-s-1 .container .books .bookdiv .column1 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column1 .filtersdiv .list,
+  .books-s-1 .container .books .bookdiv .column2 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column2 .filtersdiv .list,
+  .books-s-1 .container .books .bookdiv .column3 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column3 .filtersdiv .list {
+    width: 45px;
+    height: 45px;
+  }
+}
+@media (max-width: 470px) {
+  .books-s-1 .container .books .bookdiv .column2 .filter .grid img,
+  .books-s-1 .container .books .bookdiv .column2 .filter .list img, .books-s-1 .container .books .bookdiv .column1 .filtersdiv .grid img,
+  .books-s-1 .container .books .bookdiv .column1 .filtersdiv .list img,
+  .books-s-1 .container .books .bookdiv .column2 .filtersdiv .grid img,
+  .books-s-1 .container .books .bookdiv .column2 .filtersdiv .list img,
+  .books-s-1 .container .books .bookdiv .column3 .filtersdiv .grid img,
+  .books-s-1 .container .books .bookdiv .column3 .filtersdiv .list img {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 html,
@@ -1009,15 +1267,32 @@ html header {
   top: 0;
   z-index: 5;
 }
+@media (max-width: 500px) {
+  html header {
+    padding: 15px 0;
+  }
+}
 html header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+html header .container .pcnav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-html header .container .logo {
+html header .container .pcnav .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1027,28 +1302,28 @@ html header .container .logo {
   gap: 10px;
 }
 @media (max-width: 500px) {
-  html header .container .logo {
+  html header .container .pcnav .logo {
     gap: 5px;
   }
 }
-html header .container .logo .fa-book {
+html header .container .pcnav .logo .fa-book {
   color: #2c1508;
   font-size: 33px;
 }
-html header .container .logo .fa-book:hover {
+html header .container .pcnav .logo .fa-book:hover {
   color: #836e60;
 }
 @media (max-width: 750px) {
-  html header .container .logo .fa-book {
+  html header .container .pcnav .logo .fa-book {
     font-size: 29px;
   }
 }
 @media (max-width: 500px) {
-  html header .container .logo .fa-book {
-    font-size: 19px;
+  html header .container .pcnav .logo .fa-book {
+    font-size: 20px;
   }
 }
-html header .container .logo h3 {
+html header .container .pcnav .logo h3 {
   color: #2c1508;
   font-family: "Copperplate Gothic Light";
   font-size: 27px;
@@ -1056,20 +1331,20 @@ html header .container .logo h3 {
   font-weight: 400;
   line-height: normal;
 }
-html header .container .logo h3:hover {
+html header .container .pcnav .logo h3:hover {
   color: #836e60;
 }
 @media (max-width: 750px) {
-  html header .container .logo h3 {
+  html header .container .pcnav .logo h3 {
     font-size: 24px;
   }
 }
 @media (max-width: 500px) {
-  html header .container .logo h3 {
-    font-size: 14px;
+  html header .container .pcnav .logo h3 {
+    font-size: 15px;
   }
 }
-html header .container nav {
+html header .container .pcnav nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1078,17 +1353,21 @@ html header .container nav {
           align-items: center;
 }
 @media (max-width: 1000px) {
-  html header .container nav {
+  html header .container .pcnav nav {
     display: none;
   }
 }
-html header .container nav .ul {
+html header .container .pcnav nav .ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   gap: 50px;
 }
-html header .container nav .ul a {
+html header .container .pcnav nav .ul a {
   color: #472d1c;
   font-family: "Copperplate Gothic Light";
   font-size: 18px;
@@ -1096,63 +1375,169 @@ html header .container nav .ul a {
   font-weight: 400;
   line-height: normal;
 }
-html header .container nav .ul a:hover {
+html header .container .pcnav nav .ul a:hover {
   color: #695a50;
 }
-html header .container .iconsdiv {
+html header .container .pcnav .iconsdiv {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 55px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 200px;
+  width: 100%;
 }
 @media (max-width: 1110px) {
-  html header .container .iconsdiv {
+  html header .container .pcnav .iconsdiv {
     gap: 30px;
   }
 }
 @media (max-width: 1000px) {
-  html header .container .iconsdiv {
+  html header .container .pcnav .iconsdiv {
     gap: 12px;
   }
 }
 @media (max-width: 500px) {
-  html header .container .iconsdiv {
+  html header .container .pcnav .iconsdiv {
     gap: 5px;
   }
 }
-html header .container .iconsdiv i {
+html header .container .pcnav .iconsdiv i {
   color: #2c1508;
   font-size: 27px;
 }
-html header .container .iconsdiv i:hover {
+html header .container .pcnav .iconsdiv i:hover {
   color: #836e60;
 }
 @media (max-width: 500px) {
-  html header .container .iconsdiv i {
-    font-size: 16px;
+  html header .container .pcnav .iconsdiv i {
+    font-size: 17px;
   }
 }
 @media (max-width: 1000px) {
-  html header .container .iconsdiv .icon23 {
+  html header .container .pcnav .iconsdiv .icon23 {
     display: none;
   }
 }
-html header .container .iconsdiv .fa-bars {
+html header .container .pcnav .iconsdiv .fa-bars {
   display: none;
 }
 @media (max-width: 1000px) {
-  html header .container .iconsdiv .fa-bars {
+  html header .container .pcnav .iconsdiv .fa-bars {
     display: block;
   }
 }
+html header .container #ul {
+  display: none;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding-top: 20px;
+}
+@media (max-width: 500px) {
+  html header .container #ul {
+    padding-top: 10px;
+  }
+}
+html header .container #ul .ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+@media (max-width: 500px) {
+  html header .container #ul .ul {
+    gap: 8px;
+  }
+}
+html header .container #ul .ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+html header .container #ul .ul li a {
+  text-align: end;
+  color: #472d1c;
+  font-family: "Copperplate Gothic Light";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media (max-width: 750px) {
+  html header .container #ul .ul li a {
+    font-size: 18px;
+  }
+}
+@media (max-width: 500px) {
+  html header .container #ul .ul li a {
+    font-size: 12px;
+  }
+}
+html header .container #ul .ul li a:hover {
+  color: #695a50;
+}
 
-footer {
+.books-s-1, .bests-s-1, html .s-1 {
+  background-color: #fcf3eb;
+  padding-top: 40px;
+}
+@media (max-width: 770px) {
+  .books-s-1, .bests-s-1, html .s-1 {
+    padding-top: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .books-s-1, .bests-s-1, html .s-1 {
+    padding-top: 10px;
+  }
+}
+
+.bests-s-2, html .s-4, html .s-3, html .s-2 {
+  background-color: #fcf3eb;
+  padding-top: 60px;
+}
+@media (max-width: 770px) {
+  .bests-s-2, html .s-4, html .s-3, html .s-2 {
+    padding-top: 30px;
+  }
+}
+
+.bests-s-3, html .s-5 {
+  background-color: #fcf3eb;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media (max-width: 770px) {
+  .bests-s-3, html .s-5 {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+}
+@media (max-width: 425px) {
+  .bests-s-3, html .s-5 {
+    padding-bottom: 10px;
+  }
+}
+
+html footer {
   background-color: #fcf3eb;
   border-top: 1px solid #65503c;
   padding-top: 40px;
   padding-bottom: 22px;
 }
-footer .container {
+html footer .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1170,14 +1555,14 @@ footer .container {
       flex-wrap: wrap;
 }
 @media (max-width: 410px) {
-  footer .container {
+  html footer .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
 }
-footer .container .footerdiv1 ul {
+html footer .container .footerdiv1 ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1189,11 +1574,11 @@ footer .container .footerdiv1 ul {
   padding-bottom: 40px;
 }
 @media (max-width: 500px) {
-  footer .container .footerdiv1 ul {
+  html footer .container .footerdiv1 ul {
     padding-bottom: 20px;
   }
 }
-footer .container .footerdiv1 ul li {
+html footer .container .footerdiv1 ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1202,7 +1587,7 @@ footer .container .footerdiv1 ul li {
           align-items: center;
   gap: 10px;
 }
-footer .container .footerdiv1 .footericons {
+html footer .container .footerdiv1 .footericons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1212,16 +1597,16 @@ footer .container .footerdiv1 .footericons {
   gap: 25px;
 }
 @media (max-width: 410px) {
-  footer .container .footerdiv1 .footericons {
+  html footer .container .footerdiv1 .footericons {
     margin-bottom: 30px;
     gap: 15px;
   }
 }
-footer .container .footerdiv1 .footericons i {
+html footer .container .footerdiv1 .footericons i {
   color: #472d1c;
   font-size: 24px;
 }
-footer .container .footerdiv2 .footericons2 {
+html footer .container .footerdiv2 .footericons2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1231,19 +1616,19 @@ footer .container .footerdiv2 .footericons2 {
           flex-direction: column;
   gap: 10px;
 }
-footer .container .footerdiv2 .footericons2 a {
+html footer .container .footerdiv2 .footericons2 a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
 }
-.books-s-1 .container, .hush-s-3 .container, .hush-s-2 .container, .hush-s-1 .container, .user-s-1 .container, html .s-4 .container, html .s-3 .container, html .s-2 .container, html .s-1 .container, html header .container, footer .container {
+.books-s-1 .container, .bests-s-3 .container, .bests-s-2 .container, .bests-s-1 .container, .user-s-1 .container, html .s-5 .container, html .s-4 .container, html .s-3 .container, html .s-2 .container, html .s-1 .container, html header .container, html footer .container {
   max-width: 1240px;
   width: 100%;
   margin: 0 auto;
 }
 @media (max-width: 1300px) {
-  .books-s-1 .container, .hush-s-3 .container, .hush-s-2 .container, .hush-s-1 .container, .user-s-1 .container, html .s-4 .container, html .s-3 .container, html .s-2 .container, html .s-1 .container, html header .container, footer .container {
+  .books-s-1 .container, .bests-s-3 .container, .bests-s-2 .container, .bests-s-1 .container, .user-s-1 .container, html .s-5 .container, html .s-4 .container, html .s-3 .container, html .s-2 .container, html .s-1 .container, html header .container, html footer .container {
     width: 95%;
   }
 }
@@ -1436,7 +1821,7 @@ html .s-4 .container .offerswrapper .offer2 .offertext .purchase h6, html .s-4 .
   }
 }
 
-footer .container .footerdiv1 h3, footer .container .footerdiv2 h3 {
+html footer .container .footerdiv1 h3, html footer .container .footerdiv2 h3 {
   color: #472d1c;
   font-family: "Bell MT Regular";
   font-size: 40px;
@@ -1447,17 +1832,17 @@ footer .container .footerdiv1 h3, footer .container .footerdiv2 h3 {
   margin-bottom: 20px;
 }
 @media (max-width: 650px) {
-  footer .container .footerdiv1 h3, footer .container .footerdiv2 h3 {
+  html footer .container .footerdiv1 h3, html footer .container .footerdiv2 h3 {
     font-size: 32px;
   }
 }
 
-footer .container .footerdiv1 ul li i, footer .container .footerdiv2 .footericons2 a i {
+html footer .container .footerdiv1 ul li i, html footer .container .footerdiv2 .footericons2 a i {
   color: #472d1c;
   font-size: 18px;
 }
 
-footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericons2 a h6 {
+html footer .container .footerdiv1 ul li a, html footer .container .footerdiv2 .footericons2 a h6 {
   color: #796751;
   text-align: center;
   font-family: "Bell MT Regular";
@@ -1564,7 +1949,7 @@ footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericon
   cursor: pointer;
 }
 
-.hush-s-1 .container .description .part1 .booktitle h2, .hush-s-1 .container .imgdiv .booktitle h2 {
+.bests-s-1 .container .description .part1 .booktitle h2, .bests-s-1 .container .imgdiv .booktitle h2 {
   color: #472d1c;
   font-family: "Bell MT Regular";
   font-size: 40px;
@@ -1573,8 +1958,24 @@ footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericon
   line-height: normal;
   letter-spacing: 0.8px;
 }
+@media (max-width: 770px) {
+  .bests-s-1 .container .description .part1 .booktitle h2, .bests-s-1 .container .imgdiv .booktitle h2 {
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .bests-s-1 .container .description .part1 .booktitle h2, .bests-s-1 .container .imgdiv .booktitle h2 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 425px) {
+  .bests-s-1 .container .description .part1 .booktitle h2, .bests-s-1 .container .imgdiv .booktitle h2 {
+    font-size: 25px;
+    text-align: start;
+  }
+}
 
-.hush-s-1 .container .description .part1 .booktitle h4, .hush-s-1 .container .imgdiv .booktitle h4 {
+.bests-s-1 .container .description .part1 .booktitle h4, .bests-s-1 .container .imgdiv .booktitle h4 {
   color: #796751;
   font-family: "Bell MT Regular";
   font-size: 24px;
@@ -1583,8 +1984,24 @@ footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericon
   line-height: normal;
   letter-spacing: 0.48px;
 }
+@media (max-width: 770px) {
+  .bests-s-1 .container .description .part1 .booktitle h4, .bests-s-1 .container .imgdiv .booktitle h4 {
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .bests-s-1 .container .description .part1 .booktitle h4, .bests-s-1 .container .imgdiv .booktitle h4 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .bests-s-1 .container .description .part1 .booktitle h4, .bests-s-1 .container .imgdiv .booktitle h4 {
+    font-size: 17px;
+    text-align: start;
+  }
+}
 
-.hush-s-1 .container .description .part1 .booktitle h5, .hush-s-1 .container .imgdiv .booktitle h5 {
+.bests-s-1 .container .description .part1 .booktitle h5, .bests-s-1 .container .imgdiv .booktitle h5 {
   color: #2c1508;
   font-family: "Bell MT Regular";
   font-size: 36px;
@@ -1593,8 +2010,24 @@ footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericon
   line-height: normal;
   letter-spacing: 0.72px;
 }
+@media (max-width: 770px) {
+  .bests-s-1 .container .description .part1 .booktitle h5, .bests-s-1 .container .imgdiv .booktitle h5 {
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .bests-s-1 .container .description .part1 .booktitle h5, .bests-s-1 .container .imgdiv .booktitle h5 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 425px) {
+  .bests-s-1 .container .description .part1 .booktitle h5, .bests-s-1 .container .imgdiv .booktitle h5 {
+    font-size: 25px;
+    text-align: start;
+  }
+}
 
-.hush-s-1 .container .description .part1 .booksummary p {
+.bests-s-1 .container .description .part1 .booksummary p {
   color: #000;
   font-family: "Bell MT Regular";
   font-size: 20px;
@@ -1604,13 +2037,13 @@ footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericon
   letter-spacing: 0.4px;
 }
 
-.hush-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star,
-.hush-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star-half-stroke {
+.bests-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star,
+.bests-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star-half-stroke {
   color: #796751;
   font-size: 17px;
 }
 
-.hush-s-1 .container .description .part2 .ratingquantity .review p {
+.bests-s-1 .container .description .part2 .ratingquantity .review p {
   color: #472d1c;
   font-family: "Bell MT Regular";
   font-size: 17px;
@@ -1620,7 +2053,7 @@ footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericon
   letter-spacing: 0.34px;
 }
 
-.hush-s-3 .container .alsolike h3, .hush-s-2 .container .author h2, .hush-s-2 .container .productdet h2 {
+.bests-s-3 .container .alsolike h3, .bests-s-2 .container .author h2, .bests-s-2 .container .productdet h2 {
   color: #472d1c;
   font-family: "Bell MT Regular";
   font-size: 40px;
@@ -1631,17 +2064,17 @@ footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericon
   margin-bottom: 30px;
 }
 @media (max-width: 800px) {
-  .hush-s-3 .container .alsolike h3, .hush-s-2 .container .author h2, .hush-s-2 .container .productdet h2 {
+  .bests-s-3 .container .alsolike h3, .bests-s-2 .container .author h2, .bests-s-2 .container .productdet h2 {
     margin-bottom: 10px;
   }
 }
 @media (max-width: 400px) {
-  .hush-s-3 .container .alsolike h3, .hush-s-2 .container .author h2, .hush-s-2 .container .productdet h2 {
+  .bests-s-3 .container .alsolike h3, .bests-s-2 .container .author h2, .bests-s-2 .container .productdet h2 {
     font-size: 30px;
   }
 }
 
-.hush-s-2 .container .productdet .detailswrapper .det2 h6, .hush-s-2 .container .productdet .detailswrapper .det1 h6 {
+.bests-s-2 .container .productdet .detailswrapper .det2 h6, .bests-s-2 .container .productdet .detailswrapper .det1 h6 {
   font-family: "Bell MT Regular";
   font-size: 22px;
   font-style: normal;
@@ -1650,7 +2083,7 @@ footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericon
   letter-spacing: 0.44px;
 }
 @media (max-width: 400px) {
-  .hush-s-2 .container .productdet .detailswrapper .det2 h6, .hush-s-2 .container .productdet .detailswrapper .det1 h6 {
+  .bests-s-2 .container .productdet .detailswrapper .det2 h6, .bests-s-2 .container .productdet .detailswrapper .det1 h6 {
     font-size: 18px;
   }
 }
@@ -1724,6 +2157,89 @@ footer .container .footerdiv1 ul li a, footer .container .footerdiv2 .footericon
   text-transform: capitalize;
 }
 
+.books-s-1 .container .books .bookdiv .column2 .filter .grid,
+.books-s-1 .container .books .bookdiv .column2 .filter .list, .books-s-1 .container .books .bookdiv .column1 .filtersdiv .grid,
+.books-s-1 .container .books .bookdiv .column1 .filtersdiv .list,
+.books-s-1 .container .books .bookdiv .column2 .filtersdiv .grid,
+.books-s-1 .container .books .bookdiv .column2 .filtersdiv .list,
+.books-s-1 .container .books .bookdiv .column3 .filtersdiv .grid,
+.books-s-1 .container .books .bookdiv .column3 .filtersdiv .list {
+  width: 55px;
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #472d1c;
+  border-radius: 10px;
+  cursor: pointer;
+}
+@media (max-width: 1260px) {
+  .books-s-1 .container .books .bookdiv .column2 .filter .grid,
+  .books-s-1 .container .books .bookdiv .column2 .filter .list, .books-s-1 .container .books .bookdiv .column1 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column1 .filtersdiv .list,
+  .books-s-1 .container .books .bookdiv .column2 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column2 .filtersdiv .list,
+  .books-s-1 .container .books .bookdiv .column3 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column3 .filtersdiv .list {
+    height: 51px;
+    width: 51px;
+  }
+}
+@media (max-width: 1090px) {
+  .books-s-1 .container .books .bookdiv .column2 .filter .grid,
+  .books-s-1 .container .books .bookdiv .column2 .filter .list, .books-s-1 .container .books .bookdiv .column1 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column1 .filtersdiv .list,
+  .books-s-1 .container .books .bookdiv .column2 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column2 .filtersdiv .list,
+  .books-s-1 .container .books .bookdiv .column3 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column3 .filtersdiv .list {
+    width: 55px;
+    height: 55px;
+  }
+}
+@media (max-width: 820px) {
+  .books-s-1 .container .books .bookdiv .column2 .filter .grid,
+  .books-s-1 .container .books .bookdiv .column2 .filter .list, .books-s-1 .container .books .bookdiv .column1 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column1 .filtersdiv .list,
+  .books-s-1 .container .books .bookdiv .column2 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column2 .filtersdiv .list,
+  .books-s-1 .container .books .bookdiv .column3 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column3 .filtersdiv .list {
+    height: 51px;
+    width: 51px;
+  }
+}
+@media (max-width: 700px) {
+  .books-s-1 .container .books .bookdiv .column2 .filter .grid,
+  .books-s-1 .container .books .bookdiv .column2 .filter .list, .books-s-1 .container .books .bookdiv .column1 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column1 .filtersdiv .list,
+  .books-s-1 .container .books .bookdiv .column2 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column2 .filtersdiv .list,
+  .books-s-1 .container .books .bookdiv .column3 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column3 .filtersdiv .list {
+    width: 45px;
+    height: 45px;
+  }
+}
+@media (max-width: 470px) {
+  .books-s-1 .container .books .bookdiv .column2 .filter .grid img,
+  .books-s-1 .container .books .bookdiv .column2 .filter .list img, .books-s-1 .container .books .bookdiv .column1 .filtersdiv .grid img,
+  .books-s-1 .container .books .bookdiv .column1 .filtersdiv .list img,
+  .books-s-1 .container .books .bookdiv .column2 .filtersdiv .grid img,
+  .books-s-1 .container .books .bookdiv .column2 .filtersdiv .list img,
+  .books-s-1 .container .books .bookdiv .column3 .filtersdiv .grid img,
+  .books-s-1 .container .books .bookdiv .column3 .filtersdiv .list img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -1732,10 +2248,6 @@ html ::-moz-selection {
 }
 html ::selection {
   background-color: rgba(99, 89, 81, 0.5098039216);
-}
-html .s-1 {
-  background-color: #fcf3eb;
-  padding-top: 40px;
 }
 html .s-1 .container .quote {
   background-image: url("../images/banner.jpg");
@@ -1827,10 +2339,6 @@ html .s-1 .container .quote .shopnow h6 {
   letter-spacing: 0.32px;
   text-transform: capitalize;
 }
-html .s-2 {
-  background-color: #fcf3eb;
-  padding-top: 60px;
-}
 html .s-2 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1862,6 +2370,11 @@ html .s-2 .container .genres {
     font-size: 45px;
   }
 }
+@media (max-width: 800px) {
+  html .s-2 .container .genres {
+    font-size: 40px;
+  }
+}
 html .s-2 .container .cardswrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1890,9 +2403,10 @@ html .s-2 .container .cardswrapper {
     max-width: 600px;
   }
 }
-html .s-3 {
-  background-color: #fcf3eb;
-  padding-top: 60px;
+@media (max-width: 500px) {
+  html .s-2 .container .cardswrapper {
+    gap: 10px;
+  }
 }
 html .s-3 .container {
   display: -webkit-box;
@@ -1947,9 +2461,10 @@ html .s-3 .container .s-3title h3 {
     font-size: 45px;
   }
 }
-@media (max-width: 410px) {
+@media (max-width: 500px) {
   html .s-3 .container .s-3title h3 {
     width: 240px;
+    font-size: 40px;
   }
 }
 html .s-3 .container .s-3title h6 {
@@ -1967,6 +2482,12 @@ html .s-3 .container .s-3title h6 {
 @media (max-width: 1110px) {
   html .s-3 .container .s-3title h6 {
     font-size: 20px;
+  }
+}
+@media (max-width: 500px) {
+  html .s-3 .container .s-3title h6 {
+    padding-top: 0px;
+    font-size: 17px;
   }
 }
 html .s-3 .container .bestsellerswrapper {
@@ -2005,6 +2526,11 @@ html .s-3 .container .bestsellerswrapper {
     gap: 10px;
   }
 }
+@media (max-width: 550px) {
+  html .s-3 .container .bestsellerswrapper {
+    padding-top: 20px;
+  }
+}
 html .s-3 .container .bestsellerswrapper .bestscard {
   width: 235px;
   border-radius: 15px;
@@ -2013,7 +2539,7 @@ html .s-3 .container .bestsellerswrapper .bestscard {
 }
 html .s-3 .container .bestsellerswrapper .bestscard:hover {
   background-color: rgba(209, 190, 175, 0.9333333333);
-  border: 1px solid #A59181;
+  border: 1px solid #a59181;
 }
 @media (max-width: 1150px) {
   html .s-3 .container .bestsellerswrapper .bestscard {
@@ -2028,6 +2554,7 @@ html .s-3 .container .bestsellerswrapper .bestscard:hover {
 @media (max-width: 360px) {
   html .s-3 .container .bestsellerswrapper .bestscard {
     width: 145px;
+    height: 297px;
   }
 }
 html .s-3 .container .bestsellerswrapper .bestscard .bestsimgwrapper {
@@ -2173,17 +2700,6 @@ html .s-3 .container .seemore:hover {
     font-size: 20px;
   }
 }
-html .s-4 {
-  background-color: #fcf3eb;
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-@media (max-width: 600px) {
-  html .s-4 {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-}
 html .s-4 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2218,6 +2734,17 @@ html .s-4 .container h3 {
   line-height: normal;
   letter-spacing: 0.96px;
   margin-bottom: 30px;
+}
+@media (max-width: 1150px) {
+  html .s-4 .container h3 {
+    font-size: 45px;
+  }
+}
+@media (max-width: 710px) {
+  html .s-4 .container h3 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
 }
 html .s-4 .container .offerswrapper {
   display: -webkit-box;
@@ -2297,10 +2824,242 @@ html .s-4 .container .offerswrapper .offer2 {
     padding: 0px;
   }
 }
-
+html .s-5 .container > h3 {
+  color: #472d1c;
+  text-align: start;
+  font-family: #2c1508;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.96px;
+  margin-bottom: 30px;
+}
+@media (max-width: 1310px) {
+  html .s-5 .container > h3 {
+    text-align: center;
+  }
+}
+@media (max-width: 1150px) {
+  html .s-5 .container > h3 {
+    font-size: 45px;
+  }
+}
+@media (max-width: 710px) {
+  html .s-5 .container > h3 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+}
+html .s-5 .container .aboutus {
+  background-color: #D1BEAF;
+  border-radius: 15px;
+  aspect-ratio: 2/1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 700px) {
+  html .s-5 .container .aboutus {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 20px;
+  }
+}
+html .s-5 .container .aboutus .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  aspect-ratio: 1/1;
+}
+@media (max-width: 700px) {
+  html .s-5 .container .aboutus .about {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    aspect-ratio: 0;
+  }
+}
+html .s-5 .container .aboutus .about .uswrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  aspect-ratio: 1/1;
+  gap: 15px;
+}
+@media (max-width: 700px) {
+  html .s-5 .container .aboutus .about .uswrapper {
+    aspect-ratio: 2.5/1;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 600px) {
+  html .s-5 .container .aboutus .about .uswrapper {
+    gap: 5px;
+  }
+}
+html .s-5 .container .aboutus .about .uswrapper h3 {
+  max-width: 450px;
+  width: 100%;
+  color: #472d1c;
+  text-align: start;
+  font-family: "Bell MT Regular";
+  font-size: 43px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.72px;
+  text-transform: capitalize;
+}
+@media (max-width: 1100px) {
+  html .s-5 .container .aboutus .about .uswrapper h3 {
+    font-size: 35px;
+    max-width: 350px;
+  }
+}
+@media (max-width: 950px) {
+  html .s-5 .container .aboutus .about .uswrapper h3 {
+    font-size: 30px;
+    max-width: 300px;
+  }
+}
+@media (max-width: 770px) {
+  html .s-5 .container .aboutus .about .uswrapper h3 {
+    font-size: 25px;
+    max-width: 250px;
+  }
+}
+@media (max-width: 700px) {
+  html .s-5 .container .aboutus .about .uswrapper h3 {
+    max-width: 600px;
+    width: 90%;
+    font-size: 30px;
+  }
+}
+@media (max-width: 700px) {
+  html .s-5 .container .aboutus .about .uswrapper h3 {
+    max-width: 600px;
+    width: 90%;
+    font-size: 30px;
+  }
+}
+@media (max-width: 600px) {
+  html .s-5 .container .aboutus .about .uswrapper h3 {
+    font-size: 25px;
+  }
+}
+html .s-5 .container .aboutus .about .uswrapper p {
+  color: #50443b;
+  max-width: 450px;
+  text-align: start;
+  font-family: "Bell MT Regular";
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.72px;
+}
+@media (max-width: 1100px) {
+  html .s-5 .container .aboutus .about .uswrapper p {
+    font-size: 20px;
+    max-width: 350px;
+  }
+}
+@media (max-width: 950px) {
+  html .s-5 .container .aboutus .about .uswrapper p {
+    font-size: 17px;
+    max-width: 300px;
+  }
+}
+@media (max-width: 770px) {
+  html .s-5 .container .aboutus .about .uswrapper p {
+    font-size: 15px;
+    max-width: 250px;
+  }
+}
+@media (max-width: 700px) {
+  html .s-5 .container .aboutus .about .uswrapper p {
+    max-width: 600px;
+    width: 90%;
+    font-size: 17px;
+  }
+}
+@media (max-width: 555px) {
+  html .s-5 .container .aboutus .about .uswrapper p {
+    max-width: 500px;
+  }
+}
+@media (max-width: 600px) {
+  html .s-5 .container .aboutus .about .uswrapper p {
+    font-size: 15px;
+  }
+}
+html .s-5 .container img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 0 15px 15px 0;
+  aspect-ratio: 1/1;
+}
+@media (max-width: 700px) {
+  html .s-5 .container img {
+    aspect-ratio: 1.5/1;
+    border-radius: 15px;
+  }
+}
+@media (max-width: 540px) {
+  html .s-5 .container img {
+    aspect-ratio: 1.5/1;
+  }
+}
 .user-s-1 {
   background-color: #88776A;
-  padding: 35px 0;
+  padding-bottom: 60px;
+  padding-top: 40px;
+}
+@media (max-width: 770px) {
+  .user-s-1 {
+    padding-top: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .user-s-1 {
+    padding-top: 10px;
+  }
+}
+@media (max-width: 770px) {
+  .user-s-1 {
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 425px) {
+  .user-s-1 {
+    padding-bottom: 10px;
+  }
 }
 .user-s-1 .container {
   display: -webkit-box;
@@ -2552,6 +3311,9 @@ html .s-4 .container .offerswrapper .offer2 {
           flex-direction: column;
   gap: 20px;
 }
+.user-s-1 .container .userdiv2 .personality1 {
+  display: none;
+}
 @media (max-width: 510px) {
   .user-s-1 .container .userdiv2 .personality1 {
     display: -webkit-box;
@@ -2777,28 +3539,19 @@ html .s-4 .container .offerswrapper .offer2 {
   }
 }
 
-.hush-s-1 {
-  background-color: #fcf3eb;
-  padding-top: 60px;
-}
-@media (max-width: 770px) {
-  .hush-s-1 {
-    padding-top: 20px;
-  }
-}
-.hush-s-1 .container {
+.bests-s-1 .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 60px;
 }
 @media (max-width: 1000px) {
-  .hush-s-1 .container {
+  .bests-s-1 .container {
     gap: 30px;
   }
 }
 @media (max-width: 770px) {
-  .hush-s-1 .container {
+  .bests-s-1 .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2808,47 +3561,59 @@ html .s-4 .container .offerswrapper .offer2 {
             align-items: center;
   }
 }
-.hush-s-1 .container .imgdiv .booktitle {
+.bests-s-1 .container .imgdiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+@media (max-width: 600px) {
+  .bests-s-1 .container .imgdiv {
+    gap: 10px;
+  }
+}
+.bests-s-1 .container .imgdiv .booktitle {
   display: none;
+  max-width: 500px;
+  width: 100%;
 }
 @media (max-width: 770px) {
-  .hush-s-1 .container .imgdiv .booktitle h2 {
-    text-align: center;
+  .bests-s-1 .container .imgdiv .booktitle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
-@media (max-width: 400px) {
-  .hush-s-1 .container .imgdiv .booktitle h2 {
-    text-align: start;
+@media (max-width: 600px) {
+  .bests-s-1 .container .imgdiv .booktitle {
+    max-width: 400px;
   }
 }
-@media (max-width: 770px) {
-  .hush-s-1 .container .imgdiv .booktitle h4 {
-    text-align: center;
+@media (max-width: 425px) {
+  .bests-s-1 .container .imgdiv .booktitle {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    max-width: 260px;
   }
 }
-@media (max-width: 400px) {
-  .hush-s-1 .container .imgdiv .booktitle h4 {
-    text-align: start;
-  }
-}
-@media (max-width: 770px) {
-  .hush-s-1 .container .imgdiv .booktitle h5 {
-    text-align: center;
-  }
-}
-@media (max-width: 400px) {
-  .hush-s-1 .container .imgdiv .booktitle h5 {
-    text-align: start;
-  }
-}
-@media (max-width: 770px) {
-  .hush-s-1 .container .imgdiv .booktitle {
-    display: block;
-    margin-bottom: 20px;
-  }
-}
-.hush-s-1 .container .imgdiv img {
-  width: 420px;
+.bests-s-1 .container .imgdiv img {
+  -o-object-fit: contain;
+     object-fit: contain;
   height: 712px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -2859,18 +3624,21 @@ html .s-4 .container .offerswrapper .offer2 {
   z-index: 0;
 }
 @media (max-width: 1000px) {
-  .hush-s-1 .container .imgdiv img {
-    width: 300px;
+  .bests-s-1 .container .imgdiv img {
+    height: 600px;
+  }
+}
+@media (max-width: 770px) {
+  .bests-s-1 .container .imgdiv img {
     height: 500px;
   }
 }
-.hush-s-1 .container .imgdiv .jane {
-  height: 660px;
+@media (max-width: 550px) {
+  .bests-s-1 .container .imgdiv img {
+    height: 400px;
+  }
 }
-.hush-s-1 .container .imgdiv .aad {
-  height: 610px;
-}
-.hush-s-1 .container .description {
+.bests-s-1 .container .description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2880,7 +3648,7 @@ html .s-4 .container .offerswrapper .offer2 {
           flex-direction: column;
   gap: 25px;
 }
-.hush-s-1 .container .description .part1 {
+.bests-s-1 .container .description .part1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2890,12 +3658,12 @@ html .s-4 .container .offerswrapper .offer2 {
           flex-direction: column;
   gap: 16px;
 }
-@media (max-width: 915px) {
-  .hush-s-1 .container .description .part1 .booktitle {
+@media (max-width: 770px) {
+  .bests-s-1 .container .description .part1 .booktitle {
     display: none;
   }
 }
-.hush-s-1 .container .description .part1 .booksummary {
+.bests-s-1 .container .description .part1 .booksummary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2906,14 +3674,14 @@ html .s-4 .container .offerswrapper .offer2 {
   gap: 30px;
 }
 @media (max-width: 550px) {
-  .hush-s-1 .container .description .part1 .booksummary {
+  .bests-s-1 .container .description .part1 .booksummary {
     gap: 15px;
   }
 }
-.hush-s-1 .container .description .part1 .booksummary p #dots {
+.bests-s-1 .container .description .part1 .booksummary p #dots {
   display: none;
 }
-.hush-s-1 .container .description .part1 .booksummary #myBtn {
+.bests-s-1 .container .description .part1 .booksummary #myBtn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2928,16 +3696,16 @@ html .s-4 .container .offerswrapper .offer2 {
   display: none;
 }
 @media (max-width: 770px) {
-  .hush-s-1 .container .description .part1 .booksummary #myBtn {
+  .bests-s-1 .container .description .part1 .booksummary #myBtn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
-.hush-s-1 .container .description .part1 .booksummary #myBtn:hover {
+.bests-s-1 .container .description .part1 .booksummary #myBtn:hover {
   background-color: #a59181;
 }
-.hush-s-1 .container .description .part1 .booksummary #more {
+.bests-s-1 .container .description .part1 .booksummary #more {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2948,16 +3716,16 @@ html .s-4 .container .offerswrapper .offer2 {
   gap: 30px;
 }
 @media (max-width: 770px) {
-  .hush-s-1 .container .description .part1 .booksummary #more {
+  .bests-s-1 .container .description .part1 .booksummary #more {
     display: none;
   }
 }
 @media (max-width: 550px) {
-  .hush-s-1 .container .description .part1 .booksummary #more {
+  .bests-s-1 .container .description .part1 .booksummary #more {
     gap: 15px;
   }
 }
-.hush-s-1 .container .description .part2 {
+.bests-s-1 .container .description .part2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2968,11 +3736,11 @@ html .s-4 .container .offerswrapper .offer2 {
   gap: 40px;
 }
 @media (max-width: 900px) {
-  .hush-s-1 .container .description .part2 {
+  .bests-s-1 .container .description .part2 {
     gap: 20px;
   }
 }
-.hush-s-1 .container .description .part2 .ratingquantity {
+.bests-s-1 .container .description .part2 .ratingquantity {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2982,19 +3750,19 @@ html .s-4 .container .offerswrapper .offer2 {
           flex-direction: column;
   gap: 12px;
 }
-.hush-s-1 .container .description .part2 .ratingquantity .review {
+.bests-s-1 .container .description .part2 .ratingquantity .review {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
 }
-.hush-s-1 .container .description .part2 .ratingquantity .review .stars {
+.bests-s-1 .container .description .part2 .ratingquantity .review .stars {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
 }
-.hush-s-1 .container .description .part2 .ratingquantity .quantity {
+.bests-s-1 .container .description .part2 .ratingquantity .quantity {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3010,22 +3778,22 @@ html .s-4 .container .offerswrapper .offer2 {
   padding: 5px 0px;
 }
 @media (max-width: 550px) {
-  .hush-s-1 .container .description .part2 .ratingquantity .quantity {
+  .bests-s-1 .container .description .part2 .ratingquantity .quantity {
     width: 100px;
   }
 }
-.hush-s-1 .container .description .part2 .ratingquantity .quantity .fa-minus,
-.hush-s-1 .container .description .part2 .ratingquantity .quantity .fa-plus {
+.bests-s-1 .container .description .part2 .ratingquantity .quantity .fa-minus,
+.bests-s-1 .container .description .part2 .ratingquantity .quantity .fa-plus {
   color: #796751;
   font-size: 16px;
   text-align: center;
   cursor: pointer;
 }
-.hush-s-1 .container .description .part2 .ratingquantity .quantity .fa-minus:hover,
-.hush-s-1 .container .description .part2 .ratingquantity .quantity .fa-plus:hover {
+.bests-s-1 .container .description .part2 .ratingquantity .quantity .fa-minus:hover,
+.bests-s-1 .container .description .part2 .ratingquantity .quantity .fa-plus:hover {
   color: #a59181;
 }
-.hush-s-1 .container .description .part2 .ratingquantity .quantity h6 {
+.bests-s-1 .container .description .part2 .ratingquantity .quantity h6 {
   color: #472d1c;
   text-align: center;
   font-family: "Bell MT Regular";
@@ -3036,13 +3804,13 @@ html .s-4 .container .offerswrapper .offer2 {
   letter-spacing: 0.48px;
   text-transform: capitalize;
 }
-.hush-s-1 .container .description .part2 .buy {
+.bests-s-1 .container .description .part2 .buy {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 18px;
 }
-.hush-s-1 .container .description .part2 .buy .buynow {
+.bests-s-1 .container .description .part2 .buy .buynow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3060,11 +3828,11 @@ html .s-4 .container .offerswrapper .offer2 {
   background: #D1BEAF;
   cursor: pointer;
 }
-.hush-s-1 .container .description .part2 .buy .buynow:hover {
+.bests-s-1 .container .description .part2 .buy .buynow:hover {
   background-color: #a59181;
 }
 @media (max-width: 900px) {
-  .hush-s-1 .container .description .part2 .buy .buynow {
+  .bests-s-1 .container .description .part2 .buy .buynow {
     width: 200px;
     height: 50px;
     -ms-flex-negative: 0;
@@ -3072,18 +3840,18 @@ html .s-4 .container .offerswrapper .offer2 {
   }
 }
 @media (max-width: 770px) {
-  .hush-s-1 .container .description .part2 .buy .buynow {
+  .bests-s-1 .container .description .part2 .buy .buynow {
     width: 336px;
     height: 66px;
   }
 }
 @media (max-width: 550px) {
-  .hush-s-1 .container .description .part2 .buy .buynow {
+  .bests-s-1 .container .description .part2 .buy .buynow {
     width: 200px;
     height: 50px;
   }
 }
-.hush-s-1 .container .description .part2 .buy .buynow h3 {
+.bests-s-1 .container .description .part2 .buy .buynow h3 {
   color: #302923;
   text-align: center;
   font-family: "Bell MT Regular";
@@ -3094,21 +3862,21 @@ html .s-4 .container .offerswrapper .offer2 {
   letter-spacing: 0.6px;
 }
 @media (max-width: 900px) {
-  .hush-s-1 .container .description .part2 .buy .buynow h3 {
+  .bests-s-1 .container .description .part2 .buy .buynow h3 {
     font-size: 23px;
   }
 }
 @media (max-width: 770px) {
-  .hush-s-1 .container .description .part2 .buy .buynow h3 {
+  .bests-s-1 .container .description .part2 .buy .buynow h3 {
     font-size: 30px;
   }
 }
 @media (max-width: 550px) {
-  .hush-s-1 .container .description .part2 .buy .buynow h3 {
+  .bests-s-1 .container .description .part2 .buy .buynow h3 {
     font-size: 23px;
   }
 }
-.hush-s-1 .container .description .part2 .buy .cart {
+.bests-s-1 .container .description .part2 .buy .cart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3124,7 +3892,7 @@ html .s-4 .container .offerswrapper .offer2 {
   border-radius: 10px;
 }
 @media (max-width: 900px) {
-  .hush-s-1 .container .description .part2 .buy .cart {
+  .bests-s-1 .container .description .part2 .buy .cart {
     width: 50px;
     height: 50px;
     -ms-flex-negative: 0;
@@ -3132,65 +3900,56 @@ html .s-4 .container .offerswrapper .offer2 {
   }
 }
 @media (max-width: 770px) {
-  .hush-s-1 .container .description .part2 .buy .cart {
+  .bests-s-1 .container .description .part2 .buy .cart {
     width: 66px;
     height: 66px;
   }
 }
 @media (max-width: 550px) {
-  .hush-s-1 .container .description .part2 .buy .cart {
+  .bests-s-1 .container .description .part2 .buy .cart {
     width: 50px;
     height: 50px;
     -ms-flex-negative: 0;
         flex-shrink: 0;
   }
 }
-.hush-s-1 .container .description .part2 .buy .cart:hover {
+.bests-s-1 .container .description .part2 .buy .cart:hover {
   background-color: #D1BEAF;
   border: 1px solid #a59181;
 }
-.hush-s-1 .container .description .part2 .buy .cart .fa-cart-shopping {
+.bests-s-1 .container .description .part2 .buy .cart .fa-cart-shopping {
   font-size: 33px;
   color: #796751;
 }
 @media (max-width: 900px) {
-  .hush-s-1 .container .description .part2 .buy .cart .fa-cart-shopping {
+  .bests-s-1 .container .description .part2 .buy .cart .fa-cart-shopping {
     font-size: 25px;
   }
 }
 @media (max-width: 770px) {
-  .hush-s-1 .container .description .part2 .buy .cart .fa-cart-shopping {
+  .bests-s-1 .container .description .part2 .buy .cart .fa-cart-shopping {
     font-size: 33px;
   }
 }
 @media (max-width: 550px) {
-  .hush-s-1 .container .description .part2 .buy .cart .fa-cart-shopping {
+  .bests-s-1 .container .description .part2 .buy .cart .fa-cart-shopping {
     font-size: 25px;
   }
 }
 
-.hush-s-2 {
-  background-color: #fcf3eb;
-  padding-top: 60px;
-}
-@media (max-width: 800px) {
-  .hush-s-2 {
-    padding-top: 30px;
-  }
-}
-.hush-s-2 .container {
+.bests-s-2 .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 136px;
 }
 @media (max-width: 1220px) {
-  .hush-s-2 .container {
+  .bests-s-2 .container {
     gap: 60px;
   }
 }
 @media (max-width: 800px) {
-  .hush-s-2 .container {
+  .bests-s-2 .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -3198,11 +3957,11 @@ html .s-4 .container .offerswrapper .offer2 {
     gap: 30px;
   }
 }
-.hush-s-2 .container .productdet {
+.bests-s-2 .container .productdet {
   max-width: 662px;
   width: 100%;
 }
-.hush-s-2 .container .productdet .detailswrapper {
+.bests-s-2 .container .productdet .detailswrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3210,7 +3969,7 @@ html .s-4 .container .offerswrapper .offer2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.hush-s-2 .container .productdet .detailswrapper .det1 {
+.bests-s-2 .container .productdet .detailswrapper .det1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3220,10 +3979,10 @@ html .s-4 .container .offerswrapper .offer2 {
           flex-direction: column;
   gap: 23px;
 }
-.hush-s-2 .container .productdet .detailswrapper .det1 h6 {
+.bests-s-2 .container .productdet .detailswrapper .det1 h6 {
   color: #615240;
 }
-.hush-s-2 .container .productdet .detailswrapper .det2 {
+.bests-s-2 .container .productdet .detailswrapper .det2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3236,7 +3995,7 @@ html .s-4 .container .offerswrapper .offer2 {
           align-items: end;
   gap: 23px;
 }
-.hush-s-2 .container .productdet .detailswrapper .det2 h6 {
+.bests-s-2 .container .productdet .detailswrapper .det2 h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3245,20 +4004,20 @@ html .s-4 .container .offerswrapper .offer2 {
           justify-content: end;
   color: #796751;
 }
-.hush-s-2 .container .author {
+.bests-s-2 .container .author {
   max-width: 442px;
 }
 @media (max-width: 1220px) {
-  .hush-s-2 .container .author {
+  .bests-s-2 .container .author {
     max-width: 300px;
   }
 }
 @media (max-width: 800px) {
-  .hush-s-2 .container .author {
+  .bests-s-2 .container .author {
     max-width: 1300px;
   }
 }
-.hush-s-2 .container .author .aboutauthor {
+.bests-s-2 .container .author .aboutauthor {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3271,7 +4030,7 @@ html .s-4 .container .offerswrapper .offer2 {
   border-radius: 20px;
   padding: 20px 30px 15px 20px;
 }
-.hush-s-2 .container .author .aboutauthor h4 {
+.bests-s-2 .container .author .aboutauthor h4 {
   color: #472d1c;
   font-family: "Bell MT Regular";
   font-size: 24px;
@@ -3280,7 +4039,7 @@ html .s-4 .container .offerswrapper .offer2 {
   line-height: normal;
   letter-spacing: 0.48px;
 }
-.hush-s-2 .container .author .aboutauthor p {
+.bests-s-2 .container .author .aboutauthor p {
   color: #000;
   font-family: "Bell MT Regular";
   font-size: 16px;
@@ -3289,7 +4048,7 @@ html .s-4 .container .offerswrapper .offer2 {
   line-height: normal;
   letter-spacing: 0.32px;
 }
-.hush-s-2 .container .author .aboutauthor p #myBtn2 {
+.bests-s-2 .container .author .aboutauthor p #myBtn2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3306,10 +4065,10 @@ html .s-4 .container .offerswrapper .offer2 {
   cursor: pointer;
   margin-top: 10px;
 }
-.hush-s-2 .container .author .aboutauthor p #myBtn2:hover {
+.bests-s-2 .container .author .aboutauthor p #myBtn2:hover {
   background-color: #a59181;
 }
-.hush-s-2 .container .author .aboutauthor p #more2 {
+.bests-s-2 .container .author .aboutauthor p #more2 {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -3318,11 +4077,11 @@ html .s-4 .container .offerswrapper .offer2 {
   display: none;
 }
 @media (max-width: 550px) {
-  .hush-s-2 .container .author .aboutauthor p #more2 {
+  .bests-s-2 .container .author .aboutauthor p #more2 {
     gap: 15px;
   }
 }
-.hush-s-2 .container .author .aboutauthor .seemore {
+.bests-s-2 .container .author .aboutauthor .seemore {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3334,21 +4093,11 @@ html .s-4 .container .offerswrapper .offer2 {
   padding: 10px 20px;
   cursor: pointer;
 }
-.hush-s-2 .container .author .aboutauthor .seemore:hover {
+.bests-s-2 .container .author .aboutauthor .seemore:hover {
   background-color: #a59181;
 }
 
-.hush-s-3 {
-  background-color: #fcf3eb;
-  padding-top: 60px;
-  padding-bottom: 10px;
-}
-@media (max-width: 800px) {
-  .hush-s-3 {
-    padding-top: 30px;
-  }
-}
-.hush-s-3 .container .alsolike {
+.bests-s-3 .container .alsolike {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3360,16 +4109,16 @@ html .s-4 .container .offerswrapper .offer2 {
       -ms-flex-align: center;
           align-items: center;
 }
-.hush-s-3 .container .alsolike h3 {
+.bests-s-3 .container .alsolike h3 {
   width: 100%;
 }
 @media (max-width: 800px) {
-  .hush-s-3 .container .alsolike h3 {
+  .bests-s-3 .container .alsolike h3 {
     text-align: center;
     margin-bottom: 10px;
   }
 }
-.hush-s-3 .container .alsolike .alsolike2 {
+.bests-s-3 .container .alsolike .alsolike2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3381,19 +4130,19 @@ html .s-4 .container .offerswrapper .offer2 {
   gap: 30px;
 }
 @media (max-width: 920px) {
-  .hush-s-3 .container .alsolike .alsolike2 {
+  .bests-s-3 .container .alsolike .alsolike2 {
     gap: 15px;
   }
 }
 @media (max-width: 800px) {
-  .hush-s-3 .container .alsolike .alsolike2 {
+  .bests-s-3 .container .alsolike .alsolike2 {
     max-width: 600px;
     width: 95%;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
 }
-.hush-s-3 .container .alsolike .alsolike2 .bestscard {
+.bests-s-3 .container .alsolike .alsolike2 .bestscard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3409,27 +4158,27 @@ html .s-4 .container .offerswrapper .offer2 {
   border: 1px solid #cbb294;
   padding: 10px 20px;
 }
-.hush-s-3 .container .alsolike .alsolike2 .bestscard:hover {
+.bests-s-3 .container .alsolike .alsolike2 .bestscard:hover {
   background-color: rgba(209, 190, 175, 0.9333333333);
   border: 1px solid #a59181;
 }
 @media (max-width: 1150px) {
-  .hush-s-3 .container .alsolike .alsolike2 .bestscard {
+  .bests-s-3 .container .alsolike .alsolike2 .bestscard {
     width: 200px;
   }
 }
 @media (max-width: 450px) {
-  .hush-s-3 .container .alsolike .alsolike2 .bestscard {
+  .bests-s-3 .container .alsolike .alsolike2 .bestscard {
     width: 160px;
   }
 }
 @media (max-width: 360px) {
-  .hush-s-3 .container .alsolike .alsolike2 .bestscard {
+  .bests-s-3 .container .alsolike .alsolike2 .bestscard {
     width: 130px;
     padding: 10px 10px;
   }
 }
-.hush-s-3 .container .alsolike .alsolike2 .bestscard .bestsimgwrapper {
+.bests-s-3 .container .alsolike .alsolike2 .bestscard .bestsimgwrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3449,23 +4198,23 @@ html .s-4 .container .offerswrapper .offer2 {
   padding-bottom: 10px;
 }
 @media (max-width: 710px) {
-  .hush-s-3 .container .alsolike .alsolike2 .bestscard .bestsimgwrapper {
+  .bests-s-3 .container .alsolike .alsolike2 .bestscard .bestsimgwrapper {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
 }
-.hush-s-3 .container .alsolike .alsolike2 .bestscard .bestsimgwrapper img {
+.bests-s-3 .container .alsolike .alsolike2 .bestscard .bestsimgwrapper img {
   width: 116px;
   height: 174px;
 }
 @media (max-width: 1150px) {
-  .hush-s-3 .container .alsolike .alsolike2 .bestscard .bestsimgwrapper img {
+  .bests-s-3 .container .alsolike .alsolike2 .bestscard .bestsimgwrapper img {
     width: 95px;
     height: 144px;
   }
 }
-.hush-s-3 .container .alsolike .alsolike2 .bestscard .bookname {
+.bests-s-3 .container .alsolike .alsolike2 .bestscard .bookname {
   color: #302923;
   font-family: "Bell MT Regular";
   font-size: 20px;
@@ -3474,16 +4223,11 @@ html .s-4 .container .offerswrapper .offer2 {
   line-height: normal;
 }
 @media (max-width: 1150px) {
-  .hush-s-3 .container .alsolike .alsolike2 .bestscard .bookname {
+  .bests-s-3 .container .alsolike .alsolike2 .bestscard .bookname {
     font-size: 19px;
   }
 }
-@media (max-width: 450px) {
-  .hush-s-3 .container .alsolike .alsolike2 .bestscard .aad {
-    font-size: 15px;
-  }
-}
-.hush-s-3 .container .alsolike .alsolike2 .bestscard .rating {
+.bests-s-3 .container .alsolike .alsolike2 .bestscard .rating {
   color: #483d35;
   font-family: "Bell MT Regular";
   font-size: 16px;
@@ -3493,14 +4237,14 @@ html .s-4 .container .offerswrapper .offer2 {
   margin-top: 2px;
 }
 @media (max-width: 1150px) {
-  .hush-s-3 .container .alsolike .alsolike2 .bestscard .rating {
+  .bests-s-3 .container .alsolike .alsolike2 .bestscard .rating {
     font-size: 15px;
   }
 }
-.hush-s-3 .container .alsolike .alsolike2 .bestscard .fa-star {
+.bests-s-3 .container .alsolike .alsolike2 .bestscard .fa-star {
   font-size: 13px;
 }
-.hush-s-3 .container .alsolike .alsolike2 .bestscard .price {
+.bests-s-3 .container .alsolike .alsolike2 .bestscard .price {
   color: #3c2a16;
   font-family: "Bell MT Regular";
   font-size: 24px;
@@ -3510,35 +4254,56 @@ html .s-4 .container .offerswrapper .offer2 {
   margin-top: 5px;
 }
 @media (max-width: 1150px) {
-  .hush-s-3 .container .alsolike .alsolike2 .bestscard .price {
+  .bests-s-3 .container .alsolike .alsolike2 .bestscard .price {
     font-size: 19px;
     margin-top: 3px;
   }
 }
-.hush-s-3 .container .alsolike .alsolike2 .bestscard .lotr {
+.bests-s-3 .container .alsolike .alsolike2 .bestscard .lotr {
   font-size: 18px;
   color: #302923;
 }
 @media (max-width: 1150px) {
-  .hush-s-3 .container .alsolike .alsolike2 .bestscard .lotr {
+  .bests-s-3 .container .alsolike .alsolike2 .bestscard .lotr {
     font-size: 16px;
   }
 }
 @media (max-width: 1060px) {
-  .hush-s-3 .container .alsolike .alsolike2 .bestscard7 {
+  .bests-s-3 .container .alsolike .alsolike2 .bestscard7 {
     display: none;
   }
 }
 
 .books-s-1 {
-  background-color: #fcf3eb;
-  padding-top: 30px;
+  padding-bottom: 60px;
+}
+@media (max-width: 770px) {
+  .books-s-1 {
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 425px) {
+  .books-s-1 {
+    padding-bottom: 10px;
+  }
 }
 .books-s-1 .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 120px;
+}
+@media (max-width: 1320px) {
+  .books-s-1 .container {
+    gap: 60px;
+  }
+}
+@media (max-width: 1090px) {
+  .books-s-1 .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 .books-s-1 .container .filter {
   display: -webkit-box;
@@ -3551,6 +4316,11 @@ html .s-4 .container .offerswrapper .offer2 {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
+}
+@media (max-width: 1090px) {
+  .books-s-1 .container .filter {
+    display: none;
+  }
 }
 .books-s-1 .container .filter .category1 h3 {
   margin-top: 0px;
@@ -3632,16 +4402,59 @@ html .s-4 .container .offerswrapper .offer2 {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  cursor: pointer;
+}
+.books-s-1 .container .filter .price input[type=submit]:hover,
+.books-s-1 .container .filter .distance input[type=submit]:hover {
+  background-color: rgb(86, 65, 55);
 }
 .books-s-1 .container .books {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+@media (max-width: 500px) {
+  .books-s-1 .container .books {
+    gap: 20px;
+  }
+}
+.books-s-1 .container .books .bookdiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 55px;
 }
-.books-s-1 .container .books .column1,
-.books-s-1 .container .books .column2,
-.books-s-1 .container .books .column3 {
+@media (max-width: 1150px) {
+  .books-s-1 .container .books .bookdiv {
+    gap: 25px;
+  }
+}
+@media (max-width: 1090px) {
+  .books-s-1 .container .books .bookdiv {
+    gap: 55px;
+  }
+}
+@media (max-width: 890px) {
+  .books-s-1 .container .books .bookdiv {
+    gap: 25px;
+  }
+}
+@media (max-width: 425px) {
+  .books-s-1 .container .books .bookdiv {
+    gap: 12px;
+  }
+}
+.books-s-1 .container .books .bookdiv .column1,
+.books-s-1 .container .books .bookdiv .column2,
+.books-s-1 .container .books .bookdiv .column3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3651,44 +4464,139 @@ html .s-4 .container .offerswrapper .offer2 {
           flex-direction: column;
   gap: 20px;
 }
-.books-s-1 .container .books .column1 .bookcard,
-.books-s-1 .container .books .column2 .bookcard,
-.books-s-1 .container .books .column3 .bookcard {
+@media (max-width: 400px) {
+  .books-s-1 .container .books .bookdiv .column1,
+  .books-s-1 .container .books .bookdiv .column2,
+  .books-s-1 .container .books .bookdiv .column3 {
+    gap: 12px;
+  }
+}
+.books-s-1 .container .books .bookdiv .column1 .filtersdiv,
+.books-s-1 .container .books .bookdiv .column2 .filtersdiv,
+.books-s-1 .container .books .bookdiv .column3 .filtersdiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.books-s-1 .container .books .bookdiv .column1 .filtersdiv .grid,
+.books-s-1 .container .books .bookdiv .column1 .filtersdiv .list,
+.books-s-1 .container .books .bookdiv .column2 .filtersdiv .grid,
+.books-s-1 .container .books .bookdiv .column2 .filtersdiv .list,
+.books-s-1 .container .books .bookdiv .column3 .filtersdiv .grid,
+.books-s-1 .container .books .bookdiv .column3 .filtersdiv .list {
+  display: none;
+}
+@media (max-width: 700px) {
+  .books-s-1 .container .books .bookdiv .column1 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column1 .filtersdiv .list,
+  .books-s-1 .container .books .bookdiv .column2 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column2 .filtersdiv .list,
+  .books-s-1 .container .books .bookdiv .column3 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column3 .filtersdiv .list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media (max-width: 470px) {
+  .books-s-1 .container .books .bookdiv .column1 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column1 .filtersdiv .list,
+  .books-s-1 .container .books .bookdiv .column2 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column2 .filtersdiv .list,
+  .books-s-1 .container .books .bookdiv .column3 .filtersdiv .grid,
+  .books-s-1 .container .books .bookdiv .column3 .filtersdiv .list {
+    width: 36px;
+    height: 36px;
+  }
+}
+.books-s-1 .container .books .bookdiv .column1 .bookcard,
+.books-s-1 .container .books .bookdiv .column2 .bookcard,
+.books-s-1 .container .books .bookdiv .column3 .bookcard {
   width: 235px;
   border-radius: 15px;
   border: 1px solid #cbb294;
   padding: 20px 20px;
+  cursor: pointer;
 }
-.books-s-1 .container .books .column1 .bookcard:hover,
-.books-s-1 .container .books .column2 .bookcard:hover,
-.books-s-1 .container .books .column3 .bookcard:hover {
-  background-color: rgba(209, 190, 175, 0.9333333333);
-  border: 1px solid #a59181;
+@media (max-width: 1260px) {
+  .books-s-1 .container .books .bookdiv .column1 .bookcard,
+  .books-s-1 .container .books .bookdiv .column2 .bookcard,
+  .books-s-1 .container .books .bookdiv .column3 .bookcard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0px 20px;
+    height: 278px;
+  }
 }
-@media (max-width: 1150px) {
-  .books-s-1 .container .books .column1 .bookcard,
-  .books-s-1 .container .books .column2 .bookcard,
-  .books-s-1 .container .books .column3 .bookcard {
+@media (max-width: 1090px) {
+  .books-s-1 .container .books .bookdiv .column1 .bookcard,
+  .books-s-1 .container .books .bookdiv .column2 .bookcard,
+  .books-s-1 .container .books .bookdiv .column3 .bookcard {
+    height: 310px;
+    padding: 20px 20px;
+  }
+}
+@media (max-width: 1260px) {
+  .books-s-1 .container .books .bookdiv .column1 .bookcard,
+  .books-s-1 .container .books .bookdiv .column2 .bookcard,
+  .books-s-1 .container .books .bookdiv .column3 .bookcard {
     width: 200px;
   }
 }
-@media (max-width: 450px) {
-  .books-s-1 .container .books .column1 .bookcard,
-  .books-s-1 .container .books .column2 .bookcard,
-  .books-s-1 .container .books .column3 .bookcard {
+@media (max-width: 1090px) {
+  .books-s-1 .container .books .bookdiv .column1 .bookcard,
+  .books-s-1 .container .books .bookdiv .column2 .bookcard,
+  .books-s-1 .container .books .bookdiv .column3 .bookcard {
+    width: 235px;
+  }
+}
+@media (max-width: 820px) {
+  .books-s-1 .container .books .bookdiv .column1 .bookcard,
+  .books-s-1 .container .books .bookdiv .column2 .bookcard,
+  .books-s-1 .container .books .bookdiv .column3 .bookcard {
+    padding: 0px 20px;
+    height: 278px;
+    width: 200px;
+  }
+}
+@media (max-width: 470px) {
+  .books-s-1 .container .books .bookdiv .column1 .bookcard,
+  .books-s-1 .container .books .bookdiv .column2 .bookcard,
+  .books-s-1 .container .books .bookdiv .column3 .bookcard {
     width: 160px;
   }
 }
-@media (max-width: 360px) {
-  .books-s-1 .container .books .column1 .bookcard,
-  .books-s-1 .container .books .column2 .bookcard,
-  .books-s-1 .container .books .column3 .bookcard {
-    width: 145px;
+@media (max-width: 400px) {
+  .books-s-1 .container .books .bookdiv .column1 .bookcard,
+  .books-s-1 .container .books .bookdiv .column2 .bookcard,
+  .books-s-1 .container .books .bookdiv .column3 .bookcard {
+    width: 148px;
+    height: 255px;
   }
 }
-.books-s-1 .container .books .column1 .bookcard .bestsimgwrapper,
-.books-s-1 .container .books .column2 .bookcard .bestsimgwrapper,
-.books-s-1 .container .books .column3 .bookcard .bestsimgwrapper {
+.books-s-1 .container .books .bookdiv .column1 .bookcard:hover,
+.books-s-1 .container .books .bookdiv .column2 .bookcard:hover,
+.books-s-1 .container .books .bookdiv .column3 .bookcard:hover {
+  background-color: rgba(209, 190, 175, 0.9333333333);
+  border: 1px solid #a59181;
+}
+.books-s-1 .container .books .bookdiv .column1 .bookcard .bestsimgwrapper,
+.books-s-1 .container .books .bookdiv .column2 .bookcard .bestsimgwrapper,
+.books-s-1 .container .books .bookdiv .column3 .bookcard .bestsimgwrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3708,31 +4616,47 @@ html .s-4 .container .offerswrapper .offer2 {
   padding-bottom: 10px;
 }
 @media (max-width: 710px) {
-  .books-s-1 .container .books .column1 .bookcard .bestsimgwrapper,
-  .books-s-1 .container .books .column2 .bookcard .bestsimgwrapper,
-  .books-s-1 .container .books .column3 .bookcard .bestsimgwrapper {
+  .books-s-1 .container .books .bookdiv .column1 .bookcard .bestsimgwrapper,
+  .books-s-1 .container .books .bookdiv .column2 .bookcard .bestsimgwrapper,
+  .books-s-1 .container .books .bookdiv .column3 .bookcard .bestsimgwrapper {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
 }
-.books-s-1 .container .books .column1 .bookcard .bestsimgwrapper img,
-.books-s-1 .container .books .column2 .bookcard .bestsimgwrapper img,
-.books-s-1 .container .books .column3 .bookcard .bestsimgwrapper img {
+.books-s-1 .container .books .bookdiv .column1 .bookcard .bestsimgwrapper img,
+.books-s-1 .container .books .bookdiv .column2 .bookcard .bestsimgwrapper img,
+.books-s-1 .container .books .bookdiv .column3 .bookcard .bestsimgwrapper img {
   width: 116px;
   height: 174px;
 }
-@media (max-width: 1150px) {
-  .books-s-1 .container .books .column1 .bookcard .bestsimgwrapper img,
-  .books-s-1 .container .books .column2 .bookcard .bestsimgwrapper img,
-  .books-s-1 .container .books .column3 .bookcard .bestsimgwrapper img {
+@media (max-width: 1260px) {
+  .books-s-1 .container .books .bookdiv .column1 .bookcard .bestsimgwrapper img,
+  .books-s-1 .container .books .bookdiv .column2 .bookcard .bestsimgwrapper img,
+  .books-s-1 .container .books .bookdiv .column3 .bookcard .bestsimgwrapper img {
     width: 95px;
     height: 144px;
   }
 }
-.books-s-1 .container .books .column1 .bookcard .bookname,
-.books-s-1 .container .books .column2 .bookcard .bookname,
-.books-s-1 .container .books .column3 .bookcard .bookname {
+@media (max-width: 1090px) {
+  .books-s-1 .container .books .bookdiv .column1 .bookcard .bestsimgwrapper img,
+  .books-s-1 .container .books .bookdiv .column2 .bookcard .bestsimgwrapper img,
+  .books-s-1 .container .books .bookdiv .column3 .bookcard .bestsimgwrapper img {
+    width: 116px;
+    height: 174px;
+  }
+}
+@media (max-width: 820px) {
+  .books-s-1 .container .books .bookdiv .column1 .bookcard .bestsimgwrapper img,
+  .books-s-1 .container .books .bookdiv .column2 .bookcard .bestsimgwrapper img,
+  .books-s-1 .container .books .bookdiv .column3 .bookcard .bestsimgwrapper img {
+    width: 95px;
+    height: 144px;
+  }
+}
+.books-s-1 .container .books .bookdiv .column1 .bookcard .bookname,
+.books-s-1 .container .books .bookdiv .column2 .bookcard .bookname,
+.books-s-1 .container .books .bookdiv .column3 .bookcard .bookname {
   color: #302923;
   font-family: "Bell MT Regular";
   font-size: 20px;
@@ -3740,16 +4664,37 @@ html .s-4 .container .offerswrapper .offer2 {
   font-weight: 400;
   line-height: normal;
 }
-@media (max-width: 1150px) {
-  .books-s-1 .container .books .column1 .bookcard .bookname,
-  .books-s-1 .container .books .column2 .bookcard .bookname,
-  .books-s-1 .container .books .column3 .bookcard .bookname {
+@media (max-width: 1260px) {
+  .books-s-1 .container .books .bookdiv .column1 .bookcard .bookname,
+  .books-s-1 .container .books .bookdiv .column2 .bookcard .bookname,
+  .books-s-1 .container .books .bookdiv .column3 .bookcard .bookname {
     font-size: 19px;
   }
 }
-.books-s-1 .container .books .column1 .bookcard .rating,
-.books-s-1 .container .books .column2 .bookcard .rating,
-.books-s-1 .container .books .column3 .bookcard .rating {
+@media (max-width: 1090px) {
+  .books-s-1 .container .books .bookdiv .column1 .bookcard .bookname,
+  .books-s-1 .container .books .bookdiv .column2 .bookcard .bookname,
+  .books-s-1 .container .books .bookdiv .column3 .bookcard .bookname {
+    font-size: 20px;
+  }
+}
+@media (max-width: 820px) {
+  .books-s-1 .container .books .bookdiv .column1 .bookcard .bookname,
+  .books-s-1 .container .books .bookdiv .column2 .bookcard .bookname,
+  .books-s-1 .container .books .bookdiv .column3 .bookcard .bookname {
+    font-size: 19px;
+  }
+}
+@media (max-width: 400px) {
+  .books-s-1 .container .books .bookdiv .column1 .bookcard .bookname,
+  .books-s-1 .container .books .bookdiv .column2 .bookcard .bookname,
+  .books-s-1 .container .books .bookdiv .column3 .bookcard .bookname {
+    font-size: 16px;
+  }
+}
+.books-s-1 .container .books .bookdiv .column1 .bookcard .rating,
+.books-s-1 .container .books .bookdiv .column2 .bookcard .rating,
+.books-s-1 .container .books .bookdiv .column3 .bookcard .rating {
   color: #483d35;
   font-family: "Bell MT Regular";
   font-size: 16px;
@@ -3758,16 +4703,37 @@ html .s-4 .container .offerswrapper .offer2 {
   line-height: normal;
   margin-top: 2px;
 }
-@media (max-width: 1150px) {
-  .books-s-1 .container .books .column1 .bookcard .rating,
-  .books-s-1 .container .books .column2 .bookcard .rating,
-  .books-s-1 .container .books .column3 .bookcard .rating {
+@media (max-width: 1260px) {
+  .books-s-1 .container .books .bookdiv .column1 .bookcard .rating,
+  .books-s-1 .container .books .bookdiv .column2 .bookcard .rating,
+  .books-s-1 .container .books .bookdiv .column3 .bookcard .rating {
     font-size: 15px;
   }
 }
-.books-s-1 .container .books .column1 .bookcard .price,
-.books-s-1 .container .books .column2 .bookcard .price,
-.books-s-1 .container .books .column3 .bookcard .price {
+@media (max-width: 1090px) {
+  .books-s-1 .container .books .bookdiv .column1 .bookcard .rating,
+  .books-s-1 .container .books .bookdiv .column2 .bookcard .rating,
+  .books-s-1 .container .books .bookdiv .column3 .bookcard .rating {
+    font-size: 16px;
+  }
+}
+@media (max-width: 820px) {
+  .books-s-1 .container .books .bookdiv .column1 .bookcard .rating,
+  .books-s-1 .container .books .bookdiv .column2 .bookcard .rating,
+  .books-s-1 .container .books .bookdiv .column3 .bookcard .rating {
+    font-size: 15px;
+  }
+}
+@media (max-width: 400px) {
+  .books-s-1 .container .books .bookdiv .column1 .bookcard .rating,
+  .books-s-1 .container .books .bookdiv .column2 .bookcard .rating,
+  .books-s-1 .container .books .bookdiv .column3 .bookcard .rating {
+    font-size: 14px;
+  }
+}
+.books-s-1 .container .books .bookdiv .column1 .bookcard .price,
+.books-s-1 .container .books .bookdiv .column2 .bookcard .price,
+.books-s-1 .container .books .bookdiv .column3 .bookcard .price {
   color: #3c2a16;
   font-family: "Bell MT Regular";
   font-size: 24px;
@@ -3776,24 +4742,41 @@ html .s-4 .container .offerswrapper .offer2 {
   line-height: normal;
   margin-top: 5px;
 }
-@media (max-width: 1150px) {
-  .books-s-1 .container .books .column1 .bookcard .price,
-  .books-s-1 .container .books .column2 .bookcard .price,
-  .books-s-1 .container .books .column3 .bookcard .price {
+@media (max-width: 1260px) {
+  .books-s-1 .container .books .bookdiv .column1 .bookcard .price,
+  .books-s-1 .container .books .bookdiv .column2 .bookcard .price,
+  .books-s-1 .container .books .bookdiv .column3 .bookcard .price {
     font-size: 19px;
     margin-top: 3px;
   }
 }
-.books-s-1 .container .books .column1 select {
-  max-width: 166px;
+@media (max-width: 1090px) {
+  .books-s-1 .container .books .bookdiv .column1 .bookcard .price,
+  .books-s-1 .container .books .bookdiv .column2 .bookcard .price,
+  .books-s-1 .container .books .bookdiv .column3 .bookcard .price {
+    font-size: 24px;
+    margin-top: 5px;
+  }
+}
+@media (max-width: 820px) {
+  .books-s-1 .container .books .bookdiv .column1 .bookcard .price,
+  .books-s-1 .container .books .bookdiv .column2 .bookcard .price,
+  .books-s-1 .container .books .bookdiv .column3 .bookcard .price {
+    font-size: 19px;
+    margin-top: 3px;
+  }
+}
+.books-s-1 .container .books .bookdiv .column1 select {
+  width: 235px;
+  height: 55px;
+  padding: 0 15px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   border-radius: 10px;
   border: 1px solid #472d1c;
   background-color: #fcf3eb;
-  padding: 12px 16px;
   color: #796751;
-  text-align: center;
+  text-align: start;
   font-family: "Bell MT Regular";
   font-size: 23px;
   font-style: normal;
@@ -3804,7 +4787,49 @@ html .s-4 .container .offerswrapper .offer2 {
   outline: none;
   cursor: pointer;
 }
-.books-s-1 .container .books .column2 .filter {
+@media (max-width: 1320px) {
+  .books-s-1 .container .books .bookdiv .column1 select {
+    width: 200px;
+  }
+}
+@media (max-width: 1260px) {
+  .books-s-1 .container .books .bookdiv .column1 select {
+    font-size: 20px;
+    height: 51px;
+  }
+}
+@media (max-width: 1090px) {
+  .books-s-1 .container .books .bookdiv .column1 select {
+    height: 55px;
+    font-size: 23px;
+  }
+}
+@media (max-width: 820px) {
+  .books-s-1 .container .books .bookdiv .column1 select {
+    height: 51px;
+    font-size: 19px;
+  }
+}
+@media (max-width: 700px) {
+  .books-s-1 .container .books .bookdiv .column1 select {
+    height: 45px;
+    width: 150px;
+    padding: 0 5px;
+  }
+}
+@media (max-width: 470px) {
+  .books-s-1 .container .books .bookdiv .column1 select {
+    width: 118px;
+    height: 36px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+  .books-s-1 .container .books .bookdiv .column1 select {
+    width: 106px;
+  }
+}
+.books-s-1 .container .books .bookdiv .column2 .filter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3818,16 +4843,14 @@ html .s-4 .container .offerswrapper .offer2 {
   gap: 15px;
   max-width: 235px;
 }
-.books-s-1 .container .books .column2 .filter .grid,
-.books-s-1 .container .books .column2 .filter .list {
-  max-width: 55px;
-  padding: 12px 14px;
-  border: 1px solid #472d1c;
-  border-radius: 10px;
-  cursor: pointer;
+@media (max-width: 700px) {
+  .books-s-1 .container .books .bookdiv .column2 {
+    display: none;
+  }
 }
-.books-s-1 .container .books .column3 select {
-  max-width: 235px;
+.books-s-1 .container .books .bookdiv .column3 select {
+  width: 235px;
+  height: 55px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   border-radius: 10px;
@@ -3835,7 +4858,7 @@ html .s-4 .container .offerswrapper .offer2 {
   background-color: #fcf3eb;
   padding: 12px 16px;
   color: #796751;
-  text-align: center;
+  text-align: start;
   font-family: "Bell MT Regular";
   font-size: 17px;
   font-style: normal;
@@ -3845,4 +4868,80 @@ html .s-4 .container .offerswrapper .offer2 {
   text-transform: capitalize;
   outline: none;
   cursor: pointer;
+}
+@media (max-width: 1320px) {
+  .books-s-1 .container .books .bookdiv .column3 select {
+    width: 200px;
+  }
+}
+@media (max-width: 1260px) {
+  .books-s-1 .container .books .bookdiv .column3 select {
+    height: 51px;
+  }
+}
+@media (max-width: 1090px) {
+  .books-s-1 .container .books .bookdiv .column3 select {
+    width: 235px;
+    height: 55px;
+  }
+}
+@media (max-width: 820px) {
+  .books-s-1 .container .books .bookdiv .column3 select {
+    height: 51px;
+    width: 200px;
+  }
+}
+@media (max-width: 700px) {
+  .books-s-1 .container .books .bookdiv .column3 select {
+    height: 45px;
+    padding: 0 5px;
+    font-size: 13px;
+    width: 150px;
+  }
+}
+@media (max-width: 470px) {
+  .books-s-1 .container .books .bookdiv .column3 select {
+    width: 118px;
+    height: 36px;
+    font-size: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .books-s-1 .container .books .bookdiv .column3 select {
+    width: 106px;
+  }
+}
+.books-s-1 .container .books .pagechanger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+.books-s-1 .container .books .pagechanger i {
+  color: #796751;
+  font-size: 36px;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .books-s-1 .container .books .pagechanger i {
+    font-size: 20px;
+  }
+}
+.books-s-1 .container .books .pagechanger h6 {
+  color: #472d1c;
+  font-family: "Bell MT Regular";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.72px;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .books-s-1 .container .books .pagechanger h6 {
+    font-size: 20px;
+  }
 }/*# sourceMappingURL=global.css.map */

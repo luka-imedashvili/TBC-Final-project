@@ -22,27 +22,39 @@
   <body>
     <header>
       <div class="container">
-        <a href="../index.html" class="logo">
-          <i class="fa-solid fa-book"></i>
-          <h3>THE BOOKSHELF</h3>
-        </a>
-        <nav>
-          <ul class="ul" id="ul">
+        <div class="pcnav">
+          <a href="../index.html" class="logo">
+            <i class="fa-solid fa-book"></i>
+            <h3>THE BOOKSHELF</h3>
+          </a>
+          <nav>
+            <ul class="ul">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="books.html">Books</a></li>
+              <li><a href="../index.html#about">About Us</a></li>
+              <li><a href="#footer">Contact Us</a></li>
+            </ul>
+          </nav>
+          <div class="iconsdiv">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#"><i class="fa-solid fa-cart-shopping icon23"></i></a>
+            <a href="user.html"><i class="fa-solid fa-user icon23"></i></a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa-solid fa-bars"></i>
+            </a>
+          </div>
+        </div>
+        <nav id="ul">
+          <ul class="ul">
             <li><a href="../index.html">Home</a></li>
-            <li><a href="#">Books</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#userfooter">Contact Us</a></li>
+            <li><a href="books.html">Books</a></li>
+            <li><a href="../index.html#about">About Us</a></li>
+            <li><a href="#footer">Contact Us</a></li>
           </ul>
         </nav>
-        <div class="iconsdiv">
-          <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-          <a href="#"><i class="fa-solid fa-cart-shopping icon23"></i></a>
-          <a href="user.html"><i class="fa-solid fa-user icon23"></i></a>
-          <i class="fa-solid fa-bars"></i>
-        </div>
       </div>
     </header>
-    <section class="hush-s-1">
+    <section class="bests-s-1">
       <div class="container">
         <div class="imgdiv">
           <div class="booktitle">
@@ -105,7 +117,7 @@
         </div>
       </div>
     </section>
-    <section class="hush-s-2">
+    <section class="bests-s-2">
       <div class="container">
         <div class="productdet">
           <h2>Product Details</h2>
@@ -135,17 +147,15 @@
             <p>
               was a Georgian writer. He is the author of six novels, some short
               stories and essays. His works are conceptual and gained popularity
-              after his death. His novel Antonio and David was published in Swedish in 2013 and in Arabic in 2014.<span
-                id="dots2"
-                >..</span
-              >
+              after his death. His novel Antonio and David was published in
+              Swedish in 2013 and in Arabic in 2014.<span id="dots2">..</span>
               <span id="more2"
                 >Jemal Karchkhadze was born in 1936 in the village of Ukhuti in
                 Vani in western Georgia. He graduated in 1960 with a degree in
                 Georgian language and literature at Tbilisi State University.
-                His short story Igi was published in 1977. This was
-                followed by his most important novels The Caravan, Antonio and David and Zebulon
-                . He died in 1998 in Tbilisi.</span
+                His short story Igi was published in 1977. This was followed by
+                his most important novels The Caravan, Antonio and David and
+                Zebulon . He died in 1998 in Tbilisi.</span
               >
               <button onclick="myFunction2()" id="myBtn2">Read more</button>
             </p>
@@ -153,7 +163,7 @@
         </div>
       </div>
     </section>
-    <section class="hush-s-3">
+    <section class="bests-s-3">
       <div class="container">
         <div class="alsolike">
           <h3>You May Also Like</h3>
@@ -207,7 +217,7 @@
         </div>
       </div>
     </section>
-    <footer id="userfooter">
+    <footer id="footer">
       <div class="container">
         <div class="footerdiv1">
           <h3>Contact Us</h3>
@@ -230,6 +240,9 @@
             </li>
           </ul>
           <div class="footericons">
+            <a href="https://www.tbceducation.ge/">
+              <img src="../images/tbc-logo.png" alt="TBC logo" width="50px" />
+            </a>
             <a href="https://www.facebook.com/"
               ><i class="fa-brands fa-facebook"></i
             ></a>
@@ -239,9 +252,6 @@
             <a href="https://x.com/?lang=en&mx=2"
               ><i class="fa-brands fa-x-twitter"></i
             ></a>
-            <!-- <a href="https://www.tbceducation.ge/">
-            <img src="images/tbc-logo.png" alt="TBC logo" width="18px">
-          </a> -->
           </div>
         </div>
         <div class="footerdiv2">
@@ -251,11 +261,11 @@
               <i class="fa-solid fa-house"></i>
               <h6>Home</h6>
             </a>
-            <a href="#">
+            <a href="books.html">
               <i class="fa-solid fa-book"></i>
               <h6>Shop Books</h6>
             </a>
-            <a href="#">
+            <a href="../index.html#about">
               <i class="fa-solid fa-circle-exclamation"></i>
               <h6>About Us</h6>
             </a>

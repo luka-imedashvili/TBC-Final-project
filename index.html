@@ -11,6 +11,7 @@
       href="https://db.onlinewebfonts.com/c/01661f50354ecd0a3560ac450ecf43d3?family=Bell+MT+Regular"
       rel="stylesheet"
     />
+
     <script
       src="https://kit.fontawesome.com/041121a16a.js"
       crossorigin="anonymous"
@@ -21,41 +22,57 @@
   <body>
     <header>
       <div class="container">
-        <a href="#" class="logo">
-          <i class="fa-solid fa-book"></i>
-          <h3>THE BOOKSHELF</h3>
-        </a>
-
-        <nav>
-          <ul class="ul" id="ul">
+        <div class="pcnav">
+          <a href="#" class="logo">
+            <i class="fa-solid fa-book"></i>
+            <h3>THE BOOKSHELF</h3>
+          </a>
+          <nav>
+            <ul class="ul">
+              <li><a href="#">Home</a></li>
+              <li><a href="pages/books.html">Books</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#footer">Contact Us</a></li>
+            </ul>
+          </nav>
+          <div class="iconsdiv">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#"><i class="fa-solid fa-cart-shopping icon23"></i></a>
+            <a href="pages/user.html"
+              ><i class="fa-solid fa-user icon23"></i
+            ></a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa-solid fa-bars"></i>
+            </a>
+          </div>
+        </div>
+        <nav id="ul">
+          <ul class="ul">
             <li><a href="#">Home</a></li>
             <li><a href="pages/books.html">Books</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a href="#about">About Us</a></li>
             <li><a href="#footer">Contact Us</a></li>
           </ul>
         </nav>
-        <div class="iconsdiv">
-          <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-          <a href="#"><i class="fa-solid fa-cart-shopping icon23"></i></a>
-          <a href="pages/user.html"><i class="fa-solid fa-user icon23"></i></a>
-          <a href="pages/user.html"><i class="fa-solid fa-bars"></i></a>
-        </div>
       </div>
     </header>
     <section class="s-1">
       <div class="container">
         <div class="quote">
           <h2>give books a new life!</h2>
-          <div class="shopnow">
-            <h6>Shop Now</h6>
-          </div>
+
+          <a href="pages/books.html">
+            <div class="shopnow">
+              <h6>Shop Now</h6>
+            </div>
+          </a>
         </div>
       </div>
     </section>
     <section class="s-2">
       <div class="container">
         <h2 class="genres">Genres</h2>
-        <div class="cardswrapper">
+        <div class="cardswrapper wrapper">
           <div class="card card1">
             <img src="images/category1.png" alt="Fantasy Icon" />
             <h5>Fantasy</h5>
@@ -186,7 +203,7 @@
             <h6 class="price">14.99$</h6>
           </a>
           <!-- card8 -->
-          <a class="bestscard8 bestscard">
+          <a href="pages/prince.html" class="bestscard8 bestscard">
             <div class="bestsimgwrapper">
               <img src="images/prince.jpg" alt="Hush,hush novel" />
               <div class="bestsbox"></div>
@@ -199,7 +216,7 @@
             <h6 class="price">11.99$</h6>
           </a>
         </div>
-        <a href="#"><h4 class="seemore">See More</h4></a>
+        <a href="pages/books.html"><h4 class="seemore">See More</h4></a>
       </div>
     </section>
     <section class="s-4">
@@ -210,20 +227,47 @@
             <div class="offertext">
               <h5>Romance Books</h5>
               <h6>40% Off</h6>
-              <div class="purchase">
-                <h6>Purchase</h6>
-              </div>
+              <a href="pages/books.html">
+                <div class="purchase">
+                  <h6>Purchase</h6>
+                </div>
+              </a>
             </div>
           </div>
           <div class="offer2">
             <div class="offertext">
               <h5>Classic Literature</h5>
               <h6>Buy One Get One Free</h6>
-              <div class="purchase">
-                <h6>Purchase</h6>
-              </div>
+              <a href="pages/books.html">
+                <div class="purchase">
+                  <h6>Purchase</h6>
+                </div>
+              </a>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="s-5" id="about">
+      <div class="container">
+        <h3>About us</h3>
+        <div class="aboutus">
+          <div class="about">
+            <div class="uswrapper">
+              <h3>"The Bookshelf"</h3>
+              <p>
+                Old, little-known books are rarely found in official stores. And
+                new books can often be out of our budget. Also, probably all of
+                us have a desire to exchange read and abandoned books for
+                others, new and interesting works for us, we all want to renew
+                our shelves, but I found that in Georgia there was no mobile or
+                web platform where we could carry out these operations, so,
+                there was no website for books For lovers! This motivated us to
+                create "The Bookshelf"!
+              </p>
+            </div>
+          </div>
+          <img src="images/shelf.png" alt="Library" />
         </div>
       </div>
     </section>
@@ -271,11 +315,11 @@
               <i class="fa-solid fa-house"></i>
               <h6>Home</h6>
             </a>
-            <a href="#">
+            <a href="pages/books.html">
               <i class="fa-solid fa-book"></i>
               <h6>Shop Books</h6>
             </a>
-            <a href="#">
+            <a href="#about">
               <i class="fa-solid fa-circle-exclamation"></i>
               <h6>About Us</h6>
             </a>
@@ -283,5 +327,15 @@
         </div>
       </div>
     </footer>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("ul");
+        if (x.style.display === "flex") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "flex";
+        }
+      }
+    </script>
   </body>
 </html>
