@@ -79,9 +79,10 @@
       .iconsdiv {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        max-width: 200px;
-        width: 100%;
+        justify-content: end;
+        gap: 55px;
+        // max-width: 200px;
+        // width: 100%;
         @media (max-width: 1110px) {
           gap: 30px;
         }
