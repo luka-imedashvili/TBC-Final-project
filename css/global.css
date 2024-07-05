@@ -267,22 +267,6 @@ html header .container .pcnav .iconsdiv {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
-  gap: 55px;
-}
-@media (max-width: 1110px) {
-  html header .container .pcnav .iconsdiv {
-    gap: 30px;
-  }
-}
-@media (max-width: 1000px) {
-  html header .container .pcnav .iconsdiv {
-    gap: 12px;
-  }
-}
-@media (max-width: 500px) {
-  html header .container .pcnav .iconsdiv {
-    gap: 5px;
-  }
 }
 html header .container .pcnav .iconsdiv i {
   color: #2c1508;
@@ -307,6 +291,22 @@ html header .container .pcnav .iconsdiv .fa-bars {
 @media (max-width: 1000px) {
   html header .container .pcnav .iconsdiv .fa-bars {
     display: block;
+  }
+}
+html header .container .pcnav .iconsdiv .fa-magnifying-glass,
+html header .container .pcnav .iconsdiv .fa-cart-shopping {
+  margin-right: 55px;
+}
+@media (max-width: 1110px) {
+  html header .container .pcnav .iconsdiv .fa-magnifying-glass,
+  html header .container .pcnav .iconsdiv .fa-cart-shopping {
+    margin-right: 30px;
+  }
+}
+@media (max-width: 500px) {
+  html header .container .pcnav .iconsdiv .fa-magnifying-glass,
+  html header .container .pcnav .iconsdiv .fa-cart-shopping {
+    margin-right: 12px;
   }
 }
 html header .container #ul {
@@ -599,10 +599,14 @@ html .s-4 .container .offerswrapper .offer2, html .s-4 .container .offerswrapper
     max-width: 500px;
   }
 }
+@media (max-width: 750px) {
+  html .s-4 .container .offerswrapper .offer2, html .s-4 .container .offerswrapper .offer1 {
+    max-width: 700px;
+  }
+}
 @media (max-width: 600px) {
   html .s-4 .container .offerswrapper .offer2, html .s-4 .container .offerswrapper .offer1 {
     height: 200px;
-    width: 450px;
   }
 }
 html .s-4 .container .offerswrapper .offer2 .offertext, html .s-4 .container .offerswrapper .offer1 .offertext {
@@ -1387,22 +1391,6 @@ html header .container .pcnav .iconsdiv {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
-  gap: 55px;
-}
-@media (max-width: 1110px) {
-  html header .container .pcnav .iconsdiv {
-    gap: 30px;
-  }
-}
-@media (max-width: 1000px) {
-  html header .container .pcnav .iconsdiv {
-    gap: 12px;
-  }
-}
-@media (max-width: 500px) {
-  html header .container .pcnav .iconsdiv {
-    gap: 5px;
-  }
 }
 html header .container .pcnav .iconsdiv i {
   color: #2c1508;
@@ -1427,6 +1415,22 @@ html header .container .pcnav .iconsdiv .fa-bars {
 @media (max-width: 1000px) {
   html header .container .pcnav .iconsdiv .fa-bars {
     display: block;
+  }
+}
+html header .container .pcnav .iconsdiv .fa-magnifying-glass,
+html header .container .pcnav .iconsdiv .fa-cart-shopping {
+  margin-right: 55px;
+}
+@media (max-width: 1110px) {
+  html header .container .pcnav .iconsdiv .fa-magnifying-glass,
+  html header .container .pcnav .iconsdiv .fa-cart-shopping {
+    margin-right: 30px;
+  }
+}
+@media (max-width: 500px) {
+  html header .container .pcnav .iconsdiv .fa-magnifying-glass,
+  html header .container .pcnav .iconsdiv .fa-cart-shopping {
+    margin-right: 12px;
   }
 }
 html header .container #ul {
@@ -1719,10 +1723,14 @@ html .s-4 .container .offerswrapper .offer2, html .s-4 .container .offerswrapper
     max-width: 500px;
   }
 }
+@media (max-width: 750px) {
+  html .s-4 .container .offerswrapper .offer2, html .s-4 .container .offerswrapper .offer1 {
+    max-width: 700px;
+  }
+}
 @media (max-width: 600px) {
   html .s-4 .container .offerswrapper .offer2, html .s-4 .container .offerswrapper .offer1 {
     height: 200px;
-    width: 450px;
   }
 }
 html .s-4 .container .offerswrapper .offer2 .offertext, html .s-4 .container .offerswrapper .offer1 .offertext {
@@ -2248,7 +2256,7 @@ html ::selection {
   background-color: rgba(99, 89, 81, 0.5098039216);
 }
 html .s-1 .container .quote {
-  background-image: url("../images/banner.jpg");
+  background-image: url("../images/s-1image.png");
   background-color: #472d1c;
   height: 356px;
   background-repeat: no-repeat;
@@ -2273,9 +2281,24 @@ html .s-1 .container .quote {
       flex-wrap: wrap;
   gap: 20px;
 }
+@media (max-width: 850px) {
+  html .s-1 .container .quote {
+    height: 300px;
+  }
+}
+@media (max-width: 650px) {
+  html .s-1 .container .quote {
+    height: 250px;
+  }
+}
 @media (max-width: 450px) {
   html .s-1 .container .quote {
     padding: 0 40px;
+    height: 250px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 20px;
   }
 }
 html .s-1 .container .quote h2 {
@@ -2296,11 +2319,6 @@ html .s-1 .container .quote h2 {
   }
 }
 html .s-1 .container .quote .shopnow {
-  padding: 10px 0;
-  width: 156px;
-  border-radius: 8px;
-  background-color: #d1beaf;
-  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2316,15 +2334,14 @@ html .s-1 .container .quote .shopnow {
           align-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  padding: 10px 0;
+  width: 156px;
+  border-radius: 8px;
+  background-color: #d1beaf;
+  cursor: pointer;
 }
 html .s-1 .container .quote .shopnow:hover {
   background-color: #c4af9f;
-}
-@media (max-width: 350px) {
-  html .s-1 .container .quote .shopnow {
-    max-width: 350px;
-    width: 100%;
-  }
 }
 html .s-1 .container .quote .shopnow h6 {
   color: #302923;
@@ -2763,6 +2780,22 @@ html .s-4 .container .offerswrapper {
   gap: 40px;
   width: 100%;
 }
+@media (max-width: 1000px) {
+  html .s-4 .container .offerswrapper {
+    gap: 25px;
+  }
+}
+@media (max-width: 750px) {
+  html .s-4 .container .offerswrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 @media (max-width: 510px) {
   html .s-4 .container .offerswrapper {
     gap: 15px;
@@ -2785,9 +2818,10 @@ html .s-4 .container .offerswrapper .offer1 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background-image: url("../images/offer1.png");
+  background-size: cover;
   padding-right: 100px;
 }
-@media (max-width: 833px) {
+@media (max-width: 533px) {
   html .s-4 .container .offerswrapper .offer1 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -2812,9 +2846,10 @@ html .s-4 .container .offerswrapper .offer2 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background-image: url("../images/offer2.png");
-  padding-right: 40px;
+  background-size: cover;
+  padding-right: 50px;
 }
-@media (max-width: 833px) {
+@media (max-width: 533px) {
   html .s-4 .container .offerswrapper .offer2 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;

@@ -11,7 +11,7 @@ html {
     .container {
       @extend %container;
       .quote {
-        background-image: url("../images/banner.jpg");
+        background-image: url("../images/s-1image.png");
         background-color: #472d1c;
         height: 356px;
         background-repeat: no-repeat;
@@ -21,9 +21,19 @@ html {
         padding: 0 70px;
         @include flex(column, space-evenly, start, wrap);
         gap: 20px;
+        @media (max-width: 850px) {
+          height: 300px;
+        }
+        @media (max-width: 650px) {
+          height: 250px;
+        }
         @media (max-width: 450px) {
           padding: 0 40px;
+          height: 250px;
+          justify-content: center;
+          gap: 20px;
         }
+
         h2 {
           color: #d1beaf;
           font-family: $main-font;
@@ -40,19 +50,17 @@ html {
           }
         }
         .shopnow {
+          @include flex(row, center, center, nowrap);
           padding: 10px 0;
           width: 156px;
           border-radius: 8px;
           background-color: #d1beaf;
           cursor: pointer;
+
           &:hover {
             background-color: $hover3;
           }
-          @include flex(row, center, center, nowrap);
-          @media (max-width: 350px) {
-            max-width: 350px;
-            width: 100%;
-          }
+
           h6 {
             color: #302923;
             text-align: center;
@@ -103,7 +111,6 @@ html {
         .card {
           @extend %card;
         }
-        
       }
     }
   }
@@ -336,6 +343,13 @@ html {
         @include flex(row, center, start, nowrap);
         gap: 40px;
         width: 100%;
+        @media (max-width: 1000px) {
+          gap: 25px;
+        }
+        @media (max-width: 750px) {
+          flex-direction: column;
+          align-items: center;
+        }
         @media (max-width: 510px) {
           gap: 15px;
         }
@@ -343,8 +357,9 @@ html {
           @extend %offercard;
           @include flex(row, end, center, wrap);
           background-image: url("../images/offer1.png");
+          background-size: cover;
           padding-right: 100px;
-          @media (max-width: 833px) {
+          @media (max-width: 533px) {
             justify-content: center;
             padding: 0px;
           }
@@ -353,8 +368,10 @@ html {
           @extend %offercard;
           @include flex(row, end, center, wrap);
           background-image: url("../images/offer2.png");
-          padding-right: 40px;
-          @media (max-width: 833px) {
+          background-size: cover;
+
+          padding-right: 50px;
+          @media (max-width: 533px) {
             justify-content: center;
             padding: 0px;
           }
