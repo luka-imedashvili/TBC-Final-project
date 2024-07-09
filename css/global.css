@@ -535,6 +535,9 @@ html .s-2 .container .cardswrapper .card {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+html .s-2 .container .cardswrapper .card:hover {
+  background-color: #7f6f5b;
+}
 @media (max-width: 1310px) {
   html .s-2 .container .cardswrapper .card {
     width: 185px;
@@ -1658,6 +1661,9 @@ html .s-2 .container .cardswrapper .card {
           align-items: start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+html .s-2 .container .cardswrapper .card:hover {
+  background-color: #7f6f5b;
 }
 @media (max-width: 1310px) {
   html .s-2 .container .cardswrapper .card {
