@@ -139,14 +139,15 @@ a {
 }
 
 html header {
-  padding: 25px 0;
-  background-color: rgba(209, 190, 175, 0.9333333333);
+  padding: 20px 0;
+  background-color: #a78d78;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 5;
+  opacity: 0.95;
 }
-@media (max-width: 500px) {
+@media (max-width: 630px) {
   html header {
     padding: 15px 0;
   }
@@ -180,47 +181,55 @@ html header .container .pcnav .logo {
           align-items: center;
   gap: 10px;
 }
-@media (max-width: 500px) {
+@media (max-width: 630px) {
   html header .container .pcnav .logo {
     gap: 5px;
   }
 }
 html header .container .pcnav .logo .fa-book {
-  color: #2c1508;
-  font-size: 33px;
+  color: #291c0e;
+  font-size: 25px;
 }
 html header .container .pcnav .logo .fa-book:hover {
-  color: #836e60;
+  color: #42352d;
 }
 @media (max-width: 750px) {
   html header .container .pcnav .logo .fa-book {
     font-size: 29px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 630px) {
   html header .container .pcnav .logo .fa-book {
     font-size: 20px;
   }
 }
 html header .container .pcnav .logo h3 {
-  color: #2c1508;
+  color: #291c0e;
   font-family: "Copperplate Gothic Light";
-  font-size: 27px;
+  font-size: 23px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 html header .container .pcnav .logo h3:hover {
-  color: #836e60;
+  color: #42352d;
+  border-bottom: #3a2214 1.5px solid;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 @media (max-width: 750px) {
   html header .container .pcnav .logo h3 {
     font-size: 24px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 630px) {
   html header .container .pcnav .logo h3 {
     font-size: 15px;
+  }
+}
+@media (max-width: 350px) {
+  html header .container .pcnav .logo h3 {
+    font-size: 13px;
   }
 }
 html header .container .pcnav nav {
@@ -246,6 +255,11 @@ html header .container .pcnav nav .ul {
           flex-direction: row;
   gap: 50px;
 }
+@media (max-width: 1170px) {
+  html header .container .pcnav nav .ul {
+    gap: 30px;
+  }
+}
 html header .container .pcnav nav .ul a {
   color: #472d1c;
   font-family: "Copperplate Gothic Light";
@@ -255,7 +269,10 @@ html header .container .pcnav nav .ul a {
   line-height: normal;
 }
 html header .container .pcnav nav .ul a:hover {
-  color: #695a50;
+  color: #52443b;
+  border-bottom: #3a2214 1.5px solid;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 html header .container .pcnav .iconsdiv {
   display: -webkit-box;
@@ -268,44 +285,89 @@ html header .container .pcnav .iconsdiv {
       -ms-flex-pack: end;
           justify-content: end;
 }
-html header .container .pcnav .iconsdiv i {
-  color: #2c1508;
-  font-size: 27px;
-}
-html header .container .pcnav .iconsdiv i:hover {
-  color: #836e60;
-}
-@media (max-width: 500px) {
-  html header .container .pcnav .iconsdiv i {
-    font-size: 17px;
-  }
-}
-@media (max-width: 1000px) {
-  html header .container .pcnav .iconsdiv .icon23 {
+@media (max-width: 400px) {
+  html header .container .pcnav .iconsdiv :nth-child(2) h6 {
     display: none;
   }
 }
-html header .container .pcnav .iconsdiv .fa-bars {
+html header .container .pcnav .iconsdiv a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html header .container .pcnav .iconsdiv a :hover {
+  border-bottom: #3a2214 1.5px solid;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+html header .container .pcnav .iconsdiv a h6 {
+  color: #291c0e;
+  font-family: "Copperplate Gothic Light";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-right: 10px;
+}
+html header .container .pcnav .iconsdiv a h6:hover {
+  opacity: 0.75;
+}
+@media (max-width: 750px) {
+  html header .container .pcnav .iconsdiv a h6 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 630px) {
+  html header .container .pcnav .iconsdiv a h6 {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1130px) {
+  html header .container .pcnav .iconsdiv a .profile {
+    display: none;
+  }
+}
+html header .container .pcnav .iconsdiv a i {
+  color: #291c0e;
+  font-size: 20px;
+}
+html header .container .pcnav .iconsdiv a i:hover {
+  color: #42352d;
+}
+@media (max-width: 630px) {
+  html header .container .pcnav .iconsdiv a i {
+    font-size: 17px;
+  }
+}
+@media (max-width: 1130px) {
+  html header .container .pcnav .iconsdiv a .icon23 {
+    display: none;
+  }
+}
+html header .container .pcnav .iconsdiv a .fa-bars {
   display: none;
 }
-@media (max-width: 1000px) {
-  html header .container .pcnav .iconsdiv .fa-bars {
+@media (max-width: 1130px) {
+  html header .container .pcnav .iconsdiv a .fa-bars {
     display: block;
   }
 }
-html header .container .pcnav .iconsdiv .fa-magnifying-glass,
-html header .container .pcnav .iconsdiv .fa-cart-shopping {
-  margin-right: 55px;
+html header .container .pcnav .iconsdiv a .fa-magnifying-glass,
+html header .container .pcnav .iconsdiv a .fa-cart-shopping {
+  margin-right: 35px;
 }
-@media (max-width: 1110px) {
-  html header .container .pcnav .iconsdiv .fa-magnifying-glass,
-  html header .container .pcnav .iconsdiv .fa-cart-shopping {
-    margin-right: 30px;
+@media (max-width: 1170px) {
+  html header .container .pcnav .iconsdiv a .fa-magnifying-glass,
+  html header .container .pcnav .iconsdiv a .fa-cart-shopping {
+    margin-right: 25px;
   }
 }
-@media (max-width: 500px) {
-  html header .container .pcnav .iconsdiv .fa-magnifying-glass,
-  html header .container .pcnav .iconsdiv .fa-cart-shopping {
+@media (max-width: 630px) {
+  html header .container .pcnav .iconsdiv a .fa-magnifying-glass,
+  html header .container .pcnav .iconsdiv a .fa-cart-shopping {
     margin-right: 12px;
   }
 }
@@ -364,11 +426,11 @@ html header .container #ul .ul li a {
   }
 }
 html header .container #ul .ul li a:hover {
-  color: #695a50;
+  color: #52443b;
 }
 
 .books-s-1, .bests-s-1, html .s-1 {
-  background-color: #fcf3eb;
+  background-color: #e1d4c2;
   padding-top: 40px;
 }
 @media (max-width: 770px) {
@@ -383,7 +445,7 @@ html header .container #ul .ul li a:hover {
 }
 
 .bests-s-2, html .s-4, html .s-3, html .s-2 {
-  background-color: #fcf3eb;
+  background-color: #e1d4c2;
   padding-top: 60px;
 }
 @media (max-width: 770px) {
@@ -393,7 +455,7 @@ html header .container #ul .ul li a:hover {
 }
 
 .bests-s-3, html .s-5 {
-  background-color: #fcf3eb;
+  background-color: #e1d4c2;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -410,7 +472,7 @@ html header .container #ul .ul li a:hover {
 }
 
 html footer {
-  background-color: #fcf3eb;
+  background-color: #e1d4c2;
   border-top: 1px solid #65503c;
   padding-top: 40px;
   padding-bottom: 22px;
@@ -536,7 +598,7 @@ html .s-2 .container .cardswrapper .card {
       flex-wrap: wrap;
 }
 html .s-2 .container .cardswrapper .card:hover {
-  background-color: #7f6f5b;
+  opacity: 0.95;
 }
 @media (max-width: 1310px) {
   html .s-2 .container .cardswrapper .card {
@@ -728,7 +790,7 @@ html footer .container .footerdiv1 ul li i, html footer .container .footerdiv2 .
 }
 
 html footer .container .footerdiv1 ul li a, html footer .container .footerdiv2 .footericons2 a h6 {
-  color: #796751;
+  color: #6e473b;
   text-align: center;
   font-family: "Bell MT Regular";
   font-size: 14px;
@@ -752,16 +814,16 @@ html footer .container .footerdiv1 ul li a, html footer .container .footerdiv2 .
   }
 }
 
-.user-s-1 .container .userdiv2 .liked .likedbooks .seeall h4, .user-s-1 .container .userdiv2 .liked .likedtitle a, .user-s-1 .container .userdiv2 .liked .likedtitle .heart h3, .user-s-1 .container .userdiv2 .bio h3, .user-s-1 .container .userdiv1 .profile .personinfodiv .personinfo .info2 h3, .user-s-1 .container .userdiv1 .profile .personinfodiv .personinfo .info1 h3, .user-s-1 .container .userdiv2 .personality h3, .user-s-1 .container .userdiv2 .personality1 h3, .user-s-1 .container .userdiv1 .profile .personinfodiv .personality h3 {
-  color: #88776A;
-  font-family: Arial;
+.user-s-1 .container .userdiv2 .liked .likedtitle a, .user-s-1 .container .userdiv2 .liked .likedtitle .heart h3, .user-s-1 .container .userdiv2 .bio h3, .user-s-1 .container .userdiv1 .profile .personinfodiv .personinfo .info2 h3, .user-s-1 .container .userdiv1 .profile .personinfodiv .personinfo .info1 h3, .user-s-1 .container .userdiv2 .personality h3, .user-s-1 .container .userdiv2 .personality1 h3, .user-s-1 .container .userdiv1 .profile .personinfodiv .personality h3 {
+  color: #88776a;
+  font-family: Poppins;
   font-size: 25px;
-  font-style: normal;
-  font-weight: 700;
+  font-style: italic;
+  font-weight: 400;
   line-height: normal;
 }
 @media (max-width: 1110px) {
-  .user-s-1 .container .userdiv2 .liked .likedbooks .seeall h4, .user-s-1 .container .userdiv2 .liked .likedtitle a, .user-s-1 .container .userdiv2 .liked .likedtitle .heart h3, .user-s-1 .container .userdiv2 .bio h3, .user-s-1 .container .userdiv1 .profile .personinfodiv .personinfo .info2 h3, .user-s-1 .container .userdiv1 .profile .personinfodiv .personinfo .info1 h3, .user-s-1 .container .userdiv2 .personality h3, .user-s-1 .container .userdiv2 .personality1 h3, .user-s-1 .container .userdiv1 .profile .personinfodiv .personality h3 {
+  .user-s-1 .container .userdiv2 .liked .likedtitle a, .user-s-1 .container .userdiv2 .liked .likedtitle .heart h3, .user-s-1 .container .userdiv2 .bio h3, .user-s-1 .container .userdiv1 .profile .personinfodiv .personinfo .info2 h3, .user-s-1 .container .userdiv1 .profile .personinfodiv .personinfo .info1 h3, .user-s-1 .container .userdiv2 .personality h3, .user-s-1 .container .userdiv2 .personality1 h3, .user-s-1 .container .userdiv1 .profile .personinfodiv .personality h3 {
     font-size: 20px;
   }
 }
@@ -777,7 +839,7 @@ html footer .container .footerdiv1 ul li a, html footer .container .footerdiv2 .
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 10px;
   padding: 25px;
   gap: 10px;
@@ -861,7 +923,7 @@ html footer .container .footerdiv1 ul li a, html footer .container .footerdiv2 .
 }
 
 .bests-s-1 .container .description .part1 .booktitle h4, .bests-s-1 .container .imgdiv .booktitle h4 {
-  color: #796751;
+  color: #6e473b;
   font-family: "Bell MT Regular";
   font-size: 24px;
   font-style: normal;
@@ -924,7 +986,7 @@ html footer .container .footerdiv1 ul li a, html footer .container .footerdiv2 .
 
 .bests-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star,
 .bests-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star-half-stroke {
-  color: #796751;
+  color: #6e473b;
   font-size: 17px;
 }
 
@@ -983,7 +1045,7 @@ html footer .container .footerdiv1 ul li a, html footer .container .footerdiv2 .
   line-height: normal;
   letter-spacing: 0.72px;
   text-transform: capitalize;
-  border-bottom: 1px solid #796751;
+  border-bottom: 1px solid #6e473b;
   margin-bottom: 15px;
   margin-top: 30px;
   padding-bottom: 5px;
@@ -1063,6 +1125,16 @@ html footer .container .footerdiv1 ul li a, html footer .container .footerdiv2 .
   border: 1px solid #472d1c;
   border-radius: 10px;
   cursor: pointer;
+}
+.books-s-1 .container .books .bookdiv .column2 .filter .grid:hover,
+.books-s-1 .container .books .bookdiv .column2 .filter .list:hover, .books-s-1 .container .books .bookdiv .column1 .filtersdiv .grid:hover,
+.books-s-1 .container .books .bookdiv .column1 .filtersdiv .list:hover,
+.books-s-1 .container .books .bookdiv .column2 .filtersdiv .grid:hover,
+.books-s-1 .container .books .bookdiv .column2 .filtersdiv .list:hover,
+.books-s-1 .container .books .bookdiv .column3 .filtersdiv .grid:hover,
+.books-s-1 .container .books .bookdiv .column3 .filtersdiv .list:hover {
+  background-color: #bea290;
+  border: 1px solid #a59181;
 }
 @media (max-width: 1260px) {
   .books-s-1 .container .books .bookdiv .column2 .filter .grid,
@@ -1266,14 +1338,15 @@ a {
 }
 
 html header {
-  padding: 25px 0;
-  background-color: rgba(209, 190, 175, 0.9333333333);
+  padding: 20px 0;
+  background-color: #a78d78;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 5;
+  opacity: 0.95;
 }
-@media (max-width: 500px) {
+@media (max-width: 630px) {
   html header {
     padding: 15px 0;
   }
@@ -1307,47 +1380,55 @@ html header .container .pcnav .logo {
           align-items: center;
   gap: 10px;
 }
-@media (max-width: 500px) {
+@media (max-width: 630px) {
   html header .container .pcnav .logo {
     gap: 5px;
   }
 }
 html header .container .pcnav .logo .fa-book {
-  color: #2c1508;
-  font-size: 33px;
+  color: #291c0e;
+  font-size: 25px;
 }
 html header .container .pcnav .logo .fa-book:hover {
-  color: #836e60;
+  color: #42352d;
 }
 @media (max-width: 750px) {
   html header .container .pcnav .logo .fa-book {
     font-size: 29px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 630px) {
   html header .container .pcnav .logo .fa-book {
     font-size: 20px;
   }
 }
 html header .container .pcnav .logo h3 {
-  color: #2c1508;
+  color: #291c0e;
   font-family: "Copperplate Gothic Light";
-  font-size: 27px;
+  font-size: 23px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 html header .container .pcnav .logo h3:hover {
-  color: #836e60;
+  color: #42352d;
+  border-bottom: #3a2214 1.5px solid;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 @media (max-width: 750px) {
   html header .container .pcnav .logo h3 {
     font-size: 24px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 630px) {
   html header .container .pcnav .logo h3 {
     font-size: 15px;
+  }
+}
+@media (max-width: 350px) {
+  html header .container .pcnav .logo h3 {
+    font-size: 13px;
   }
 }
 html header .container .pcnav nav {
@@ -1373,6 +1454,11 @@ html header .container .pcnav nav .ul {
           flex-direction: row;
   gap: 50px;
 }
+@media (max-width: 1170px) {
+  html header .container .pcnav nav .ul {
+    gap: 30px;
+  }
+}
 html header .container .pcnav nav .ul a {
   color: #472d1c;
   font-family: "Copperplate Gothic Light";
@@ -1382,7 +1468,10 @@ html header .container .pcnav nav .ul a {
   line-height: normal;
 }
 html header .container .pcnav nav .ul a:hover {
-  color: #695a50;
+  color: #52443b;
+  border-bottom: #3a2214 1.5px solid;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 html header .container .pcnav .iconsdiv {
   display: -webkit-box;
@@ -1395,44 +1484,89 @@ html header .container .pcnav .iconsdiv {
       -ms-flex-pack: end;
           justify-content: end;
 }
-html header .container .pcnav .iconsdiv i {
-  color: #2c1508;
-  font-size: 27px;
-}
-html header .container .pcnav .iconsdiv i:hover {
-  color: #836e60;
-}
-@media (max-width: 500px) {
-  html header .container .pcnav .iconsdiv i {
-    font-size: 17px;
-  }
-}
-@media (max-width: 1000px) {
-  html header .container .pcnav .iconsdiv .icon23 {
+@media (max-width: 400px) {
+  html header .container .pcnav .iconsdiv :nth-child(2) h6 {
     display: none;
   }
 }
-html header .container .pcnav .iconsdiv .fa-bars {
+html header .container .pcnav .iconsdiv a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html header .container .pcnav .iconsdiv a :hover {
+  border-bottom: #3a2214 1.5px solid;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+html header .container .pcnav .iconsdiv a h6 {
+  color: #291c0e;
+  font-family: "Copperplate Gothic Light";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-right: 10px;
+}
+html header .container .pcnav .iconsdiv a h6:hover {
+  opacity: 0.75;
+}
+@media (max-width: 750px) {
+  html header .container .pcnav .iconsdiv a h6 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 630px) {
+  html header .container .pcnav .iconsdiv a h6 {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1130px) {
+  html header .container .pcnav .iconsdiv a .profile {
+    display: none;
+  }
+}
+html header .container .pcnav .iconsdiv a i {
+  color: #291c0e;
+  font-size: 20px;
+}
+html header .container .pcnav .iconsdiv a i:hover {
+  color: #42352d;
+}
+@media (max-width: 630px) {
+  html header .container .pcnav .iconsdiv a i {
+    font-size: 17px;
+  }
+}
+@media (max-width: 1130px) {
+  html header .container .pcnav .iconsdiv a .icon23 {
+    display: none;
+  }
+}
+html header .container .pcnav .iconsdiv a .fa-bars {
   display: none;
 }
-@media (max-width: 1000px) {
-  html header .container .pcnav .iconsdiv .fa-bars {
+@media (max-width: 1130px) {
+  html header .container .pcnav .iconsdiv a .fa-bars {
     display: block;
   }
 }
-html header .container .pcnav .iconsdiv .fa-magnifying-glass,
-html header .container .pcnav .iconsdiv .fa-cart-shopping {
-  margin-right: 55px;
+html header .container .pcnav .iconsdiv a .fa-magnifying-glass,
+html header .container .pcnav .iconsdiv a .fa-cart-shopping {
+  margin-right: 35px;
 }
-@media (max-width: 1110px) {
-  html header .container .pcnav .iconsdiv .fa-magnifying-glass,
-  html header .container .pcnav .iconsdiv .fa-cart-shopping {
-    margin-right: 30px;
+@media (max-width: 1170px) {
+  html header .container .pcnav .iconsdiv a .fa-magnifying-glass,
+  html header .container .pcnav .iconsdiv a .fa-cart-shopping {
+    margin-right: 25px;
   }
 }
-@media (max-width: 500px) {
-  html header .container .pcnav .iconsdiv .fa-magnifying-glass,
-  html header .container .pcnav .iconsdiv .fa-cart-shopping {
+@media (max-width: 630px) {
+  html header .container .pcnav .iconsdiv a .fa-magnifying-glass,
+  html header .container .pcnav .iconsdiv a .fa-cart-shopping {
     margin-right: 12px;
   }
 }
@@ -1491,11 +1625,11 @@ html header .container #ul .ul li a {
   }
 }
 html header .container #ul .ul li a:hover {
-  color: #695a50;
+  color: #52443b;
 }
 
 .books-s-1, .bests-s-1, html .s-1 {
-  background-color: #fcf3eb;
+  background-color: #e1d4c2;
   padding-top: 40px;
 }
 @media (max-width: 770px) {
@@ -1510,7 +1644,7 @@ html header .container #ul .ul li a:hover {
 }
 
 .bests-s-2, html .s-4, html .s-3, html .s-2 {
-  background-color: #fcf3eb;
+  background-color: #e1d4c2;
   padding-top: 60px;
 }
 @media (max-width: 770px) {
@@ -1520,7 +1654,7 @@ html header .container #ul .ul li a:hover {
 }
 
 .bests-s-3, html .s-5 {
-  background-color: #fcf3eb;
+  background-color: #e1d4c2;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -1537,7 +1671,7 @@ html header .container #ul .ul li a:hover {
 }
 
 html footer {
-  background-color: #fcf3eb;
+  background-color: #e1d4c2;
   border-top: 1px solid #65503c;
   padding-top: 40px;
   padding-bottom: 22px;
@@ -1663,7 +1797,7 @@ html .s-2 .container .cardswrapper .card {
       flex-wrap: wrap;
 }
 html .s-2 .container .cardswrapper .card:hover {
-  background-color: #7f6f5b;
+  opacity: 0.95;
 }
 @media (max-width: 1310px) {
   html .s-2 .container .cardswrapper .card {
@@ -1855,7 +1989,7 @@ html footer .container .footerdiv1 ul li i, html footer .container .footerdiv2 .
 }
 
 html footer .container .footerdiv1 ul li a, html footer .container .footerdiv2 .footericons2 a h6 {
-  color: #796751;
+  color: #6e473b;
   text-align: center;
   font-family: "Bell MT Regular";
   font-size: 14px;
@@ -1879,16 +2013,16 @@ html footer .container .footerdiv1 ul li a, html footer .container .footerdiv2 .
   }
 }
 
-.user-s-1 .container .userdiv2 .liked .likedbooks .seeall h4, .user-s-1 .container .userdiv2 .liked .likedtitle a, .user-s-1 .container .userdiv2 .liked .likedtitle .heart h3, .user-s-1 .container .userdiv2 .bio h3, .user-s-1 .container .userdiv2 .personality h3, .user-s-1 .container .userdiv2 .personality1 h3, .user-s-1 .container .userdiv1 .profile .personinfodiv .personality h3, .user-s-1 .container .userdiv1 .profile .personinfodiv .personinfo .info2 h3, .user-s-1 .container .userdiv1 .profile .personinfodiv .personinfo .info1 h3 {
-  color: #88776A;
-  font-family: Arial;
+.user-s-1 .container .userdiv2 .liked .likedtitle a, .user-s-1 .container .userdiv2 .liked .likedtitle .heart h3, .user-s-1 .container .userdiv2 .bio h3, .user-s-1 .container .userdiv2 .personality h3, .user-s-1 .container .userdiv2 .personality1 h3, .user-s-1 .container .userdiv1 .profile .personinfodiv .personality h3, .user-s-1 .container .userdiv1 .profile .personinfodiv .personinfo .info2 h3, .user-s-1 .container .userdiv1 .profile .personinfodiv .personinfo .info1 h3 {
+  color: #88776a;
+  font-family: Poppins;
   font-size: 25px;
-  font-style: normal;
-  font-weight: 700;
+  font-style: italic;
+  font-weight: 400;
   line-height: normal;
 }
 @media (max-width: 1110px) {
-  .user-s-1 .container .userdiv2 .liked .likedbooks .seeall h4, .user-s-1 .container .userdiv2 .liked .likedtitle a, .user-s-1 .container .userdiv2 .liked .likedtitle .heart h3, .user-s-1 .container .userdiv2 .bio h3, .user-s-1 .container .userdiv2 .personality h3, .user-s-1 .container .userdiv2 .personality1 h3, .user-s-1 .container .userdiv1 .profile .personinfodiv .personality h3, .user-s-1 .container .userdiv1 .profile .personinfodiv .personinfo .info2 h3, .user-s-1 .container .userdiv1 .profile .personinfodiv .personinfo .info1 h3 {
+  .user-s-1 .container .userdiv2 .liked .likedtitle a, .user-s-1 .container .userdiv2 .liked .likedtitle .heart h3, .user-s-1 .container .userdiv2 .bio h3, .user-s-1 .container .userdiv2 .personality h3, .user-s-1 .container .userdiv2 .personality1 h3, .user-s-1 .container .userdiv1 .profile .personinfodiv .personality h3, .user-s-1 .container .userdiv1 .profile .personinfodiv .personinfo .info2 h3, .user-s-1 .container .userdiv1 .profile .personinfodiv .personinfo .info1 h3 {
     font-size: 20px;
   }
 }
@@ -1904,7 +2038,7 @@ html footer .container .footerdiv1 ul li a, html footer .container .footerdiv2 .
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 10px;
   padding: 25px;
   gap: 10px;
@@ -1988,7 +2122,7 @@ html footer .container .footerdiv1 ul li a, html footer .container .footerdiv2 .
 }
 
 .bests-s-1 .container .description .part1 .booktitle h4, .bests-s-1 .container .imgdiv .booktitle h4 {
-  color: #796751;
+  color: #6e473b;
   font-family: "Bell MT Regular";
   font-size: 24px;
   font-style: normal;
@@ -2051,7 +2185,7 @@ html footer .container .footerdiv1 ul li a, html footer .container .footerdiv2 .
 
 .bests-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star,
 .bests-s-1 .container .description .part2 .ratingquantity .review .stars .fa-star-half-stroke {
-  color: #796751;
+  color: #6e473b;
   font-size: 17px;
 }
 
@@ -2110,7 +2244,7 @@ html footer .container .footerdiv1 ul li a, html footer .container .footerdiv2 .
   line-height: normal;
   letter-spacing: 0.72px;
   text-transform: capitalize;
-  border-bottom: 1px solid #796751;
+  border-bottom: 1px solid #6e473b;
   margin-bottom: 15px;
   margin-top: 30px;
   padding-bottom: 5px;
@@ -2190,6 +2324,16 @@ html footer .container .footerdiv1 ul li a, html footer .container .footerdiv2 .
   border: 1px solid #472d1c;
   border-radius: 10px;
   cursor: pointer;
+}
+.books-s-1 .container .books .bookdiv .column2 .filter .grid:hover,
+.books-s-1 .container .books .bookdiv .column2 .filter .list:hover, .books-s-1 .container .books .bookdiv .column1 .filtersdiv .grid:hover,
+.books-s-1 .container .books .bookdiv .column1 .filtersdiv .list:hover,
+.books-s-1 .container .books .bookdiv .column2 .filtersdiv .grid:hover,
+.books-s-1 .container .books .bookdiv .column2 .filtersdiv .list:hover,
+.books-s-1 .container .books .bookdiv .column3 .filtersdiv .grid:hover,
+.books-s-1 .container .books .bookdiv .column3 .filtersdiv .list:hover {
+  background-color: #bea290;
+  border: 1px solid #a59181;
 }
 @media (max-width: 1260px) {
   .books-s-1 .container .books .bookdiv .column2 .filter .grid,
@@ -2558,10 +2702,6 @@ html .s-3 .container .bestsellerswrapper .bestscard {
   border: 1px solid #cbb294;
   padding: 10px 20px;
 }
-html .s-3 .container .bestsellerswrapper .bestscard:hover {
-  background-color: rgba(209, 190, 175, 0.9333333333);
-  border: 1px solid #a59181;
-}
 @media (max-width: 1150px) {
   html .s-3 .container .bestsellerswrapper .bestscard {
     width: 200px;
@@ -2692,6 +2832,9 @@ html .s-3 .container .bestsellerswrapper .bestscard .lotr {
     font-size: 16px;
   }
 }
+html .s-3 .container .bestsellerswrapper :hover {
+  background-color: #bea290;
+}
 @media (max-width: 925px) {
   html .s-3 .container .bestsellerswrapper .bestscard8,
   html .s-3 .container .bestsellerswrapper .bestscard4 {
@@ -2714,7 +2857,7 @@ html .s-3 .container .seemore {
   margin-top: 15px;
 }
 html .s-3 .container .seemore:hover {
-  color: #836e60;
+  color: #42352d;
 }
 @media (max-width: 750px) {
   html .s-3 .container .seemore {
@@ -2748,7 +2891,7 @@ html .s-4 .container {
 html .s-4 .container h3 {
   color: #472d1c;
   text-align: center;
-  font-family: #2c1508;
+  font-family: #291c0e;
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
@@ -2866,7 +3009,7 @@ html .s-4 .container .offerswrapper .offer2 {
 html .s-5 .container > h3 {
   color: #472d1c;
   text-align: start;
-  font-family: #2c1508;
+  font-family: #291c0e;
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
@@ -2891,7 +3034,7 @@ html .s-5 .container > h3 {
   }
 }
 html .s-5 .container .aboutus {
-  background-color: #D1BEAF;
+  background-color: #a78d78;
   border-radius: 15px;
   aspect-ratio: 2/1;
   display: -webkit-box;
@@ -3076,7 +3219,7 @@ html .s-5 .container img {
   }
 }
 .user-s-1 {
-  background-color: #88776A;
+  background-color: #88776a;
   padding-bottom: 60px;
   padding-top: 40px;
 }
@@ -3142,7 +3285,7 @@ html .s-5 .container img {
   }
 }
 .user-s-1 .container .userdiv1 .profile {
-  background-color: #FFF;
+  background-color: #fff;
   padding: 25px 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3179,7 +3322,7 @@ html .s-5 .container img {
   gap: 20px;
 }
 .user-s-1 .container .userdiv1 .profile .person h2 {
-  color: #88776A;
+  color: #88776a;
   text-align: center;
   font-family: Arial;
   font-size: 28px;
@@ -3310,7 +3453,7 @@ html .s-5 .container img {
   display: flex;
   gap: 25px;
   padding: 22px 30px;
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 10px;
   max-width: 355px;
 }
@@ -3385,7 +3528,7 @@ html .s-5 .container img {
   gap: 5px;
 }
 .user-s-1 .container .userdiv2 .liked .likedtitle .heart .fa-heart {
-  color: #88776A;
+  color: #88776a;
   font-size: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3535,7 +3678,7 @@ html .s-5 .container img {
   width: 150px;
   height: 225px;
   border-radius: 5px;
-  background-color: rgba(209, 190, 175, 0.9333333333);
+  background-color: #a78d78;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3570,7 +3713,18 @@ html .s-5 .container img {
   }
 }
 .user-s-1 .container .userdiv2 .liked .likedbooks .seeall h4 {
+  color: #ffe9d8;
+  font-family: "Bell MT Regular";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
   text-align: center;
+}
+@media (max-width: 1110px) {
+  .user-s-1 .container .userdiv2 .liked .likedbooks .seeall h4 {
+    font-size: 20px;
+  }
 }
 @media (max-width: 830px) {
   .user-s-1 .container .userdiv2 .personality {
@@ -3728,7 +3882,7 @@ html .s-5 .container img {
   max-width: -moz-fit-content;
   max-width: fit-content;
   border-radius: 8px;
-  background-color: #D1BEAF;
+  background-color: #a78d78;
   padding: 10px 20px;
   color: #302923;
   border: none;
@@ -3812,7 +3966,7 @@ html .s-5 .container img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #D1BEAF;
+  background-color: #a78d78;
   border-radius: 10px;
   width: 132px;
   padding: 5px 0px;
@@ -3824,7 +3978,7 @@ html .s-5 .container img {
 }
 .bests-s-1 .container .description .part2 .ratingquantity .quantity .fa-minus,
 .bests-s-1 .container .description .part2 .ratingquantity .quantity .fa-plus {
-  color: #796751;
+  color: #6e473b;
   font-size: 16px;
   text-align: center;
   cursor: pointer;
@@ -3865,7 +4019,7 @@ html .s-5 .container img {
           align-items: center;
   gap: 8px;
   border-radius: 8px;
-  background: #D1BEAF;
+  background: #a78d78;
   cursor: pointer;
 }
 .bests-s-1 .container .description .part2 .buy .buynow:hover {
@@ -3928,7 +4082,7 @@ html .s-5 .container img {
           justify-content: center;
   width: 66px;
   height: 66px;
-  border: 1px solid #D1BEAF;
+  border: 1px solid #a78d78;
   border-radius: 10px;
 }
 @media (max-width: 900px) {
@@ -3954,12 +4108,12 @@ html .s-5 .container img {
   }
 }
 .bests-s-1 .container .description .part2 .buy .cart:hover {
-  background-color: #D1BEAF;
+  background-color: #a78d78;
   border: 1px solid #a59181;
 }
 .bests-s-1 .container .description .part2 .buy .cart .fa-cart-shopping {
   font-size: 33px;
-  color: #796751;
+  color: #6e473b;
 }
 @media (max-width: 900px) {
   .bests-s-1 .container .description .part2 .buy .cart .fa-cart-shopping {
@@ -4042,7 +4196,7 @@ html .s-5 .container img {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
-  color: #796751;
+  color: #6e473b;
 }
 .bests-s-2 .container .author {
   max-width: 442px;
@@ -4066,7 +4220,7 @@ html .s-5 .container img {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
-  border: 1px solid #796751;
+  border: 1px solid #6e473b;
   border-radius: 20px;
   padding: 20px 30px 15px 20px;
 }
@@ -4096,7 +4250,7 @@ html .s-5 .container img {
   max-width: -moz-fit-content;
   max-width: fit-content;
   border-radius: 8px;
-  background-color: #D1BEAF;
+  background-color: #a78d78;
   padding: 10px 20px;
   border: none;
   color: #302923;
@@ -4129,7 +4283,7 @@ html .s-5 .container img {
   max-width: -moz-fit-content;
   max-width: fit-content;
   border-radius: 8px;
-  background-color: #D1BEAF;
+  background-color: #a78d78;
   padding: 10px 20px;
   cursor: pointer;
 }
@@ -4199,7 +4353,7 @@ html .s-5 .container img {
   padding: 10px 20px;
 }
 .bests-s-3 .container .alsolike .alsolike2 .bestscard:hover {
-  background-color: rgba(209, 190, 175, 0.9333333333);
+  background-color: #a78d78;
   border: 1px solid #a59181;
 }
 @media (max-width: 1150px) {
@@ -4378,7 +4532,7 @@ html .s-5 .container img {
 .books-s-1 .container .filter .price input[type=text],
 .books-s-1 .container .filter .distance input[type=text] {
   border-radius: 5px;
-  border: 1px solid #796751;
+  border: 1px solid #6e473b;
   background-color: #d7bfad;
   padding: 12px 6px;
 }
@@ -4446,7 +4600,7 @@ html .s-5 .container img {
 }
 .books-s-1 .container .filter .price input[type=submit]:hover,
 .books-s-1 .container .filter .distance input[type=submit]:hover {
-  background-color: rgb(86, 65, 55);
+  opacity: 0.95;
 }
 .books-s-1 .container .books {
   display: -webkit-box;
@@ -4555,6 +4709,25 @@ html .s-5 .container img {
     height: 36px;
   }
 }
+.books-s-1 .container .books .bookdiv .column1 .filtersdiv .grid:hover,
+.books-s-1 .container .books .bookdiv .column1 .filtersdiv .list:hover,
+.books-s-1 .container .books .bookdiv .column2 .filtersdiv .grid:hover,
+.books-s-1 .container .books .bookdiv .column2 .filtersdiv .list:hover,
+.books-s-1 .container .books .bookdiv .column3 .filtersdiv .grid:hover,
+.books-s-1 .container .books .bookdiv .column3 .filtersdiv .list:hover {
+  background-color: #bea290;
+}
+.books-s-1 .container .books .bookdiv .column1 .filtersdiv select:hover,
+.books-s-1 .container .books .bookdiv .column2 .filtersdiv select:hover,
+.books-s-1 .container .books .bookdiv .column3 .filtersdiv select:hover {
+  background-color: #bea290;
+  border: 1px solid #b1aaa5;
+}
+.books-s-1 .container .books .bookdiv .column1 .filtersdiv select option:hover,
+.books-s-1 .container .books .bookdiv .column2 .filtersdiv select option:hover,
+.books-s-1 .container .books .bookdiv .column3 .filtersdiv select option:hover {
+  opacity: 0.75;
+}
 .books-s-1 .container .books .bookdiv .column1 .bookcard,
 .books-s-1 .container .books .bookdiv .column2 .bookcard,
 .books-s-1 .container .books .bookdiv .column3 .bookcard {
@@ -4631,7 +4804,7 @@ html .s-5 .container img {
 .books-s-1 .container .books .bookdiv .column1 .bookcard:hover,
 .books-s-1 .container .books .bookdiv .column2 .bookcard:hover,
 .books-s-1 .container .books .bookdiv .column3 .bookcard:hover {
-  background-color: rgba(209, 190, 175, 0.9333333333);
+  background-color: #bea290;
   border: 1px solid #a59181;
 }
 .books-s-1 .container .books .bookdiv .column1 .bookcard .bestsimgwrapper,
@@ -4814,7 +4987,7 @@ html .s-5 .container img {
       flex-shrink: 0;
   border-radius: 10px;
   border: 1px solid #472d1c;
-  background-color: #fcf3eb;
+  background-color: #e1d4c2;
   color: #796751;
   text-align: start;
   font-family: "Bell MT Regular";
@@ -4895,7 +5068,7 @@ html .s-5 .container img {
       flex-shrink: 0;
   border-radius: 10px;
   border: 1px solid #472d1c;
-  background-color: #fcf3eb;
+  background-color: #e1d4c2;
   padding: 12px 16px;
   color: #796751;
   text-align: start;
@@ -4961,7 +5134,7 @@ html .s-5 .container img {
   gap: 15px;
 }
 .books-s-1 .container .books .pagechanger i {
-  color: #796751;
+  color: #6e473b;
   font-size: 36px;
   cursor: pointer;
 }

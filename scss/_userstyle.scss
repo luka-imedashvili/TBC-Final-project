@@ -330,7 +330,15 @@
               display: none;
             }
             h4 {
-              @extend %usertitles;
+              color: #ffe9d8;
+              font-family: $main-font;
+              font-size: 25px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+              @media (max-width: 1110px) {
+                font-size: 20px;
+              }
               text-align: center;
             }
           }

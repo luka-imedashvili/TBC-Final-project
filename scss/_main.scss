@@ -184,10 +184,7 @@ html {
           border-radius: 15px;
           border: 1px solid $border-color;
           padding: 10px 20px;
-          &:hover {
-            background-color: $header-background;
-            border: 1px solid #a59181;
-          }
+          
           @media (max-width: 1150px) {
             width: 200px;
           }
@@ -198,7 +195,6 @@ html {
             width: 145px;
             height: 297px;
           }
-
           .bestsimgwrapper {
             @include flex(row, end, start, wrap);
             gap: 15px;
@@ -229,6 +225,7 @@ html {
               }
             }
           }
+          
           .bookname {
             color: #302923;
             font-family: $main-font;
@@ -281,6 +278,10 @@ html {
               font-size: 16px;
             }
           }
+          
+        }
+        :hover {
+          background-color: $card-hover;
         }
         .bestscard8,
         .bestscard4 {
