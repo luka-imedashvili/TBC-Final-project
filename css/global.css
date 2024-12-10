@@ -325,6 +325,11 @@ html header .container .pcnav .iconsdiv a h6:hover {
     font-size: 15px;
   }
 }
+@media (max-width: 630px) {
+  html header .container .pcnav .iconsdiv a h6 {
+    font-size: 13px;
+  }
+}
 @media (max-width: 1130px) {
   html header .container .pcnav .iconsdiv a .profile {
     display: none;
@@ -1522,6 +1527,11 @@ html header .container .pcnav .iconsdiv a h6:hover {
 @media (max-width: 630px) {
   html header .container .pcnav .iconsdiv a h6 {
     font-size: 15px;
+  }
+}
+@media (max-width: 630px) {
+  html header .container .pcnav .iconsdiv a h6 {
+    font-size: 13px;
   }
 }
 @media (max-width: 1130px) {
